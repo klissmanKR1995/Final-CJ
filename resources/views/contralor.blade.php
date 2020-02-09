@@ -46,38 +46,30 @@
 
               <a class="nav-link menuMain active" id="v-pills-inicio-tab" data-toggle="pill" href="#v-pills-inicio" role="tab" aria-controls="v-pills-inicio" aria-selected="false"><i class="fas fa-home"></i> Inicio</a>
 
-              <!-- Menu con submenu usuarios-->
-
+             <!-- Menu con submenu modulos-->
               <li class="nav-item">
-                  <a class="nav-link collapsed py-1 dropdown-toggle" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-university"></i> Modulos</a>
-                  <div class="collapse" id="submenu1sub1" aria-expanded="false" aria-controls="v-pills-home">
+                  <a class="nav-link collapsed py-1 dropdown-toggle menuMain" href="#submenu2sub3" data-toggle="collapse" data-target="#submenu2sub3" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-align-justify"></i> Consulta-Modulos</a>
+                  <div class="collapse" id="submenu2sub3" aria-expanded="false" aria-controls="v-pills-home">
                       <ul class="flex-column nav pl-4">
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-expedientes-tab" data-toggle="pill" href="#v-pills-expedientes" role="tab" aria-controls="v-pills-expedientes" aria-selected="false">
+                              <i class="fas fa-university"></i>  Expedientes
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloUno-tab" data-toggle="pill" href="#v-pills-moduloUno" role="tab" aria-controls="v-pills-moduloUno" aria-selected="false">
+                              <i class="fas fa-university"></i>  Modulo - I
+                              </a>
+                          </li>
                            <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-expedientes-tab" data-toggle="pill" href="#v-pills-expedientes" role="tab" aria-controls="v-pills-expedientes" aria-selected="false"><i class="fas fa-university"></i>
-                                   Expedientes
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloUnoContralor-tab" data-toggle="pill" href="#v-pills-moduloUnoContralor" role="tab" aria-controls="v-pills-moduloUnoContralor" aria-selected="false"><i class="fas fa-university"></i>
-                                   Modulo I
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloDosContralor-tab" data-toggle="pill" href="#v-pills-moduloDosContralor" role="tab" aria-controls="v-pills-moduloDosContralor" aria-selected="false"> <i class="fas fa-university"></i>
-                                  Modulo VIII
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloDiezContralor-tab" data-toggle="pill" href="#v-pills-moduloDiezContralor" role="tab" aria-controls="v-pills-moduloDiezContralor" aria-selected="false"> <i class="fas fa-university"></i>
-                                  Modulo X
+                              <a class="nav-link p-1" id="v-pills-moduloDiez-tab" data-toggle="pill" href="#v-pills-moduloDiez" role="tab" aria-controls="v-pills-moduloDiez" aria-selected="false">
+                              <i class="fas fa-university"></i>  Modulo - X
                               </a>
                           </li>
                       </ul>
                   </div>
               </li>
-              <!-- Termina menu con submenu usuarios-->
-
-              
+          <!-- Termina menu con submenu modulos-->
 
               <a class="nav-link menuMain" id="v-pills-estadisticas-tab" data-toggle="pill" href="#v-pills-estadisticas" role="tab" aria-controls="v-pills-estadisticas" aria-selected="false"><i class="fas fa-file-alt"></i> Generación de Estádisticas</a>
 
@@ -128,82 +120,67 @@
 
 
 
-      <!-- Empieza formulario de expedientes de gobierno -->
-        <div class="tab-pane fade" id="v-pills-expedientes" role="tabpanel" aria-labelledby="v-pills-expedientes-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> Visualiazación </strong> de registro de expedientes, <strong> POR MODULOS DE CAPTURA </strong> y generación de <strong> REPORTES ESTÁDISTICOS </strong>
-          </div>
-
-          <div class="container">
-           
-            <expedintescontraloria-component> </expedintescontraloria-component>
-
-            <a href="{{ route('expedientes.pdf') }}" class="btn btn-danger"> Exportar PDF </a>
-
-            <a href="{{ route('expedientes.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
- 
-
-          </div>
-        </div>
-      <!-- Termina formulario moduloUnoContralor -->
-
-
-
-      <!-- Empieza formulario de moduloUnoContralor de gobierno -->
-        <div class="tab-pane fade" id="v-pills-moduloUnoContralor" role="tabpanel" aria-labelledby="v-pills-moduloUnoContralor-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> Visualiazación </strong> de registro de expedientes, <strong> POR MODULOS DE CAPTURA </strong> y generación de <strong> REPORTES ESTÁDISTICOS </strong>
-          </div>
-
-          <div class="container">
-           
-           <veruno-component> </veruno-component> <br>
-
-           <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
-            
- 
-
-          </div>
-        </div>
-      <!-- Termina formulario moduloUnoContralor -->
-
-
-
-     <!-- Empieza formulario de moduloDosContralor -->
-      <div class="tab-pane fade" id="v-pills-moduloDosContralor" role="tabpanel" aria-labelledby="v-pills-moduloDosContralor-tab">
+       <!-- Empieza formulario modulo I -->
+      <div class="tab-pane fade" id="v-pills-expedientes" role="tabpanel" aria-labelledby="v-pills-expedientes-tab">
 
         <div class="alert alert-secondary text-center" role="alert">
-          <font size="4"> ACCIONES: </font>  <strong> Visualiazación </strong> de registro de expedientes, <strong> POR MODULOS DE CAPTURA </strong> y generación de <strong> REPORTES ESTÁDISTICOS </strong>
+          <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de expedientes, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
         </div>
 
         <div class="container">
          
+         <expedientesadmin-component> </expedientesadmin-component> <br>
         
-          <verdos-component> </verdos-component>
+           <a href="{{ route('expedientes.pdf') }}" class="btn btn-danger"> Exportar PDF </a>
 
+           <a href="{{ route('expedientes.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
+        
         </div>
       </div>
-      <!-- Termina formulario moduloDosContralor -->
+     
+      <!-- Termina formulario modulo I -->
 
-       <!-- Empieza formulario de moduloDiezContralor -->
-      <div class="tab-pane fade" id="v-pills-moduloDiezContralor" role="tabpanel" aria-labelledby="v-pills-moduloDiezContralor-tab">
 
-        <div class="alert alert-secondary text-center" role="alert">
-          <font size="4"> ACCIONES: </font>  <strong> Visualiazación </strong> de registro de expedientes, <strong> POR MODULOS DE CAPTURA </strong> y generación de <strong> REPORTES ESTÁDISTICOS </strong>
-        </div>
 
-        <div class="container">
-         
-        
-          <verdiez-component> </verdiez-component> <br>
+      <!-- Empieza formulario modulo I -->
+        <div class="tab-pane fade" id="v-pills-moduloUno" role="tabpanel" aria-labelledby="v-pills-moduloUno-tab">
 
-          <a href="{{ route('modulodiez.xlsx') }}" class="btn btn-success"> Exportar Excel </a> <br>
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
 
-        </div>
+          <div class="container">
+           
+              <modulounoactualizar-component> </modulounoactualizar-component> <br>
+
+              <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
+          
+          </div>
+    
       </div>
-      <!-- Termina formulario moduloDiezContralor -->
+     
+      <!-- Termina formulario modulo I -->
+
+
+      <!-- Empieza formulario modulo X -->
+        <div class="tab-pane fade" id="v-pills-moduloDiez" role="tabpanel" aria-labelledby="v-pills-moduloDiez-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo X, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulodiezactualizar-component> </modulodiezactualizar-component> <br> 
+
+              <a href="{{ route('modulodiez.xlsx') }}" class="btn btn-success"> Exportar Excel </a> <br>
+
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo X -->
 
        <!-- Empieza formulario de estadisticas -->
       <div class="tab-pane fade" id="v-pills-estadisticas" role="tabpanel" aria-labelledby="v-pills-estadisticas-tab">

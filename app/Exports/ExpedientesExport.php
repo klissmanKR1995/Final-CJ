@@ -17,7 +17,7 @@ class ExpedientesExport implements FromCollection
                         ->join('juicios', 'expedientes.id_juicio', '=', 'juicios.id_juicio')
                         ->join('materias', 'expedientes.id_materia', '=', 'materias.id_materia')
                         ->join('juzgados', 'expedientes.id_juzgado', '=', 'juzgados.id_juzgado')
-                        ->select('expedientes.numero_expediente', 'materias.nombre_materia', 'juzgados.nombre_juzgado', 'expedientes.nombre_actor', 'expedientes.nombre_demandado', 'expedientes.fecha_en_tribunal', 'expedientes.fecha_en_juzgado', 'juicios.nombre_juicio')
+                        ->select('expedientes.numero_expediente', 'materias.nombre_materia', 'juzgados.nombre_juzgado', 'expedientes.nombre_actor', 'expedientes.nombre_demandado', 'expedientes.fecha_en_tribunal', 'expedientes.fecha_en_juzgado', 'juicios.nombre_juicio', 'expedientes.tipo_accion')
                        ->get();
     }
 }

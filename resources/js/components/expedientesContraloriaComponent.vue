@@ -12,6 +12,7 @@
               <th scope="col"> Fecha - Tribunal</th>
               <th scope="col"> Fecha - Juzgado</th>
               <th scope="col"> Tipo - Juicio</th>
+              <th scope="col"> Tipo - Acción</th>
             </tr>
             <tr v-for="(item, index) in expedientes" :key="index">
               <td>{{item.numero_expediente}}</td>
@@ -22,6 +23,7 @@
               <td>{{item.fecha_en_tribunal}}</td>
               <td>{{item.fecha_en_juzgado}}</td>
               <td>{{item.nombre_juicio}}</td>
+              <td>{{item.tipo_accion}}</td>
             </tr>
         </thead>   
       </table>

@@ -1770,22 +1770,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
 
@@ -3551,6 +3535,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3566,7 +3572,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: '',
         fecha_en_tribunal: '',
         fecha_en_juzgado: '',
-        id_juicio: ''
+        id_juicio: '',
+        tipo_accion: ''
       },
       editarActivo: false
     };
@@ -3622,6 +3629,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = item.fecha_en_tribunal;
       this.expediente.fecha_en_juzgado = item.fecha_en_juzgado;
       this.expediente.id_juicio = item.id_juicio;
+      this.expediente.tipo_accion = item.tipo_accion;
     },
     editar: function editar(item) {
       var _this3 = this;
@@ -3634,7 +3642,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: item.nombre_demandado,
         fecha_en_tribunal: item.fecha_en_tribunal,
         fecha_en_juzgado: item.fecha_en_juzgado,
-        id_juicio: item.id_juicio
+        id_juicio: item.id_juicio,
+        tipo_accion: item.tipo_accion
       };
       axios.put("/Proyecto-CJ/public/expedientes/".concat(item.id_expediente), params).then(function (res) {
         _this3.editarActivo = false;
@@ -3649,6 +3658,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = '';
       this.expediente.fecha_en_juzgado = '';
       this.expediente.id_juicio = '';
+      this.expediente.tipo_accion = '';
     },
     cancelarEdicion: function cancelarEdicion() {
       this.editarActivo = false;
@@ -3660,7 +3670,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: '',
         fecha_en_tribunal: '',
         fecha_en_juzgado: '',
-        id_juicio: ''
+        id_juicio: '',
+        tipo_accion: ''
       };
     },
     agregar: function agregar() {
@@ -3684,7 +3695,8 @@ __webpack_require__.r(__webpack_exports__);
         fecha_en_tribunal: this.expediente.fecha_en_tribunal,
         fecha_en_juzgado: this.expediente.fecha_en_juzgado,
         id_juicio: this.expediente.id_juicio,
-        nombre_juicio: this.expediente.nombre_juicio
+        nombre_juicio: this.expediente.nombre_juicio,
+        tipo_accion: this.expediente.tipo_accion
       }; //Accion para limpiar los campos
 
       this.expediente.numero_expediente = '';
@@ -3695,6 +3707,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = '';
       this.expediente.fecha_en_juzgado = '';
       this.expediente.id_juicio = '';
+      this.expediente.tipo_accion = '';
       axios.post('/Proyecto-CJ/public/expedientes', params).then(function (res) {
         _this4.getResults(_this4.expedientes.last_page);
       });
@@ -3927,6 +3940,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -3942,7 +3979,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: '',
         fecha_en_tribunal: '',
         fecha_en_juzgado: '',
-        id_juicio: ''
+        id_juicio: '',
+        tipo_accion: ''
       },
       editarActivo: false
     };
@@ -3998,6 +4036,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = item.fecha_en_tribunal;
       this.expediente.fecha_en_juzgado = item.fecha_en_juzgado;
       this.expediente.id_juicio = item.id_juicio;
+      this.expediente.tipo_accion = item.tipo_accion;
     },
     editar: function editar(item) {
       var _this3 = this;
@@ -4010,7 +4049,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: item.nombre_demandado,
         fecha_en_tribunal: item.fecha_en_tribunal,
         fecha_en_juzgado: item.fecha_en_juzgado,
-        id_juicio: item.id_juicio
+        id_juicio: item.id_juicio,
+        tipo_accion: item.tipo_accion
       };
       axios.put("/Proyecto-CJ/public/expedientes/".concat(item.id_expediente), params).then(function (res) {
         _this3.editarActivo = false;
@@ -4025,6 +4065,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = '';
       this.expediente.fecha_en_juzgado = '';
       this.expediente.id_juicio = '';
+      this.expediente.tipo_accion = '';
     },
     cancelarEdicion: function cancelarEdicion() {
       this.editarActivo = false;
@@ -4036,7 +4077,8 @@ __webpack_require__.r(__webpack_exports__);
         nombre_demandado: '',
         fecha_en_tribunal: '',
         fecha_en_juzgado: '',
-        id_juicio: ''
+        id_juicio: '',
+        tipo_accion: ''
       };
     },
     agregar: function agregar() {
@@ -4060,7 +4102,8 @@ __webpack_require__.r(__webpack_exports__);
         fecha_en_tribunal: this.expediente.fecha_en_tribunal,
         fecha_en_juzgado: this.expediente.fecha_en_juzgado,
         id_juicio: this.expediente.id_juicio,
-        nombre_juicio: this.expediente.nombre_juicio
+        nombre_juicio: this.expediente.nombre_juicio,
+        tipo_accion: this.expediente.tipo_accion
       }; //Accion para limpiar los campos
 
       this.expediente.numero_expediente = '';
@@ -4071,6 +4114,7 @@ __webpack_require__.r(__webpack_exports__);
       this.expediente.fecha_en_tribunal = '';
       this.expediente.fecha_en_juzgado = '';
       this.expediente.id_juicio = '';
+      this.expediente.tipo_accion = '';
       axios.post('/Proyecto-CJ/public/expedientes', params).then(function (res) {
         _this4.getResults(_this4.expedientes.last_page);
       });
@@ -4118,6 +4162,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -5311,135 +5357,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
 
@@ -5737,135 +5654,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
 /* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -47393,23 +47181,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [_vm._v(_vm._s(item.si_fecha))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.no_motivos))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_declaracion_rebeldia))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.si_contesta_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.reconviene_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_reconvencion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contesta_reconvencion))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.numero_total_acuerdos))])
+                    _c("td", [_vm._v(_vm._s(item.no_motivos))])
                   ])
                 })
               ],
@@ -47520,31 +47292,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Fecha ")]),
       _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" No, Motivos ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Contestación Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Declaración rebeldia ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Contesta Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Contestación Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Reconviene Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Reconvención Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Contesta Reconvención ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número Total Acuerdos ")])
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" No, Motivos ")])
     ])
   },
   function() {
@@ -48955,56 +48703,107 @@ var render = function() {
               ]),
               _c("br"),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.expediente.id_juicio,
-                        expression: "expediente.id_juicio"
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.id_juicio,
+                          expression: "expediente.id_juicio"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "id_juicio" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "id_juicio",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "id_juicio" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.expediente,
-                          "id_juicio",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Juicio al expediente")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.juicios, function(item, index) {
+                        return _c(
+                          "option",
+                          { domProps: { value: item.id_juicio } },
+                          [_vm._v(_vm._s(item.nombre_juicio))]
                         )
+                      })
+                    ],
+                    2
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.tipo_accion,
+                          expression: "expediente.tipo_accion"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "tipo_accion",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Juicio al expediente")
-                    ]),
-                    _vm._v(" "),
-                    _vm._l(_vm.juicios, function(item, index) {
-                      return _c(
-                        "option",
-                        { domProps: { value: item.id_juicio } },
-                        [_vm._v(_vm._s(item.nombre_juicio))]
-                      )
-                    })
-                  ],
-                  2
-                )
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Tipo Acción ")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion1")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion2")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion3")])
+                    ]
+                  )
+                ])
               ]),
+              _vm._v(" "),
+              _c("br"),
               _vm._v(" "),
               _c("center", [
                 _c(
@@ -49350,56 +49149,107 @@ var render = function() {
               ]),
               _c("br"),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.expediente.id_juicio,
-                        expression: "expediente.id_juicio"
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.id_juicio,
+                          expression: "expediente.id_juicio"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "id_juicio" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "id_juicio",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "id_juicio" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.expediente,
-                          "id_juicio",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Juicio al expediente")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.juicios, function(item, index) {
+                        return _c(
+                          "option",
+                          { domProps: { value: item.id_juicio } },
+                          [_vm._v(_vm._s(item.nombre_juicio))]
                         )
+                      })
+                    ],
+                    2
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.tipo_accion,
+                          expression: "expediente.tipo_accion"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "tipo_accion",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Juicio al expediente")
-                    ]),
-                    _vm._v(" "),
-                    _vm._l(_vm.juicios, function(item, index) {
-                      return _c(
-                        "option",
-                        { domProps: { value: item.id_juicio } },
-                        [_vm._v(_vm._s(item.nombre_juicio))]
-                      )
-                    })
-                  ],
-                  2
-                )
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Tipo Acción ")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion1")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion2")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion3")])
+                    ]
+                  )
+                ])
               ]),
+              _vm._v(" "),
+              _c("br"),
               _vm._v(" "),
               _c("center", [
                 _c(
@@ -49456,6 +49306,8 @@ var render = function() {
                 _c("td", [_vm._v(_vm._s(item.fecha_en_juzgado))]),
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(item.nombre_juicio))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.tipo_accion))]),
                 _vm._v(" "),
                 _c("td", [
                   _c("span", { staticClass: "badge badge-primary" }, [
@@ -49588,6 +49440,8 @@ var staticRenderFns = [
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha - Juzgado")]),
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Juicio")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Acción")]),
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha - Registro")]),
       _vm._v(" "),
@@ -49960,56 +49814,107 @@ var render = function() {
               ]),
               _c("br"),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.expediente.id_juicio,
-                        expression: "expediente.id_juicio"
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.id_juicio,
+                          expression: "expediente.id_juicio"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "id_juicio" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "id_juicio",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "id_juicio" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.expediente,
-                          "id_juicio",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Juicio al expediente")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.juicios, function(item, index) {
+                        return _c(
+                          "option",
+                          { domProps: { value: item.id_juicio } },
+                          [_vm._v(_vm._s(item.nombre_juicio))]
                         )
+                      })
+                    ],
+                    2
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.tipo_accion,
+                          expression: "expediente.tipo_accion"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "tipo_accion",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Juicio al expediente")
-                    ]),
-                    _vm._v(" "),
-                    _vm._l(_vm.juicios, function(item, index) {
-                      return _c(
-                        "option",
-                        { domProps: { value: item.id_juicio } },
-                        [_vm._v(_vm._s(item.nombre_juicio))]
-                      )
-                    })
-                  ],
-                  2
-                )
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Tipo Acción ")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion1")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion2")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion3")])
+                    ]
+                  )
+                ])
               ]),
+              _vm._v(" "),
+              _c("br"),
               _vm._v(" "),
               _c("center", [
                 _c(
@@ -50356,56 +50261,107 @@ var render = function() {
               ]),
               _c("br"),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.expediente.id_juicio,
-                        expression: "expediente.id_juicio"
+              _c("div", { staticClass: "form-row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.id_juicio,
+                          expression: "expediente.id_juicio"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { id: "id_juicio" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "id_juicio",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "id_juicio" },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.expediente,
-                          "id_juicio",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Juicio al expediente")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.juicios, function(item, index) {
+                        return _c(
+                          "option",
+                          { domProps: { value: item.id_juicio } },
+                          [_vm._v(_vm._s(item.nombre_juicio))]
                         )
+                      })
+                    ],
+                    2
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.expediente.tipo_accion,
+                          expression: "expediente.tipo_accion"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.expediente,
+                            "tipo_accion",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Juicio al expediente")
-                    ]),
-                    _vm._v(" "),
-                    _vm._l(_vm.juicios, function(item, index) {
-                      return _c(
-                        "option",
-                        { domProps: { value: item.id_juicio } },
-                        [_vm._v(_vm._s(item.nombre_juicio))]
-                      )
-                    })
-                  ],
-                  2
-                )
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Tipo Acción ")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion1")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion2")]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("Accion3")])
+                    ]
+                  )
+                ])
               ]),
+              _vm._v(" "),
+              _c("br"),
               _vm._v(" "),
               _c("center", [
                 _c(
@@ -50461,7 +50417,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(item.fecha_en_juzgado))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(item.nombre_juicio))])
+                _c("td", [_vm._v(_vm._s(item.nombre_juicio))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.tipo_accion))])
               ])
             })
           ],
@@ -50557,7 +50515,9 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha - Juzgado")]),
       _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Juicio")])
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Juicio")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Acción")])
     ])
   },
   function() {
@@ -50645,7 +50605,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("td", [_vm._v(_vm._s(item.fecha_en_juzgado))]),
                 _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(item.nombre_juicio))])
+                _c("td", [_vm._v(_vm._s(item.nombre_juicio))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(item.tipo_accion))])
               ])
             })
           ],
@@ -50732,7 +50694,9 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha - Juzgado")]),
       _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Juicio")])
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Juicio")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo - Acción")])
     ])
   },
   function() {
@@ -52564,7 +52528,7 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha juez emplazamiento")
+                        _vm._v("Fecha en que el juez ordena el emplazamiento")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -52601,7 +52565,7 @@ var render = function() {
                       { staticClass: "col-md-4" },
                       [
                         _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Mecanismos para realizar emplazamiento")
+                          _vm._v("Mecanismos para realizar el emplazamiento")
                         ]),
                         _vm._v(" "),
                         _c("vue-select", {
@@ -52784,7 +52748,9 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número de visitas emplazamiento")
+                        _vm._v(
+                          "  Número de visitas para realizar el emplazamiento "
+                        )
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -52816,7 +52782,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("¿Se realiza emplazamiento?")
+                        _vm._v("¿Se realiza el emplazamiento?")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -52868,7 +52834,7 @@ var render = function() {
                       { staticClass: "col-md-4" },
                       [
                         _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Mecanismos de realizacion emplazamiento")
+                          _vm._v("Mecanismos de realizacion del emplazamiento")
                         ]),
                         _vm._v(" "),
                         _c("vue-select", {
@@ -52908,7 +52874,7 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Si se realizo fecha")
+                        _vm._v("Si se realizo el emplezamiento anotar fecha")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -52940,7 +52906,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("No se realiza emplazamiento, motivos")
+                        _vm._v("No se realiza el emplazamiento, motivos")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -52968,339 +52934,10 @@ var render = function() {
                           }
                         }
                       })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contestacion_demanda,
-                              expression: "modulotres.contestacion_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contestacion_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
                     ])
                   ]),
                   _vm._v(" "),
                   _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha declaración rebeldia")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_declaracion_rebeldia,
-                            expression: "modulotres.fecha_declaracion_rebeldia"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_declaracion_rebeldia
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_declaracion_rebeldia",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-md-4" },
-                      [
-                        _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Si contesta la demanda")
-                        ]),
-                        _vm._v(" "),
-                        _c("vue-select", {
-                          staticClass: "vue-select1",
-                          attrs: {
-                            label: "valor_variable",
-                            options: _vm.siContesta,
-                            model: _vm.result1
-                          },
-                          on: {
-                            "update:model": function($event) {
-                              _vm.result1 = $event
-                            }
-                          },
-                          model: {
-                            value: _vm.modulotres.si_contesta_demanda,
-                            callback: function($$v) {
-                              _vm.$set(
-                                _vm.modulotres,
-                                "si_contesta_demanda",
-                                $$v
-                              )
-                            },
-                            expression: "modulotres.si_contesta_demanda"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_contestacion_demanda,
-                            expression: "modulotres.fecha_contestacion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_contestacion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_contestacion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El demandado reconviene la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.reconviene_demanda,
-                              expression: "modulotres.reconviene_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "reconviene_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha reconvención de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_reconvencion_demanda,
-                            expression: "modulotres.fecha_reconvencion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_reconvencion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_reconvencion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El reconvenido contesta la reconvención")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contesta_reconvencion,
-                              expression: "modulotres.contesta_reconvencion"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contesta_reconvencion",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número total de acuerdos emitidos")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.numero_total_acuerdos,
-                            expression: "modulotres.numero_total_acuerdos"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: {
-                          value: _vm.modulotres.numero_total_acuerdos
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "numero_total_acuerdos",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
                   _vm._v(" "),
                   _c("center", [
                     _c(
@@ -53408,7 +53045,7 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha juez emplazamiento")
+                        _vm._v("Fecha en que el juez ordena el emplazamiento")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -53445,7 +53082,7 @@ var render = function() {
                       { staticClass: "col-md-4" },
                       [
                         _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Mecanismos para realizar emplazamiento")
+                          _vm._v("Mecanismos para realizar el emplazamiento")
                         ]),
                         _vm._v(" "),
                         _c("vue-select", {
@@ -53628,7 +53265,9 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número de visitas emplazamiento")
+                        _vm._v(
+                          " Número de visitas para realizar el emplazamiento a la parte demandada"
+                        )
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -53660,7 +53299,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("¿Se realiza emplazamiento?")
+                        _vm._v("¿Se realiza el emplazamiento?")
                       ]),
                       _vm._v(" "),
                       _c(
@@ -53712,7 +53351,7 @@ var render = function() {
                       { staticClass: "col-md-4" },
                       [
                         _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Mecanismos de realizacion emplazamiento")
+                          _vm._v("Mecanismos de realizacion del emplazamiento")
                         ]),
                         _vm._v(" "),
                         _c("vue-select", {
@@ -53752,7 +53391,7 @@ var render = function() {
                   _c("div", { staticClass: "form-row" }, [
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Si se realizo fecha")
+                        _vm._v("Si se realizo el emplezamiento anotar fecha")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -53784,7 +53423,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-4" }, [
                       _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("No se realiza emplazamiento, motivos")
+                        _vm._v("No se realiza el emplazamiento, motivos")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -53812,339 +53451,10 @@ var render = function() {
                           }
                         }
                       })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contestacion_demanda,
-                              expression: "modulotres.contestacion_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contestacion_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
                     ])
                   ]),
                   _vm._v(" "),
                   _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha declaración rebeldia")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_declaracion_rebeldia,
-                            expression: "modulotres.fecha_declaracion_rebeldia"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_declaracion_rebeldia
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_declaracion_rebeldia",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-md-4" },
-                      [
-                        _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Si contesta la demanda")
-                        ]),
-                        _vm._v(" "),
-                        _c("vue-select", {
-                          staticClass: "vue-select1",
-                          attrs: {
-                            label: "valor_variable",
-                            options: _vm.siContesta,
-                            model: _vm.result1
-                          },
-                          on: {
-                            "update:model": function($event) {
-                              _vm.result1 = $event
-                            }
-                          },
-                          model: {
-                            value: _vm.modulotres.si_contesta_demanda,
-                            callback: function($$v) {
-                              _vm.$set(
-                                _vm.modulotres,
-                                "si_contesta_demanda",
-                                $$v
-                              )
-                            },
-                            expression: "modulotres.si_contesta_demanda"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_contestacion_demanda,
-                            expression: "modulotres.fecha_contestacion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_contestacion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_contestacion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El demandado reconviene la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.reconviene_demanda,
-                              expression: "modulotres.reconviene_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "reconviene_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha reconvención de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_reconvencion_demanda,
-                            expression: "modulotres.fecha_reconvencion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_reconvencion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_reconvencion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El reconvenido contesta la reconvención")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contesta_reconvencion,
-                              expression: "modulotres.contesta_reconvencion"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contesta_reconvencion",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número total de acuerdos emitidos")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.numero_total_acuerdos,
-                            expression: "modulotres.numero_total_acuerdos"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: {
-                          value: _vm.modulotres.numero_total_acuerdos
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "numero_total_acuerdos",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
                   _vm._v(" "),
                   _c("center", [
                     _c(
@@ -54203,23 +53513,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", [_vm._v(_vm._s(item.si_fecha))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.no_motivos))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_declaracion_rebeldia))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.si_contesta_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.reconviene_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_reconvencion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contesta_reconvencion))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.numero_total_acuerdos))])
+                    _c("td", [_vm._v(_vm._s(item.no_motivos))])
                   ])
                 })
               ],
@@ -54339,31 +53633,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Fecha ")]),
       _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" No, Motivos ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Contestación Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Declaración rebeldia ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Contesta Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Contestación Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Reconviene Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Reconvención Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Contesta Reconvención ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número Total Acuerdos ")])
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" No, Motivos ")])
     ])
   },
   function() {
@@ -54908,339 +54178,10 @@ var render = function() {
                           }
                         }
                       })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contestacion_demanda,
-                              expression: "modulotres.contestacion_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contestacion_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
                     ])
                   ]),
                   _vm._v(" "),
                   _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha declaración rebeldia")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_declaracion_rebeldia,
-                            expression: "modulotres.fecha_declaracion_rebeldia"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_declaracion_rebeldia
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_declaracion_rebeldia",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-md-4" },
-                      [
-                        _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Si contesta la demanda")
-                        ]),
-                        _vm._v(" "),
-                        _c("vue-select", {
-                          staticClass: "vue-select1",
-                          attrs: {
-                            label: "valor_variable",
-                            options: _vm.siContesta,
-                            model: _vm.result1
-                          },
-                          on: {
-                            "update:model": function($event) {
-                              _vm.result1 = $event
-                            }
-                          },
-                          model: {
-                            value: _vm.modulotres.si_contesta_demanda,
-                            callback: function($$v) {
-                              _vm.$set(
-                                _vm.modulotres,
-                                "si_contesta_demanda",
-                                $$v
-                              )
-                            },
-                            expression: "modulotres.si_contesta_demanda"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_contestacion_demanda,
-                            expression: "modulotres.fecha_contestacion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_contestacion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_contestacion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El demandado reconviene la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.reconviene_demanda,
-                              expression: "modulotres.reconviene_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "reconviene_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha reconvención de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_reconvencion_demanda,
-                            expression: "modulotres.fecha_reconvencion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_reconvencion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_reconvencion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El reconvenido contesta la reconvención")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contesta_reconvencion,
-                              expression: "modulotres.contesta_reconvencion"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contesta_reconvencion",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número total de acuerdos emitidos")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.numero_total_acuerdos,
-                            expression: "modulotres.numero_total_acuerdos"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: {
-                          value: _vm.modulotres.numero_total_acuerdos
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "numero_total_acuerdos",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
                   _vm._v(" "),
                   _c("center", [
                     _c(
@@ -55751,339 +54692,10 @@ var render = function() {
                           }
                         }
                       })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contestacion_demanda,
-                              expression: "modulotres.contestacion_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contestacion_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
                     ])
                   ]),
                   _vm._v(" "),
                   _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha declaración rebeldia")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_declaracion_rebeldia,
-                            expression: "modulotres.fecha_declaracion_rebeldia"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_declaracion_rebeldia
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_declaracion_rebeldia",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-md-4" },
-                      [
-                        _c("label", { attrs: { for: "inputState" } }, [
-                          _vm._v("Si contesta la demanda")
-                        ]),
-                        _vm._v(" "),
-                        _c("vue-select", {
-                          staticClass: "vue-select1",
-                          attrs: {
-                            label: "valor_variable",
-                            options: _vm.siContesta,
-                            model: _vm.result1
-                          },
-                          on: {
-                            "update:model": function($event) {
-                              _vm.result1 = $event
-                            }
-                          },
-                          model: {
-                            value: _vm.modulotres.si_contesta_demanda,
-                            callback: function($$v) {
-                              _vm.$set(
-                                _vm.modulotres,
-                                "si_contesta_demanda",
-                                $$v
-                              )
-                            },
-                            expression: "modulotres.si_contesta_demanda"
-                          }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha contestación de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_contestacion_demanda,
-                            expression: "modulotres.fecha_contestacion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_contestacion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_contestacion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El demandado reconviene la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.reconviene_demanda,
-                              expression: "modulotres.reconviene_demanda"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "reconviene_demanda",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Fecha reconvención de la demanda")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.fecha_reconvencion_demanda,
-                            expression: "modulotres.fecha_reconvencion_demanda"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "date" },
-                        domProps: {
-                          value: _vm.modulotres.fecha_reconvencion_demanda
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "fecha_reconvencion_demanda",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("El reconvenido contesta la reconvención")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "select",
-                        {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.modulotres.contesta_reconvencion,
-                              expression: "modulotres.contesta_reconvencion"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.$set(
-                                _vm.modulotres,
-                                "contesta_reconvencion",
-                                $event.target.multiple
-                                  ? $$selectedVal
-                                  : $$selectedVal[0]
-                              )
-                            }
-                          }
-                        },
-                        [
-                          _c("option", { attrs: { selected: "" } }, [
-                            _vm._v("Seleccionar")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("Si")]),
-                          _vm._v(" "),
-                          _c("option", [_vm._v("No")])
-                        ]
-                      )
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-row" }, [
-                    _c("div", { staticClass: "col-md-4" }, [
-                      _c("label", { attrs: { for: "inputState" } }, [
-                        _vm._v("Número total de acuerdos emitidos")
-                      ]),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.modulotres.numero_total_acuerdos,
-                            expression: "modulotres.numero_total_acuerdos"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text" },
-                        domProps: {
-                          value: _vm.modulotres.numero_total_acuerdos
-                        },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.modulotres,
-                              "numero_total_acuerdos",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
                   _vm._v(" "),
                   _c("center", [
                     _c(
@@ -56143,22 +54755,6 @@ var render = function() {
                     _c("td", [_vm._v(_vm._s(item.si_fecha))]),
                     _vm._v(" "),
                     _c("td", [_vm._v(_vm._s(item.no_motivos))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_declaracion_rebeldia))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.si_contesta_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_contestacion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.reconviene_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.fecha_reconvencion_demanda))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.contesta_reconvencion))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(item.numero_total_acuerdos))]),
                     _vm._v(" "),
                     _c("td", [
                       _c(
@@ -56309,32 +54905,6 @@ var staticRenderFns = [
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Fecha ")]),
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" No, Motivos ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Contestación Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Declaración rebeldia ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si, Contesta Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Contestación Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Reconviene Demanda ")]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Fecha Reconvención Demanda ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Contesta Reconvención ")
-      ]),
-      _vm._v(" "),
-      _c("th", { attrs: { scope: "col" } }, [
-        _vm._v(" Número Total Acuerdos ")
-      ]),
       _vm._v(" "),
       _c("th", { attrs: { scope: "col" } }, [_vm._v(" Actualizar ")]),
       _vm._v(" "),

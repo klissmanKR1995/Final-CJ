@@ -17,14 +17,6 @@
                 <th scope="col"> Mecanismos de realización </th>
                 <th scope="col"> Si, Fecha </th>
                 <th scope="col"> No, Motivos </th>
-                <th scope="col"> Contestación Demanda </th>
-                <th scope="col"> Fecha Declaración rebeldia </th>
-                <th scope="col"> Si, Contesta Demanda </th>
-                <th scope="col"> Fecha Contestación Demanda </th>
-                <th scope="col"> Reconviene Demanda </th>
-                <th scope="col"> Fecha Reconvención Demanda </th>
-                <th scope="col"> Contesta Reconvención </th>
-                <th scope="col"> Número Total Acuerdos </th>
               </tr>
               <tr v-for="(item, index) in modulotress.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -39,14 +31,6 @@
                 <td>{{item.mecanismos_realizacion_emplazamiento}}</td>
                 <td>{{item.si_fecha}}</td>
                 <td>{{item.no_motivos}}</td>
-                <td>{{item.contestacion_demanda}}</td>
-                <td>{{item.fecha_declaracion_rebeldia}}</td>
-                <td>{{item.si_contesta_demanda}}</td>
-                <td>{{item.fecha_contestacion_demanda}}</td>
-                <td>{{item.reconviene_demanda}}</td>
-                <td>{{item.fecha_reconvencion_demanda}}</td>
-                <td>{{item.contesta_reconvencion}}</td>
-                <td>{{item.numero_total_acuerdos}}</td>
               </tr>
           </thead>   
         </table>

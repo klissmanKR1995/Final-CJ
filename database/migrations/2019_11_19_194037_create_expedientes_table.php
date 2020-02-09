@@ -23,6 +23,7 @@ class CreateExpedientesTable extends Migration
             $table->date('fecha_en_tribunal');
             $table->date('fecha_en_juzgado');
             $table->bigInteger('id_juicio')->unsigned();
+            $table->string('tipo_accion');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('id_juicio')->references('id_juicio')->on('juicios');
             $table->foreign('id_materia')->references('id_materia')->on('materias');

@@ -14,11 +14,11 @@
                 
            <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Fecha juez emplazamiento</label>
+              <label for="inputState">Fecha en que el juez ordena el emplazamiento</label>
               <input type="date" class="form-control" v-model="modulotres.fecha_juez_emplazamiento">
             </div>
             <div class="col-md-4">
-              <label for="inputState">Mecanismos para realizar emplazamiento</label>
+              <label for="inputState">Mecanismos para realizar el emplazamiento</label>
               <vue-select class="vue-select1"  label="valor_variable" :options='
                 mecanismosRealizar' :model.sync="result1" v-model="modulotres.mecanismos_realizar_emplazamiento"></vue-select>
             </div>
@@ -49,11 +49,11 @@
 
           <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Número de visitas emplazamiento</label>
+              <label for="inputState">  Número de visitas para realizar el emplazamiento </label>
               <input type="text" class="form-control" v-model="modulotres.numero_visitas">
             </div>
             <div class="col-md-4">
-             <label for="inputState">¿Se realiza emplazamiento?</label>
+             <label for="inputState">¿Se realiza el emplazamiento?</label>
               <select class="form-control" v-model="modulotres.se_realizo">
                 <option selected>Seleccionar</option>
                 <option>Si</option>
@@ -61,7 +61,7 @@
               </select>
             </div>
             <div class="col-md-4">
-              <label for="inputState">Mecanismos de realizacion emplazamiento</label>
+              <label for="inputState">Mecanismos de realizacion del emplazamiento</label>
                 <vue-select class="vue-select1"  label="valor_variable" :options='
                   mecanismosRealizacion' :model.sync="result1" v-model="modulotres.mecanismos_realizacion_emplazamiento"></vue-select>
             </div>
@@ -69,71 +69,14 @@
 
           <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Si se realizo fecha</label>
+              <label for="inputState">Si se realizo el emplezamiento anotar fecha</label>
               <input type="date" class="form-control" v-model="modulotres.si_fecha">
             </div>
             <div class="col-md-4">
-             <label for="inputState">No se realiza emplazamiento, motivos</label>
+             <label for="inputState">No se realiza el emplazamiento, motivos</label>
              <input type="text" class="form-control" v-model="modulotres.no_motivos">
             </div>
-            <div class="col-md-4">
-             <label for="inputState">Contestación de la demanda</label>
-              <select class="form-control" v-model="modulotres.contestacion_demanda">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
           </div> <br>
-              
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Fecha declaración rebeldia</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_declaracion_rebeldia">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Si contesta la demanda</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                siContesta' :model.sync="result1" v-model="modulotres.si_contesta_demanda"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Fecha contestación de la demanda</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_contestacion_demanda">
-            </div>
-          </div> <br>
-
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">El demandado reconviene la demanda</label>
-              <select class="form-control" v-model="modulotres.reconviene_demanda">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Fecha reconvención de la demanda</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_reconvencion_demanda">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">El reconvenido contesta la reconvención</label>
-              <select class="form-control" v-model="modulotres.contesta_reconvencion">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-          </div> <br>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Número total de acuerdos emitidos</label>
-              <input type="text" class="form-control" v-model="modulotres.numero_total_acuerdos">
-            </div>
-          </div> 
-
-
 
           <center>    
           <button class="btn btn-primary" type="submit"> Actualizar </button>
@@ -153,13 +96,13 @@
             </select>
           </div>
                 
-          <div class="form-row">
+         <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Fecha juez emplazamiento</label>
+              <label for="inputState">Fecha en que el juez ordena el emplazamiento</label>
               <input type="date" class="form-control" v-model="modulotres.fecha_juez_emplazamiento">
             </div>
             <div class="col-md-4">
-              <label for="inputState">Mecanismos para realizar emplazamiento</label>
+              <label for="inputState">Mecanismos para realizar el emplazamiento</label>
               <vue-select class="vue-select1"  label="valor_variable" :options='
                 mecanismosRealizar' :model.sync="result1" v-model="modulotres.mecanismos_realizar_emplazamiento"></vue-select>
             </div>
@@ -190,11 +133,11 @@
 
           <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Número de visitas emplazamiento</label>
+              <label for="inputState"> Número de visitas para realizar el emplazamiento a la parte demandada</label>
               <input type="text" class="form-control" v-model="modulotres.numero_visitas">
             </div>
             <div class="col-md-4">
-             <label for="inputState">¿Se realiza emplazamiento?</label>
+             <label for="inputState">¿Se realiza el emplazamiento?</label>
               <select class="form-control" v-model="modulotres.se_realizo">
                 <option selected>Seleccionar</option>
                 <option>Si</option>
@@ -202,7 +145,7 @@
               </select>
             </div>
             <div class="col-md-4">
-              <label for="inputState">Mecanismos de realizacion emplazamiento</label>
+              <label for="inputState">Mecanismos de realizacion del emplazamiento</label>
                 <vue-select class="vue-select1"  label="valor_variable" :options='
                   mecanismosRealizacion' :model.sync="result1" v-model="modulotres.mecanismos_realizacion_emplazamiento"></vue-select>
             </div>
@@ -210,71 +153,15 @@
 
           <div class="form-row">
             <div class="col-md-4">
-              <label for="inputState">Si se realizo fecha</label>
+              <label for="inputState">Si se realizo el emplezamiento anotar fecha</label>
               <input type="date" class="form-control" v-model="modulotres.si_fecha">
             </div>
             <div class="col-md-4">
-             <label for="inputState">No se realiza emplazamiento, motivos</label>
+             <label for="inputState">No se realiza el emplazamiento, motivos</label>
              <input type="text" class="form-control" v-model="modulotres.no_motivos">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">Contestación de la demanda</label>
-              <select class="form-control" v-model="modulotres.contestacion_demanda">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
             </div>
           </div> <br>
               
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Fecha declaración rebeldia</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_declaracion_rebeldia">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Si contesta la demanda</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                siContesta' :model.sync="result1" v-model="modulotres.si_contesta_demanda"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Fecha contestación de la demanda</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_contestacion_demanda">
-            </div>
-          </div> <br>
-
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">El demandado reconviene la demanda</label>
-              <select class="form-control" v-model="modulotres.reconviene_demanda">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Fecha reconvención de la demanda</label>
-              <input type="date" class="form-control" v-model="modulotres.fecha_reconvencion_demanda">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">El reconvenido contesta la reconvención</label>
-              <select class="form-control" v-model="modulotres.contesta_reconvencion">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-          </div> <br>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Número total de acuerdos emitidos</label>
-              <input type="text" class="form-control" v-model="modulotres.numero_total_acuerdos">
-            </div>
-          </div> 
-
-
           <center>    
           <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
           </center><br>
@@ -299,14 +186,6 @@
                 <th scope="col"> Mecanismos de realización </th>
                 <th scope="col"> Si, Fecha </th>
                 <th scope="col"> No, Motivos </th>
-                <th scope="col"> Contestación Demanda </th>
-                <th scope="col"> Fecha Declaración rebeldia </th>
-                <th scope="col"> Si, Contesta Demanda </th>
-                <th scope="col"> Fecha Contestación Demanda </th>
-                <th scope="col"> Reconviene Demanda </th>
-                <th scope="col"> Fecha Reconvención Demanda </th>
-                <th scope="col"> Contesta Reconvención </th>
-                <th scope="col"> Número Total Acuerdos </th>
               </tr>
               <tr v-for="(item, index) in modulotress.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -321,14 +200,6 @@
                 <td>{{item.mecanismos_realizacion_emplazamiento}}</td>
                 <td>{{item.si_fecha}}</td>
                 <td>{{item.no_motivos}}</td>
-                <td>{{item.contestacion_demanda}}</td>
-                <td>{{item.fecha_declaracion_rebeldia}}</td>
-                <td>{{item.si_contesta_demanda}}</td>
-                <td>{{item.fecha_contestacion_demanda}}</td>
-                <td>{{item.reconviene_demanda}}</td>
-                <td>{{item.fecha_reconvencion_demanda}}</td>
-                <td>{{item.contesta_reconvencion}}</td>
-                <td>{{item.numero_total_acuerdos}}</td>
               </tr>
           </thead>   
         </table>

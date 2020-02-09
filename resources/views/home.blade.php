@@ -87,36 +87,6 @@
               </li>
           <!-- Termina menu con submenu catalogos-->
 
-              <!-- Menu con submenu catalogos-->
-              <li class="nav-item">
-                  <a class="nav-link collapsed py-1 dropdown-toggle menuMain" href="#submenu2sub3" data-toggle="collapse" data-target="#submenu2sub3" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-align-justify"></i> Consulta-Modulos</a>
-                  <div class="collapse" id="submenu2sub3" aria-expanded="false" aria-controls="v-pills-home">
-                      <ul class="flex-column nav pl-4">
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-expedientes-tab" data-toggle="pill" href="#v-pills-expedientes" role="tab" aria-controls="v-pills-expedientes" aria-selected="false">
-                              <i class="fas fa-university"></i>  Expedientes
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloUno-tab" data-toggle="pill" href="#v-pills-moduloUno" role="tab" aria-controls="v-pills-moduloUno" aria-selected="false">
-                              <i class="fas fa-university"></i>  Modulo - I
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloOcho-tab" data-toggle="pill" href="#v-pills-moduloOcho" role="tab" aria-controls="v-pills-moduloOcho" aria-selected="false">
-                              <i class="fas fa-university"></i>  Modulo - VIII
-                              </a>
-                          </li>
-                           <li class="nav-item">
-                              <a class="nav-link p-1" id="v-pills-moduloDiez-tab" data-toggle="pill" href="#v-pills-moduloDiez" role="tab" aria-controls="v-pills-moduloDiez" aria-selected="false">
-                              <i class="fas fa-university"></i>  Modulo - X
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </li>
-          <!-- Termina menu con submenu catalogos-->
-
               
               <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -302,87 +272,7 @@
         </div>
       <!-- Termina formulario valores -->
 
-      <!-- Empieza formulario modulo I -->
-      <div class="tab-pane fade" id="v-pills-expedientes" role="tabpanel" aria-labelledby="v-pills-expedientes-tab">
-
-        <div class="alert alert-secondary text-center" role="alert">
-          <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de expedientes, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-        </div>
-
-        <div class="container">
-         
-         <expedientesadmin-component> </expedientesadmin-component> <br>
-        
-           <a href="{{ route('expedientes.pdf') }}" class="btn btn-danger"> Exportar PDF </a>
-
-           <a href="{{ route('expedientes.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
-        
-        </div>
-      </div>
-     
-      <!-- Termina formulario modulo I -->
-
-
-
-     
-
-        <!-- Empieza formulario modulo I -->
-        <div class="tab-pane fade" id="v-pills-moduloUno" role="tabpanel" aria-labelledby="v-pills-moduloUno-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-          </div>
-
-          <div class="container">
-           
-              <modulounoactualizar-component> </modulounoactualizar-component> <br>
-
-              <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
-          
-          </div>
-    
-      </div>
-     
-      <!-- Termina formulario modulo I -->
-
-       <!-- Empieza formulario modulo VIII -->
-        <div class="tab-pane fade" id="v-pills-moduloOcho" role="tabpanel" aria-labelledby="v-pills-moduloOcho-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo VIII, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-          </div>
-
-          <div class="container">
-           
-              <modulodosactualizar-component> </modulodosactualizar-component>
-          
-          </div>
-    
-      </div>
-     
-      <!-- Termina formulario modulo VIII -->
-
-      <!-- Empieza formulario modulo X -->
-        <div class="tab-pane fade" id="v-pills-moduloDiez" role="tabpanel" aria-labelledby="v-pills-moduloDiez-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo X, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-          </div>
-
-          <div class="container">
-           
-              <modulodiezactualizar-component> </modulodiezactualizar-component> <br>
-
-              <a href="{{ route('modulodiez.pdf') }}" class="btn btn-danger"> Exportar PDF </a>  
-
-              <a href="{{ route('modulodiez.xlsx') }}" class="btn btn-success"> Exportar Excel </a> <br>
-
-          
-          </div>
-    
-      </div>
-     
-      <!-- Termina formulario modulo X -->
+   
 
 
     <!-- /#wrapper -->

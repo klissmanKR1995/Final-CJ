@@ -67,6 +67,7 @@ class expedientesController extends Controller
         $expedientes->fecha_en_tribunal = $request->fecha_en_tribunal;
         $expedientes->fecha_en_juzgado = $request->fecha_en_juzgado;
         $expedientes->id_juicio = $request->id_juicio;
+        $expedientes->tipo_accion = $request->tipo_accion;
         $expedientes->user_id = auth()->id();
         $expedientes->save();
 
@@ -122,6 +123,7 @@ class expedientesController extends Controller
         $expedientes->fecha_en_tribunal = $request->fecha_en_tribunal;
         $expedientes->fecha_en_juzgado = $request->fecha_en_juzgado;
         $expedientes->id_juicio = $request->id_juicio;
+        $expedientes->tipo_accion = $request->tipo_accion;
         $expedientes->save();
         return $expedientes;
     }
