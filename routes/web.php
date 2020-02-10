@@ -28,6 +28,10 @@ Route::get('/contralor', 'ContralorController@index');
 
 Route::get('/diligenciario', 'DiligenciarioController@index');
 
+Route::get('/secretario', 'SecretarioController@index');
+
+Route::get('/ingeniero', 'IngenieroController@index');
+
 Route::get('/graficas', 'graController@index');
 
 /* Rutas de los componentes en interfaz home (Administrador) */

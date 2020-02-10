@@ -57,6 +57,12 @@ class LoginController extends Controller
             case 4:
                     return '/diligenciario';
                 break; 
+            case 5:
+                    return '/secretario';
+                break; 
+            case 6:
+                    return '/ingeniero';
+                break;         
             default:
                     return '/login'; 
                 break;
