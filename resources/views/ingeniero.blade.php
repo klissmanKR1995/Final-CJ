@@ -105,7 +105,6 @@
               <h1 class="mt-4">Bienvenidos al modulo ingeniero</h1>
               <p> Al sistema de generación de estadísticas del <strong> Poder Judicial del Estado de Tlaxcala. </strong> </p>
               
-              
 
               <br> 
             </div>
@@ -122,7 +121,9 @@
           </div>
 
           <div class="container">
-          
+                  
+                  <modulotres-component></modulotres-component>
+
           </div>
         </div>
       <!-- Termina formulario del modulo numero 2-->

@@ -5106,6 +5106,819 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulocincos: {},
+      modulocinco: {
+        id_expediente: '',
+        emision_acuerdo_controvertido: '',
+        fecha_emision_acuerdo: '',
+        fecha_emision_acuerdo_probatorio: '',
+        emision_acuerdo: '',
+        numero_total_acuerdos: ''
+      },
+      editarActivo: false,
+      result1: ""
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResultsModuloCinco();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResultsModuloCinco: function getResultsModuloCinco() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/modulocinco?page=' + page).then(function (response) {
+        _this2.modulocincos = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.modulocinco.id_expediente = item.id_expediente;
+      this.modulocinco.emision_acuerdo_controvertido = item.emision_acuerdo_controvertido;
+      this.modulocinco.fecha_emision_acuerdo = item.fecha_emision_acuerdo;
+      this.modulocinco.fecha_emision_acuerdo_probatorio = item.fecha_emision_acuerdo_probatorio;
+      this.modulocinco.emision_acuerdo = item.emision_acuerdo;
+      this.modulocinco.numero_total_acuerdos = item.numero_total_acuerdos;
+      this.modulocinco.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        emision_acuerdo_controvertido: item.emision_acuerdo_controvertido,
+        fecha_emision_acuerdo: item.fecha_emision_acuerdo,
+        fecha_emision_acuerdo_probatorio: item.fecha_emision_acuerdo_probatorio,
+        emision_acuerdo: item.emision_acuerdo,
+        numero_total_acuerdos: item.numero_total_acuerdos
+      };
+      axios.put("/Proyecto-CJ/public/modulocinco/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResultsModuloCinco(_this3.modulocincos.current_page);
+      });
+      this.modulocinco.id_expediente = '';
+      this.modulocinco.emision_acuerdo_controvertido = '';
+      this.modulocinco.fecha_emision_acuerdo = '';
+      this.modulocinco.fecha_emision_acuerdo_probatorio = '';
+      this.modulocinco.emision_acuerdo = '';
+      this.modulocinco.numero_total_acuerdos = '';
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.modulocinco = {
+        id_expediente: '',
+        emision_acuerdo_controvertido: '',
+        fecha_emision_acuerdo: '',
+        fecha_emision_acuerdo_probatorio: '',
+        emision_acuerdo: '',
+        numero_total_acuerdos: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      var params = {
+        id_expediente: this.modulocinco.id_expediente,
+        emision_acuerdo_controvertido: this.modulocinco.emision_acuerdo_controvertido,
+        fecha_emision_acuerdo: this.modulocinco.fecha_emision_acuerdo,
+        fecha_emision_acuerdo_probatorio: this.modulocinco.fecha_emision_acuerdo_probatorio,
+        emision_acuerdo: this.modulocinco.emision_acuerdo,
+        numero_total_acuerdos: this.modulocinco.numero_total_acuerdos
+      }; //Accion para limpiar los campos
+
+      this.modulocinco.id_expediente = '';
+      this.modulocinco.emision_acuerdo_controvertido = '';
+      this.modulocinco.fecha_emision_acuerdo = '';
+      this.modulocinco.fecha_emision_acuerdo_probatorio = '';
+      this.modulocinco.emision_acuerdo = '';
+      this.modulocinco.numero_total_acuerdos = '';
+      axios.post('/Proyecto-CJ/public/modulocinco', params).then(function (res) {
+        _this4.getResults(_this4.modulocinco.last_page);
+      });
+      /* axios.post('/Proyecto-CJ/public/modulocinco', params)     
+           .then(res => {
+               this.getResultsModuloCinco(this.modulocincos.last_page);
+               this.expedientes.length = 0
+               axios.get('/Proyecto-CJ/public/expedientesAll')
+               .then(res => {
+                   this.expedientes = res.data;
+               })
+       })*/
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloCinco').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModuloCinco: function eliminarModuloCinco(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/modulocinco/" + $("#id").val()).then(function () {
+          _this5.getResultsModuloCinco(_this5.modulocincos.current_page);
+
+          $('#exampleModalModuloCinco').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloCinco').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulotress: {},
+      modulotres: {
+        id_expediente: '',
+        tipo_audiencia: '',
+        fecha_audiencia: '',
+        fecha_inicio_audiencia: '',
+        fecha_conclusion: '',
+        se_difiere: '',
+        tipo_audiencia_diferida: '',
+        causas_diferimientos: '',
+        fecha_difiere_audiencia: '',
+        fecha_continuidad: '',
+        fecha_conclusion_diferida: ''
+      },
+      editarActivo: false,
+      result1: ""
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResults();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResults: function getResults() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/modulo3?page=' + page).then(function (response) {
+        _this2.modulotress = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.modulotres.id_expediente = item.id_expediente;
+      this.modulotres.tipo_audiencia = item.tipo_audiencia;
+      this.modulotres.fecha_audiencia = item.fecha_audiencia;
+      this.modulotres.fecha_inicio_audiencia = item.fecha_inicio_audiencia;
+      this.modulotres.fecha_conclusion = item.fecha_conclusion;
+      this.modulotres.se_difiere = item.se_difiere;
+      this.modulotres.tipo_audiencia_diferida = item.tipo_audiencia_diferida;
+      this.modulotres.causas_diferimientos = item.causas_diferimientos;
+      this.modulotres.fecha_difiere_audiencia = item.fecha_difiere_audiencia;
+      this.modulotres.fecha_continuidad = item.fecha_continuidad;
+      this.modulotres.fecha_conclusion_diferida = item.fecha_conclusion_diferida;
+      this.modulotres.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        tipo_audiencia: item.tipo_audiencia,
+        fecha_audiencia: item.fecha_audiencia,
+        fecha_inicio_audiencia: item.fecha_inicio_audiencia,
+        fecha_conclusion: item.fecha_conclusion,
+        se_difiere: item.se_difiere,
+        tipo_audiencia_diferida: item.tipo_audiencia_diferida,
+        causas_diferimientos: item.causas_diferimientos,
+        fecha_difiere_audiencia: item.fecha_difiere_audiencia,
+        fecha_continuidad: item.fecha_continuidad,
+        fecha_conclusion_diferida: item.fecha_conclusion_diferida
+      };
+      axios.put("/Proyecto-CJ/public/modulo3/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResults(_this3.modulotress.current_page);
+      });
+      this.modulotres.id_expediente = item.id_expediente;
+      this.modulotres.tipo_audiencia = item.tipo_audiencia;
+      this.modulotres.fecha_audiencia = item.fecha_audiencia;
+      this.modulotres.fecha_inicio_audiencia = item.fecha_inicio_audiencia;
+      this.modulotres.fecha_conclusion = item.fecha_conclusion;
+      this.modulotres.se_difiere = item.se_difiere;
+      this.modulotres.tipo_audiencia_diferida = item.tipo_audiencia_diferida;
+      this.modulotres.causas_diferimientos = item.causas_diferimientos;
+      this.modulotres.fecha_difiere_audiencia = item.fecha_difiere_audiencia;
+      this.modulotres.fecha_continuidad = item.fecha_continuidad;
+      this.modulotres.fecha_conclusion_diferida = item.fecha_conclusion_diferida;
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.modulotres = {
+        id_expediente: '',
+        tipo_audiencia: '',
+        fecha_audiencia: '',
+        fecha_inicio_audiencia: '',
+        fecha_conclusion: '',
+        se_difiere: '',
+        tipo_audiencia_diferida: '',
+        causas_diferimientos: '',
+        fecha_difiere_audiencia: '',
+        fecha_continuidad: '',
+        fecha_conclusion_diferida: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      //Valida modulouno de formularios
+      //if(this.modulouno.municipios.trim() === ''){
+      //alert('Debes completar todos los campos antes de guardar');
+      //return;
+      //}
+      //console.log(this.modulouno.id_expediente, this.modulouno.descripcion); 
+      var params = {
+        id_expediente: this.modulotres.id_expediente,
+        tipo_audiencia: this.modulotres.tipo_audiencia,
+        fecha_audiencia: this.modulotres.fecha_audiencia,
+        fecha_inicio_audiencia: this.modulotres.fecha_inicio_audiencia,
+        fecha_conclusion: this.modulotres.fecha_conclusion,
+        se_difiere: this.modulotres.se_difiere,
+        tipo_audiencia_diferida: this.modulotres.tipo_audiencia_diferida,
+        causas_diferimientos: this.modulotres.causas_diferimientos,
+        fecha_difiere_audiencia: this.modulotres.fecha_difiere_audiencia,
+        fecha_continuidad: this.modulotres.fecha_continuidad,
+        fecha_conclusion_diferida: this.modulotres.fecha_conclusion_diferida
+      }; //Accion para limpiar los campos
+
+      this.modulotres.id_expediente = '';
+      this.modulotres.tipo_audiencia = '';
+      this.modulotres.fecha_audiencia = '';
+      this.modulotres.fecha_inicio_audiencia = '';
+      this.modulotres.fecha_conclusion = '';
+      this.modulotres.se_difiere = '';
+      this.modulotres.tipo_audiencia_diferida = '';
+      this.modulotres.causas_diferimientos = '';
+      this.modulotres.fecha_difiere_audiencia = '';
+      this.modulotres.fecha_continuidad = '';
+      this.modulotres.fecha_conclusion_diferida = '';
+      axios.post('/Proyecto-CJ/public/modulo3', params).then(function (res) {
+        _this4.getResults(_this4.modulotress.last_page);
+
+        _this4.expedientes.length = 0;
+        axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+          _this4.expedientes = res.data;
+        });
+      });
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloTres').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModulotres: function eliminarModulotres(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/modulo3/" + $("#id").val()).then(function () {
+          _this5.getResults(_this5.modulotress.current_page);
+
+          $('#exampleModalModuloTres').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloTres').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/modulodiezComponent.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/modulodiezComponent.vue?vue&type=script&lang=js& ***!
@@ -52435,6 +53248,2054 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.modulocinco)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocinco.id_expediente,
+                            expression: "modulocinco.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Emisión de acuerdo por hechos no controvertidos: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.modulocinco.emision_acuerdo_controvertido,
+                              expression:
+                                "modulocinco.emision_acuerdo_controvertido"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocinco,
+                                "emision_acuerdo_controvertido",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Fecha causa sentencia")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocinco.fecha_emision_acuerdo,
+                            expression: "modulocinco.fecha_emision_acuerdo"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocinco.fecha_emision_acuerdo
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "fecha_emision_acuerdo",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Fecha de promoción")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value:
+                              _vm.modulocinco.fecha_emision_acuerdo_probatorio,
+                            expression:
+                              "modulocinco.fecha_emision_acuerdo_probatorio"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value:
+                            _vm.modulocinco.fecha_emision_acuerdo_probatorio
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "fecha_emision_acuerdo_probatorio",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Emision de acuerdo: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocinco.emision_acuerdo,
+                              expression: "modulocinco.emision_acuerdo"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocinco,
+                                "emision_acuerdo",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la fase de Audiencia preliminar:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocinco.numero_total_acuerdos,
+                            expression: "modulocinco.numero_total_acuerdos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.modulocinco.numero_total_acuerdos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "numero_total_acuerdos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(" Ejecución de la sentencia (Modulo VIII)  ")
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("label", { attrs: { for: "inputState1" } }, [
+                      _vm._v("Id expediente:")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.modulocinco.id_expediente,
+                          expression: "modulocinco.id_expediente"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "number" },
+                      domProps: { value: _vm.modulocinco.id_expediente },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.modulocinco,
+                            "id_expediente",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Emisión de acuerdo por hechos no controvertidos: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.modulocinco.emision_acuerdo_controvertido,
+                              expression:
+                                "modulocinco.emision_acuerdo_controvertido"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocinco,
+                                "emision_acuerdo_controvertido",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Fecha causa sentencia")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocinco.fecha_emision_acuerdo,
+                            expression: "modulocinco.fecha_emision_acuerdo"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocinco.fecha_emision_acuerdo
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "fecha_emision_acuerdo",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Fecha de promoción")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value:
+                              _vm.modulocinco.fecha_emision_acuerdo_probatorio,
+                            expression:
+                              "modulocinco.fecha_emision_acuerdo_probatorio"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value:
+                            _vm.modulocinco.fecha_emision_acuerdo_probatorio
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "fecha_emision_acuerdo_probatorio",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Emision de acuerdo: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocinco.emision_acuerdo,
+                              expression: "modulocinco.emision_acuerdo"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocinco,
+                                "emision_acuerdo",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la fase de Audiencia preliminar:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocinco.numero_total_acuerdos,
+                            expression: "modulocinco.numero_total_acuerdos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.modulocinco.numero_total_acuerdos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocinco,
+                              "numero_total_acuerdos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulocincos.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(_vm._s(item.emision_acuerdo_controvertido))
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_emision_acuerdo))]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(_vm._s(item.fecha_emision_acuerdo_probatorio))
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.emision_acuerdo))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.numero_total_acuerdos))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulocincos },
+            on: { "pagination-change-page": _vm.getResultsModuloCinco }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloCinco",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModuloCincoLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloCinco("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloCinco("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - VIII) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Emision de acuerdo ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Fecha de emisión de acuerdo ")
+      ]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Fecha de emisión de acuerdo probatorio")
+      ]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Emisión de acuerdo")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Numero total de acuerdos")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloCincoLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.modulotres)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.id_expediente,
+                            expression: "modulotres.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulotres,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de Audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.tipo_audiencia,
+                              expression: "modulotres.tipo_audiencia"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "tipo_audiencia",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Audiencia incidental")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia de juicio")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("4.- Audiencia de continuación de juicio")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Otra")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora de audiencia fijada por la/el juez: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_audiencia,
+                            expression: "modulotres.fecha_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_audiencia },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha y hora de inicio de la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_inicio_audiencia,
+                            expression: "modulotres.fecha_inicio_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_inicio_audiencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_inicio_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha y hora de conclusión de la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_conclusion,
+                            expression: "modulotres.fecha_conclusion"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_conclusion },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_conclusion",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se difiere la Audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.se_difiere,
+                              expression: "modulotres.se_difiere"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "se_difiere",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de audiencia diferida: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.tipo_audiencia_diferida,
+                              expression: "modulotres.tipo_audiencia_diferida"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "tipo_audiencia_diferida",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Audiencia incidental")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia de juicio")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("4.- Audiencia de continuación de juicio")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Otra")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Causas de diferimientos de audiencias: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.causas_diferimientos,
+                            expression: "modulotres.causas_diferimientos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: {
+                          value: _vm.modulotres.causas_diferimientos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "causas_diferimientos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha en la que se difiere la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_difiere_audiencia,
+                            expression: "modulotres.fecha_difiere_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_difiere_audiencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_difiere_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora en que se da continuidad a la audiencia diferida: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_continuidad,
+                            expression: "modulotres.fecha_continuidad"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_continuidad },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_continuidad",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora de conclusión de la audiencia diferida: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_conclusion_diferida,
+                            expression: "modulotres.fecha_conclusion_diferida"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_conclusion_diferida
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_conclusion_diferida",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(" Datos de audiencias (Modulo III)  ")
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.id_expediente,
+                            expression: "modulotres.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulotres,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de Audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.tipo_audiencia,
+                              expression: "modulotres.tipo_audiencia"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "tipo_audiencia",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Audiencia incidental")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia de juicio")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("4.- Audiencia de continuación de juicio")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Otra")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora de audiencia fijada por la/el juez: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_audiencia,
+                            expression: "modulotres.fecha_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_audiencia },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha y hora de inicio de la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_inicio_audiencia,
+                            expression: "modulotres.fecha_inicio_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_inicio_audiencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_inicio_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha y hora de conclusión de la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_conclusion,
+                            expression: "modulotres.fecha_conclusion"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_conclusion },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_conclusion",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se difiere la Audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.se_difiere,
+                              expression: "modulotres.se_difiere"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "se_difiere",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de audiencia diferida: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulotres.tipo_audiencia_diferida,
+                              expression: "modulotres.tipo_audiencia_diferida"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulotres,
+                                "tipo_audiencia_diferida",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Audiencia incidental")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia de juicio")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("4.- Audiencia de continuación de juicio")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Otra")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Causas de diferimientos de audiencias: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.causas_diferimientos,
+                            expression: "modulotres.causas_diferimientos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text" },
+                        domProps: {
+                          value: _vm.modulotres.causas_diferimientos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "causas_diferimientos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha en la que se difiere la audiencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_difiere_audiencia,
+                            expression: "modulotres.fecha_difiere_audiencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_difiere_audiencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_difiere_audiencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora en que se da continuidad a la audiencia diferida: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_continuidad,
+                            expression: "modulotres.fecha_continuidad"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulotres.fecha_continuidad },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_continuidad",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha y hora de conclusión de la audiencia diferida: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulotres.fecha_conclusion_diferida,
+                            expression: "modulotres.fecha_conclusion_diferida"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulotres.fecha_conclusion_diferida
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulotres,
+                              "fecha_conclusion_diferida",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulotress.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_audiencia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_audiencia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_inicio_audiencia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_conclusion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.se_difiere))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_audicencia_diferida))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.causas_diferimientos))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_difiere_audiencia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_continuidad))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_conclusion_diferida))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulotress },
+            on: { "pagination-change-page": _vm.getResults }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloTres",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModuloTresLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulotres("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulotres("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - III) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-Inicio ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-conclusión ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Se difiere ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo-diferida ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Causas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-difiere ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-continuidad")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Fecha-conclusión-diferida ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloTresLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/modulodiezComponent.vue?vue&type=template&id=03561af2&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/modulodiezComponent.vue?vue&type=template&id=03561af2& ***!
@@ -79799,6 +82660,8 @@ Vue.component('modulodiezactualizar-component', __webpack_require__(/*! ./compon
 Vue.component('expedientes-component', __webpack_require__(/*! ./components/expedientesComponent.vue */ "./resources/js/components/expedientesComponent.vue")["default"]);
 Vue.component('modulouno-component', __webpack_require__(/*! ./components/modulounoComponent.vue */ "./resources/js/components/modulounoComponent.vue")["default"]);
 Vue.component('modulodos-component', __webpack_require__(/*! ./components/modulodosComponent.vue */ "./resources/js/components/modulodosComponent.vue")["default"]);
+Vue.component('modulotres-component', __webpack_require__(/*! ./components/moduloTresComponent.vue */ "./resources/js/components/moduloTresComponent.vue")["default"]);
+Vue.component('modulocinco-component', __webpack_require__(/*! ./components/moduloCincoComponent.vue */ "./resources/js/components/moduloCincoComponent.vue")["default"]);
 /**
  Componentes Contralor
  */
@@ -80615,6 +83478,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_materiasNComponent_vue_vue_type_template_id_61a7ef08___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_materiasNComponent_vue_vue_type_template_id_61a7ef08___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCincoComponent.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/moduloCincoComponent.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloCincoComponent.vue?vue&type=template&id=5d351d8a& */ "./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a&");
+/* harmony import */ var _moduloCincoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloCincoComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloCincoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloCincoComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloCincoComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCincoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloCincoComponent.vue?vue&type=template&id=5d351d8a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCincoComponent.vue?vue&type=template&id=5d351d8a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloTresComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/moduloTresComponent.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloTresComponent.vue?vue&type=template&id=8c6ef740& */ "./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740&");
+/* harmony import */ var _moduloTresComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloTresComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloTresComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloTresComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloTresComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloTresComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloTresComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloTresComponent.vue?vue&type=template&id=8c6ef740& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloTresComponent_vue_vue_type_template_id_8c6ef740___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

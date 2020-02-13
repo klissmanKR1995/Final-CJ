@@ -152,6 +152,10 @@ Route::resource('/modulodos', 'ejemploDosController');
 
 Route::resource('/modulotres', 'ejemploTresController');
 
+Route::resource('/modulo3', 'moduloTresController');
+
+Route::resource('/modulocinco', 'moduloCincoController');
+
 
 /* Rutas del PDF */
 

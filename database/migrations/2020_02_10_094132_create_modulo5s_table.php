@@ -16,9 +16,10 @@ class CreateModulo5sTable extends Migration
         Schema::create('modulo5', function (Blueprint $table) {
             $table->bigIncrements('id_modulo');
             $table->bigInteger('id_expediente')->unsigned();
-            $table->string('emision_acuerdo')->nullable();
+            $table->string('emision_acuerdo_controvertido')->nullable();
             $table->date('fecha_emision_acuerdo')->nullable();
             $table->date('fecha_emision_acuerdo_probatorio')->nullable();
+            $table->string('emision_acuerdo')->nullable();
             $table->bigInteger('numero_total_acuerdos')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('id_expediente')->references('id_expediente')->on('expedientes');
