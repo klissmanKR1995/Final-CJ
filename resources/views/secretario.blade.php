@@ -62,18 +62,20 @@
                                   Módulo IV
                               </a>
                           </li>
+
+
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo5-tab" data-toggle="pill" href="#v-pills-modulo5" role="tab" aria-controls="v-pills-modulo5" aria-selected="false"><i class="fas fa-cube"></i>
                                    Módulo V
                               </a>
                           </li>
 
+                          
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo6-tab" data-toggle="pill" href="#v-pills-modulo6" role="tab" aria-controls="v-pills-modulo6" aria-selected="false"><i class="fas fa-cube"></i>
                                    Módulo VI
                               </a>
                           </li>
-                          
 
 
                            <li class="nav-item">
@@ -159,7 +161,7 @@
           </div>
 
           <div class="container">
-
+             <modulo2-component></modulo2-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 2-->
@@ -174,6 +176,7 @@
 
           <div class="container">
 
+            <modulocuatro-component></modulocuatro-component>          
           </div>
         </div>
       <!-- Termina formulario del modulo numero 4-->
@@ -200,7 +203,7 @@
           </div>
 
           <div class="container">
-
+            <moduloseis-component></moduloseis-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 6-->
@@ -214,7 +217,7 @@
           </div>
 
           <div class="container">
-
+              
           </div>
         </div>
       <!-- Termina formulario del modulo numero 7-->
@@ -228,7 +231,7 @@
           </div>
 
           <div class="container">
-
+            <modulosiete-component></modulosiete-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 7-->
@@ -242,7 +245,7 @@
           </div>
 
           <div class="container">
-
+            <modulodos-component></modulodos-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 8-->
@@ -256,7 +259,6 @@
           </div>
 
           <div class="container">
-
           </div>
         </div>
       <!-- Termina formulario del modulo numero 9-->

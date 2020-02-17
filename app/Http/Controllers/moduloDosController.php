@@ -113,7 +113,7 @@ class moduloDosController extends Controller
         $modulodos->numero_acuerdos= $request->numero_acuerdos;
         $modulodos->save();
         return $modulodos;
-
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -125,4 +125,5 @@ class moduloDosController extends Controller
         $modulodos = modulo2::find($id);
         $modulodos->delete();
     }
+
 }

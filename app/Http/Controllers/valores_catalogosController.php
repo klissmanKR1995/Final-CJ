@@ -494,6 +494,17 @@ class valores_catalogosController extends Controller
         );
     }
 
+    public function pruebasCatalogos(Request $request)
+    {
+        return json_encode(
+            DB::table('valores_catalagos')
+            ->select('id_valor','valor_variable')
+            ->where('id_catalogo', 25)
+            ->orderBy('id_catalogo', 'asc')
+            ->get()
+        );
+    }
+
 
   
     public function searchNombreValores(Request $request)

@@ -32,8 +32,20 @@ Vue.component('modulodiezactualizar-component', require('./components/modulodiez
 Vue.component('expedientes-component', require('./components/expedientesComponent.vue').default);
 Vue.component('modulouno-component', require('./components/modulounoComponent.vue').default);
 Vue.component('modulodos-component', require('./components/modulodosComponent.vue').default);
+Vue.component('modulo2-component', require('./components/moduloDossComponent.vue').default);
 Vue.component('modulotres-component', require('./components/moduloTresComponent.vue').default);
+Vue.component('modulocuatro-component', require('./components/moduloCuatroComponent.vue').default);
 Vue.component('modulocinco-component', require('./components/moduloCincoComponent.vue').default);
+Vue.component('moduloseis-component', require('./components/moduloSeisComponent.vue').default);
+Vue.component('modulosiete-component', require('./components/moduloSieteComponent.vue').default);
+
+
+
+
+
+
+
+
 
 /**
  Componentes Contralor

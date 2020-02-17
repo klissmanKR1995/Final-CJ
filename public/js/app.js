@@ -5447,6 +5447,2008 @@ Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulocuatros: {},
+      modulocuatro: {
+        id_expediente: '',
+        se_ofrecen_pruebas: '',
+        parte_que_ofrece_prueba: '',
+        fecha_ofrecen_pruebas: '',
+        fecha_admision_pruebas: '',
+        pruebas_ofrecidas_en: '',
+        tipo_pruebas_ofrecidas: '',
+        tipo_pruebas_admitidas: '',
+        tipo_pruebas_desahogadas: '',
+        fecha_desahogo_pruebas: '',
+        numero_pruebas_desahogadas: '',
+        fecha_aceptacion_cargo: '',
+        fecha_perritos_rinden: '',
+        juez_designa_perito: '',
+        se_renuncia_pruenas: '',
+        parte_renuncia_pruebas: '',
+        tipo_pruebas_renuncia: '',
+        motivos_renuncia_pruebas: ''
+      },
+      pruebas: [],
+      editarActivo: false,
+      result1: ""
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResults();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+    axios.get('/Proyecto-CJ/public/pruebasCatalogos').then(function (res) {
+      _this.pruebas = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResults: function getResults() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/modulocuatro?page=' + page).then(function (response) {
+        _this2.modulocuatros = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.modulocuatro.id_expediente = item.id_expediente;
+      this.modulocuatro.se_ofrecen_pruebas = item.se_ofrecen_pruebas;
+      this.modulocuatro.parte_que_ofrece_prueba = item.parte_que_ofrece_prueba;
+      this.modulocuatro.fecha_ofrecen_pruebas = item.fecha_ofrecen_pruebas;
+      this.modulocuatro.fecha_admision_pruebas = item.fecha_admision_pruebas;
+      this.modulocuatro.pruebas_ofrecidas_en = item.pruebas_ofrecidas_en;
+      this.modulocuatro.tipo_pruebas_ofrecidas = item.tipo_pruebas_ofrecidas;
+      this.modulocuatro.tipo_pruebas_admitidas = item.tipo_pruebas_admitidas;
+      this.modulocuatro.tipo_pruebas_desahogadas = item.tipo_pruebas_desahogadas;
+      this.modulocuatro.fecha_desahogo_pruebas = item.fecha_desahogo_pruebas;
+      this.modulocuatro.numero_pruebas_desahogadas = item.numero_pruebas_desahogadas;
+      this.modulocuatro.fecha_aceptacion_cargo = item.fecha_aceptacion_cargo;
+      this.modulocuatro.fecha_perritos_rinden = item.fecha_perritos_rinden;
+      this.modulocuatro.juez_designa_perito = item.juez_designa_perito;
+      this.modulocuatro.se_renuncia_pruenas = item.se_renuncia_pruenas;
+      this.modulocuatro.parte_renuncia_pruebas = item.parte_renuncia_pruebas;
+      this.modulocuatro.motivos_renuncia_pruebas = item.motivos_renuncia_pruebas;
+      this.modulocuatro.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        se_ofrecen_pruebas: item.se_ofrecen_pruebas,
+        parte_que_ofrece_prueba: item.parte_que_ofrece_prueba,
+        fecha_ofrecen_pruebas: item.fecha_ofrecen_pruebas,
+        fecha_admision_pruebas: item.fecha_admision_pruebas,
+        pruebas_ofrecidas_en: item.pruebas_ofrecidas_en,
+        tipo_pruebas_admitidas: item.tipo_pruebas_admitidas,
+        tipo_pruebas_desahogadas: item.tipo_pruebas_desahogadas,
+        fecha_desahogo_pruebas: item.fecha_desahogo_pruebas,
+        numero_pruebas_desahogadas: item.numero_pruebas_desahogadas,
+        fecha_aceptacion_cargo: item.fecha_aceptacion_cargo,
+        fecha_perritos_rinden: item.fecha_perritos_rinden,
+        juez_designa_perito: item.juez_designa_perito,
+        se_renuncia_pruenas: item.se_renuncia_pruenas,
+        parte_renuncia_pruebas: item.parte_renuncia_pruebas,
+        motivos_renuncia_pruebas: item.motivos_renuncia_pruebas
+      };
+      axios.put("/Proyecto-CJ/public/modulocuatro/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResults(_this3.modulocuatros.current_page);
+      });
+      this.modulocuatro.id_expediente = '';
+      this.modulocuatro.se_ofrecen_pruebas = '';
+      this.modulocuatro.parte_que_ofrece_prueba = '';
+      this.modulocuatro.fecha_ofrecen_pruebas = '';
+      this.modulocuatro.fecha_admision_pruebas = '';
+      this.modulocuatro.pruebas_ofrecidas_en = '';
+      this.modulocuatro.tipo_pruebas_ofrecidas = '';
+      this.modulocuatro.tipo_pruebas_admitidas = '';
+      this.modulocuatro.tipo_pruebas_desahogadas = '';
+      this.modulocuatro.fecha_desahogo_pruebas = '';
+      this.modulocuatro.numero_pruebas_desahogadas = '';
+      this.modulocuatro.fecha_aceptacion_cargo = '';
+      this.modulocuatro.fecha_perritos_rinden = '';
+      this.modulocuatro.juez_designa_perito = '';
+      this.modulocuatro.se_renuncia_pruenas = '';
+      this.modulocuatro.parte_renuncia_pruebas = '';
+      this.modulocuatro.tipo_pruebas_renuncia = '';
+      this.modulocuatro.motivos_renuncia_pruebas = '';
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.modulocuatro = {
+        id_expediente: '',
+        se_ofrecen_pruebas: '',
+        parte_que_ofrece_prueba: '',
+        fecha_ofrecen_pruebas: '',
+        fecha_admision_pruebas: '',
+        pruebas_ofrecidas_en: '',
+        tipo_pruebas_ofrecidas: '',
+        tipo_pruebas_admitidas: '',
+        tipo_pruebas_desahogadas: '',
+        fecha_desahogo_pruebas: '',
+        numero_pruebas_desahogadas: '',
+        fecha_aceptacion_cargo: '',
+        fecha_perritos_rinden: '',
+        juez_designa_perito: '',
+        se_renuncia_pruenas: '',
+        parte_renuncia_pruebas: '',
+        tipo_pruebas_renuncia: '',
+        motivos_renuncia_pruebas: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      //Valida modulouno de formularios
+      //if(this.modulouno.municipios.trim() === ''){
+      //alert('Debes completar todos los campos antes de guardar');
+      //return;
+      //}
+      //console.log(this.modulouno.id_expediente, this.modulouno.descripcion); 
+      var params = {
+        id_expediente: this.modulocuatro.id_expediente,
+        se_ofrecen_pruebas: this.modulocuatro.se_ofrecen_pruebas,
+        parte_que_ofrece_prueba: this.modulocuatro.parte_que_ofrece_prueba,
+        fecha_ofrecen_pruebas: this.modulocuatro.fecha_ofrecen_pruebas,
+        fecha_admision_pruebas: this.modulocuatro.fecha_admision_pruebas,
+        pruebas_ofrecidas_en: this.modulocuatro.pruebas_ofrecidas_en,
+        tipo_pruebas_ofrecidas: this.modulocuatro.tipo_pruebas_ofrecidas,
+        tipo_pruebas_admitidas: this.modulocuatro.tipo_pruebas_admitidas,
+        tipo_pruebas_desahogadas: this.modulocuatro.tipo_pruebas_desahogadas,
+        fecha_desahogo_pruebas: this.modulocuatro.fecha_desahogo_pruebas,
+        numero_pruebas_desahogadas: this.modulocuatro.numero_pruebas_desahogadas,
+        fecha_aceptacion_cargo: this.modulocuatro.fecha_aceptacion_cargo,
+        fecha_perritos_rinden: this.modulocuatro.fecha_perritos_rinden,
+        juez_designa_perito: this.modulocuatro.juez_designa_perito,
+        se_renuncia_pruenas: this.modulocuatro.se_renuncia_pruenas,
+        parte_renuncia_pruebas: this.modulocuatro.parte_renuncia_pruebas,
+        tipo_pruebas_renuncia: this.modulocuatro.tipo_pruebas_renuncia,
+        motivos_renuncia_pruebas: this.modulocuatro.motivos_renuncia_pruebas
+      }; //Accion para limpiar los campos
+
+      this.modulocuatro.id_expediente = '';
+      this.modulocuatro.se_ofrecen_pruebas = '';
+      this.modulocuatro.parte_que_ofrece_prueba = '';
+      this.modulocuatro.fecha_ofrecen_pruebas = '';
+      this.modulocuatro.fecha_admision_pruebas = '';
+      this.modulocuatro.pruebas_ofrecidas_en = '';
+      this.modulocuatro.tipo_pruebas_ofrecidas = '';
+      this.modulocuatro.tipo_pruebas_admitidas = '';
+      this.modulocuatro.tipo_pruebas_desahogadas = '';
+      this.modulocuatro.fecha_desahogo_pruebas = '';
+      this.modulocuatro.numero_pruebas_desahogadas = '';
+      this.modulocuatro.fecha_aceptacion_cargo = '';
+      this.modulocuatro.fecha_perritos_rinden = '';
+      this.modulocuatro.juez_designa_perito = '';
+      this.modulocuatro.se_renuncia_pruenas = '';
+      this.modulocuatro.parte_renuncia_pruebas = '';
+      this.modulocuatro.tipo_pruebas_renuncia = '';
+      this.modulocuatro.motivos_renuncia_pruebas = '';
+      axios.post('/Proyecto-CJ/public/modulocuatro', params).then(function (res) {
+        _this4.getResults(_this4.modulocuatros.last_page);
+
+        _this4.expedientes.length = 0;
+        axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+          _this4.expedientes = res.data;
+        });
+      });
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloUno').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModulouno: function eliminarModulouno(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/modulouno/" + $("#id").val()).then(function () {
+          _this5.getResults(_this5.modulounos.current_page);
+
+          $('#exampleModalModuloUno').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloUno').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulodoss: {},
+      modulodos: {
+        id_expediente: '',
+        monto_demandado: '',
+        fecha_emision: '',
+        tipo_acuerdo: '',
+        subsana_prevencion: '',
+        contestacion_demanda: '',
+        fecha_no_contesta: '',
+        si_contesta: '',
+        fecha_si_contesta: '',
+        reconviene_demanda: '',
+        fecha_reconviene: '',
+        contesta_reconvenido: '',
+        numero_acuerdos: ''
+      },
+      editarActivo: false,
+      result1: ""
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResults();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResults: function getResults() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/modulo2?page=' + page).then(function (response) {
+        _this2.modulodoss = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.modulodos.id_expediente = item.id_expediente;
+      this.modulodos.monto_demandado = item.monto_demandado;
+      this.modulodos.fecha_emision = item.fecha_emision;
+      this.modulodos.tipo_acuerdo = item.tipo_acuerdo;
+      this.modulodos.subsana_prevencion = item.subsana_prevencion;
+      this.modulodos.contestacion_demanda = item.contestacion_demanda;
+      this.modulodos.fecha_no_contesta = item.fecha_no_contesta;
+      this.modulodos.si_contesta = item.si_contesta;
+      this.modulodos.fecha_si_contesta = item.fecha_si_contesta;
+      this.modulodos.reconviene_demanda = item.reconviene_demanda;
+      this.modulodos.fecha_reconviene = item.fecha_reconviene;
+      this.modulodos.contesta_reconvenido = item.contesta_reconvenido;
+      this.modulodos.numero_acuerdos = item.numero_acuerdos;
+      this.modulodos.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        monto_demandado: item.monto_demandado,
+        fecha_emision: item.fecha_emision,
+        tipo_acuerdo: item.tipo_acuerdo,
+        subsana_prevencion: item.subsana_prevencion,
+        contestacion_demanda: item.contestacion_demanda,
+        fecha_no_contesta: item.fecha_no_contesta,
+        si_contesta: item.si_contesta,
+        fecha_si_contesta: item.fecha_si_contesta,
+        reconviene_demanda: item.reconviene_demanda,
+        fecha_reconviene: item.fecha_reconviene,
+        contesta_reconvenido: item.contesta_reconvenido,
+        numero_acuerdos: item.numero_acuerdos
+      };
+      axios.put("/Proyecto-CJ/public/modulo2/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResults(_this3.modulodoss.current_page);
+      });
+      this.modulodos.id_expediente = item.id_expediente;
+      this.modulodos.monto_demandado = item.monto_demandado;
+      this.modulodos.fecha_emision = item.fecha_emision;
+      this.modulodos.tipo_acuerdo = item.tipo_acuerdo;
+      this.modulodos.subsana_prevencion = item.subsana_prevencion;
+      this.modulodos.contestacion_demanda = item.contestacion_demanda;
+      this.modulodos.fecha_no_contesta = item.fecha_no_contesta;
+      this.modulodos.si_contesta = item.si_contesta;
+      this.modulodos.fecha_si_contesta = item.fecha_si_contesta;
+      this.modulodos.reconviene_demanda = item.reconviene_demanda;
+      this.modulodos.fecha_reconviene = item.fecha_reconviene;
+      this.modulodos.contesta_reconvenido = item.contesta_reconvenido;
+      this.modulodos.numero_acuerdos = item.numero_acuerdos;
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.modulodos = {
+        id_expediente: '',
+        monto_demandado: '',
+        fecha_emision: '',
+        tipo_acuerdo: '',
+        subsana_prevencion: '',
+        contestacion_demanda: '',
+        fecha_no_contesta: '',
+        si_contesta: '',
+        fecha_si_contesta: '',
+        reconviene_demanda: '',
+        fecha_reconviene: '',
+        contesta_reconvenido: '',
+        numero_acuerdos: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      //Valida modulouno de formularios
+      //if(this.modulouno.municipios.trim() === ''){
+      //alert('Debes completar todos los campos antes de guardar');
+      //return;
+      //}
+      //console.log(this.modulouno.id_expediente, this.modulouno.descripcion); 
+      var params = {
+        id_expediente: this.modulodos.id_expediente,
+        monto_demandado: this.modulodos.monto_demandado,
+        fecha_emision: this.modulodos.fecha_emision,
+        tipo_acuerdo: this.modulodos.tipo_acuerdo,
+        subsana_prevencion: this.modulodos.subsana_prevencion,
+        contestacion_demanda: this.modulodos.contestacion_demanda,
+        fecha_no_contesta: this.modulodos.fecha_no_contesta,
+        si_contesta: this.modulodos.si_contesta,
+        fecha_si_contesta: this.modulodos.fecha_si_contesta,
+        reconviene_demanda: this.modulodos.reconviene_demanda,
+        fecha_reconviene: this.modulodos.fecha_reconviene,
+        contesta_reconvenido: this.modulodos.contesta_reconvenido,
+        numero_acuerdos: this.modulodos.numero_acuerdos
+      }; //Accion para limpiar los campos
+
+      this.modulodos.id_expediente = '';
+      this.modulodos.monto_demandado = '';
+      this.modulodos.fecha_emision = '';
+      this.modulodos.tipo_acuerdo = '';
+      this.modulodos.subsana_prevencion = '';
+      this.modulodos.contestacion_demanda = '';
+      this.modulodos.fecha_no_contesta = '';
+      this.modulodos.si_contesta = '';
+      this.modulodos.fecha_si_contesta = '';
+      this.modulodos.reconviene_demanda = '';
+      this.modulodos.fecha_reconviene = '';
+      this.modulodos.contesta_reconvenido = '';
+      this.modulodos.numero_acuerdos = '';
+      axios.post('/Proyecto-CJ/public/modulo2', params).then(function (res) {
+        _this4.getResults(_this4.modulodoss.last_page);
+
+        _this4.expedientes.length = 0;
+        axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+          _this4.expedientes = res.data;
+        });
+      });
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloDos').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModulodos: function eliminarModulodos(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/modulo2/" + $("#id").val()).then(function () {
+          _this5.getResults(_this5.modulodoss.current_page);
+
+          $('#exampleModalModuloDos').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloDos').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulo6: {},
+      moduloseis: {
+        id_expediente: '',
+        alegatos_presentados: '',
+        alegatos_presentados_parte_demandada: '',
+        incidentes_pendientes: '',
+        numero_incidentes_por_resolver: '',
+        numero_incidentes_resueltos: '',
+        numero_total_acuerdos_por_resolver: ''
+      },
+      editarActivo: false
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResultsModuloSeis();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResultsModuloSeis: function getResultsModuloSeis() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/moduloseis?page=' + page).then(function (response) {
+        _this2.modulo6 = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.moduloseis.id_expediente = item.id_expediente;
+      this.moduloseis.alegatos_presentados = item.alegatos_presentados;
+      this.moduloseis.alegatos_presentados_parte_demandada = item.alegatos_presentados_parte_demandada;
+      this.moduloseis.incidentes_pendientes = item.incidentes_pendientes;
+      this.moduloseis.numero_incidentes_por_resolver = item.numero_incidentes_por_resolver;
+      this.moduloseis.numero_incidentes_resueltos = item.numero_incidentes_resueltos;
+      this.moduloseis.numero_total_acuerdos_por_resolver = item.numero_total_acuerdos_por_resolver;
+      this.moduloseis.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        alegatos_presentados: item.alegatos_presentados,
+        alegatos_presentados_parte_demandada: item.alegatos_presentados_parte_demandada,
+        incidentes_pendientes: item.incidentes_pendientes,
+        numero_incidentes_por_resolver: item.numero_incidentes_por_resolver,
+        numero_incidentes_resueltos: item.numero_incidentes_resueltos,
+        numero_total_acuerdos_por_resolver: item.numero_total_acuerdos_por_resolver
+      };
+      axios.put("/Proyecto-CJ/public/moduloseis/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResultsModuloSeis(_this3.modulo6.current_page);
+      });
+      this.moduloseis.id_expediente = '';
+      this.moduloseis.alegatos_presentados = '';
+      this.moduloseis.alegatos_presentados_parte_demandada = '';
+      this.moduloseis.incidentes_pendientes = '';
+      this.moduloseis.numero_incidentes_por_resolver = '';
+      this.moduloseis.numero_incidentes_resueltos = '';
+      this.moduloseis.numero_total_acuerdos_por_resolver = '';
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.moduloseis = {
+        id_expediente: '',
+        alegatos_presentados: '',
+        alegatos_presentados_parte_demandada: '',
+        incidentes_pendientes: '',
+        numero_incidentes_por_resolver: '',
+        numero_incidentes_resueltos: '',
+        numero_total_acuerdos_por_resolver: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      var params = {
+        id_expediente: this.moduloseis.id_expediente,
+        alegatos_presentados: this.moduloseis.alegatos_presentados,
+        alegatos_presentados_parte_demandada: this.moduloseis.alegatos_presentados_parte_demandada,
+        incidentes_pendientes: this.moduloseis.incidentes_pendientes,
+        numero_incidentes_por_resolver: this.moduloseis.numero_incidentes_por_resolver,
+        numero_incidentes_resueltos: this.moduloseis.numero_incidentes_resueltos,
+        numero_total_acuerdos_por_resolver: this.moduloseis.numero_total_acuerdos_por_resolver
+      }; //Accion para limpiar los campos
+
+      this.moduloseis.id_expediente = '';
+      this.moduloseis.alegatos_presentados = '';
+      this.moduloseis.alegatos_presentados_parte_demandada = '';
+      this.moduloseis.incidentes_pendientes = '';
+      this.moduloseis.numero_incidentes_por_resolver = '';
+      this.moduloseis.numero_incidentes_resueltos = '';
+      this.moduloseis.numero_total_acuerdos_por_resolver = '';
+      axios.post('/Proyecto-CJ/public/moduloseis', params).then(function (res) {
+        _this4.getResults(_this4.moduloseis.last_page);
+      });
+      /* axios.post('/Proyecto-CJ/public/modulocinco', params)     
+           .then(res => {
+               this.getResultsModuloCinco(this.modulocincos.last_page);
+               this.expedientes.length = 0
+               axios.get('/Proyecto-CJ/public/expedientesAll')
+               .then(res => {
+                   this.expedientes = res.data;
+               })
+       })*/
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloSeis').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModuloSeis: function eliminarModuloSeis(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/moduloseis/" + $("#id").val()).then(function () {
+          _this5.getResultsModuloSeis(_this5.modulo6.current_page);
+
+          $('#exampleModalModuloSeis').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloSeis').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select/dist/vue-select.css */ "./node_modules/vue-select/dist/vue-select.css");
+/* harmony import */ var vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select_dist_vue_select_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.component('vue-select', vue_select__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      expedientes: [],
+      modulosietes: {},
+      modulosiete: {
+        id_expediente: '',
+        tipo_termminacion: '',
+        caso_terminacion: '',
+        fase_terminacion: '',
+        fecha_terminacion: '',
+        fecha_emision_sentencia: '',
+        sentencia_favor: '',
+        monto_liquido: ''
+      },
+      editarActivo: false
+    };
+  },
+  mounted: function mounted() {
+    // Fetch initial results
+    this.getResults();
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+      _this.expedientes = res.data;
+    })["catch"](function (error) {
+      console.log(error.response);
+    });
+  },
+  methods: {
+    getResults: function getResults() {
+      var _this2 = this;
+
+      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      axios.get('/Proyecto-CJ/public/modulo7?page=' + page).then(function (response) {
+        _this2.modulosietes = response.data;
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
+    },
+    editarFormulario: function editarFormulario(item) {
+      this.editarActivo = true;
+      this.modulosiete.id_expediente = item.id_expediente;
+      this.modulosiete.tipo_termminacion = item.tipo_termminacion;
+      this.modulosiete.caso_terminacion = item.caso_terminacion;
+      this.modulosiete.fase_terminacion = item.fase_terminacion;
+      this.modulosiete.fecha_terminacion = item.fecha_terminacion;
+      this.modulosiete.fecha_emision_sentencia = item.fecha_emision_sentencia;
+      this.modulosiete.sentencia_favor = item.sentencia_favor;
+      this.modulosiete.monto_liquido = item.monto_liquido;
+      this.modulosiete.id_modulo = item.id_modulo;
+    },
+    editar: function editar(item) {
+      var _this3 = this;
+
+      var params = {
+        id_expediente: item.id_expediente,
+        tipo_termminacion: item.tipo_termminacion,
+        caso_terminacion: item.caso_terminacion,
+        fase_terminacion: item.fase_terminacion,
+        fecha_terminacion: item.fecha_terminacion,
+        fecha_emision_sentencia: item.fecha_emision_sentencia,
+        sentencia_favor: item.sentencia_favor,
+        monto_liquido: item.monto_liquido
+      };
+      axios.put("/Proyecto-CJ/public/modulo7/".concat(item.id_modulo), params).then(function (res) {
+        _this3.editarActivo = false;
+
+        _this3.getResults(_this3.modulosietes.current_page);
+      });
+      this.modulosiete.id_expediente = item.id_expediente;
+      this.modulosiete.tipo_termminacion = item.tipo_termminacion;
+      this.modulosiete.caso_terminacion = item.caso_terminacion;
+      this.modulosiete.fase_terminacion = item.fase_terminacion;
+      this.modulosiete.fecha_terminacion = item.fecha_terminacion;
+      this.modulosiete.fecha_emision_sentencia = item.fecha_emision_sentencia;
+      this.modulosiete.sentencia_favor = item.sentencia_favor;
+      this.modulosiete.monto_liquido = item.monto_liquido;
+    },
+    cancelarEdicion: function cancelarEdicion() {
+      this.editarActivo = false;
+      this.modulosiete = {
+        id_expediente: '',
+        tipo_termminacion: '',
+        caso_terminacion: '',
+        fase_terminacion: '',
+        fecha_terminacion: '',
+        fecha_emision_sentencia: '',
+        sentencia_favor: '',
+        monto_liquido: ''
+      };
+    },
+    agregar: function agregar() {
+      var _this4 = this;
+
+      //Valida modulouno de formularios
+      //if(this.modulouno.municipios.trim() === ''){
+      //alert('Debes completar todos los campos antes de guardar');
+      //return;
+      //}
+      //console.log(this.modulouno.id_expediente, this.modulouno.descripcion); 
+      var params = {
+        id_expediente: this.modulosiete.id_expediente,
+        tipo_termminacion: this.modulosiete.tipo_termminacion,
+        caso_terminacion: this.modulosiete.caso_terminacion,
+        fase_terminacion: this.modulosiete.fase_terminacion,
+        fecha_terminacion: this.modulosiete.fecha_terminacion,
+        fecha_emision_sentencia: this.modulosiete.fecha_emision_sentencia,
+        sentencia_favor: this.modulosiete.sentencia_favor,
+        monto_liquido: this.modulosiete.monto_liquido
+      }; //Accion para limpiar los campos
+
+      this.modulosiete.id_expediente = '';
+      this.modulosiete.tipo_termminacion = '';
+      this.modulosiete.caso_terminacion = '';
+      this.modulosiete.fase_terminacion = '';
+      this.modulosiete.fecha_terminacion = '';
+      this.modulosiete.fecha_emision_sentencia = '';
+      this.modulosiete.sentencia_favor = '';
+      this.modulosiete.monto_liquido = '';
+      axios.post('/Proyecto-CJ/public/modulo7', params).then(function (res) {
+        _this4.getResults(_this4.modulosietes.last_page);
+
+        _this4.expedientes.length = 0;
+        axios.get('/Proyecto-CJ/public/expedientesAll').then(function (res) {
+          _this4.expedientes = res.data;
+        });
+      });
+    },
+    confirmar: function confirmar(id) {
+      $('#exampleModalModuloSiete').modal("show");
+      $('#id').val(id);
+    },
+    eliminarModulosiete: function eliminarModulosiete(op) {
+      var _this5 = this;
+
+      if (op === "aceptar") {
+        axios["delete"]("/Proyecto-CJ/public/modulo7/" + $("#id").val()).then(function () {
+          _this5.getResults(_this5.modulosietes.current_page);
+
+          $('#exampleModalModuloSiete').modal("hide");
+        });
+      } else {
+        $('#exampleModalModuloSiete').modal("hide");
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloTresComponent.vue?vue&type=script&lang=js& ***!
@@ -54055,6 +56057,5366 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.modulocuatro)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.id_expediente,
+                            expression: "modulocuatro.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se ofrecen pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.se_ofrecen_pruebas,
+                              expression: "modulocuatro.se_ofrecen_pruebas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "se_ofrecen_pruebas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Parte que ofrece la/s prueba/s:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.parte_que_ofrece_prueba,
+                              expression: "modulocuatro.parte_que_ofrece_prueba"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "parte_que_ofrece_prueba",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha en que se ofrecen las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_ofrecen_pruebas,
+                            expression: "modulocuatro.fecha_ofrecen_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_ofrecen_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_ofrecen_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de admisión de las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_admision_pruebas,
+                            expression: "modulocuatro.fecha_admision_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_admision_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_admision_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Prueba/s ofrecida/s en:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.pruebas_ofrecidas_en,
+                              expression: "modulocuatro.pruebas_ofrecidas_en"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "pruebas_ofrecidas_en",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Juicio")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Reconvención")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s ofrecida/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_ofrecidas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_ofrecidas",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_ofrecidas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s admitida/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_admitidas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_admitidas",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_admitidas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s desahogada/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_desahogadas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_desahogadas",
+                                  $$v
+                                )
+                              },
+                              expression:
+                                "modulocuatro.tipo_pruebas_desahogadas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de desahogo de pruebas admitidas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_desahogo_pruebas,
+                            expression: "modulocuatro.fecha_desahogo_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_desahogo_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_desahogo_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número de pruebas desahogadas fuera del Tribunal:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.numero_pruebas_desahogadas,
+                            expression:
+                              "modulocuatro.numero_pruebas_desahogadas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.modulocuatro.numero_pruebas_desahogadas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "numero_pruebas_desahogadas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha de aceptación de cargo de peritos para pruebas periciales:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_aceptacion_cargo,
+                            expression: "modulocuatro.fecha_aceptacion_cargo  "
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_aceptacion_cargo
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_aceptacion_cargo",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha en que peritos rinden informe respecto de las pruebas periciales:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_perritos_rinden,
+                            expression: "modulocuatro.fecha_perritos_rinden"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_perritos_rinden
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_perritos_rinden",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Juez designa perito en discordia:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.juez_designa_perito,
+                              expression: "modulocuatro.juez_designa_perito"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "juez_designa_perito",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se renuncia a las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.se_renuncia_pruenas,
+                              expression: "modulocuatro.se_renuncia_pruenas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "se_renuncia_pruenas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Parte que renuncia a la/s prueba/s:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.parte_renuncia_pruebas,
+                              expression: "modulocuatro.parte_renuncia_pruebas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "parte_renuncia_pruebas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s a la/s que se renuncia:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_renuncia,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_renuncia",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_renuncia"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("label", { attrs: { for: "inputState1" } }, [
+                      _vm._v("Motivo por el que renuncian a la/s prueba/s:")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.motivos_renuncia_pruebas,
+                            expression: "modulocuatro.motivos_renuncia_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "inputState1" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "motivos_renuncia_pruebas",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { selected: "" } }, [
+                          _vm._v("Seleccionar")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", [
+                          _vm._v("1.- Por acuerdo entre las partes")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v("22.- Otra")])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(" Datos de las partes en los procesos (Modulo I)  ")
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.id_expediente,
+                            expression: "modulocuatro.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se ofrecen pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.se_ofrecen_pruebas,
+                              expression: "modulocuatro.se_ofrecen_pruebas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "se_ofrecen_pruebas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Parte que ofrece la/s prueba/s:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.parte_que_ofrece_prueba,
+                              expression: "modulocuatro.parte_que_ofrece_prueba"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "parte_que_ofrece_prueba",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha en que se ofrecen las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_ofrecen_pruebas,
+                            expression: "modulocuatro.fecha_ofrecen_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_ofrecen_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_ofrecen_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de admisión de las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_admision_pruebas,
+                            expression: "modulocuatro.fecha_admision_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_admision_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_admision_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Prueba/s ofrecida/s en:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.pruebas_ofrecidas_en,
+                              expression: "modulocuatro.pruebas_ofrecidas_en"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "pruebas_ofrecidas_en",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Juicio")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Reconvención")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s ofrecida/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_ofrecidas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_ofrecidas",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_ofrecidas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s admitida/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_admitidas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_admitidas",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_admitidas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s desahogada/s:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_desahogadas,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_desahogadas",
+                                  $$v
+                                )
+                              },
+                              expression:
+                                "modulocuatro.tipo_pruebas_desahogadas"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de desahogo de pruebas admitidas:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_desahogo_pruebas,
+                            expression: "modulocuatro.fecha_desahogo_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_desahogo_pruebas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_desahogo_pruebas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número de pruebas desahogadas fuera del Tribunal:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.numero_pruebas_desahogadas,
+                            expression:
+                              "modulocuatro.numero_pruebas_desahogadas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.modulocuatro.numero_pruebas_desahogadas
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "numero_pruebas_desahogadas",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha de aceptación de cargo de peritos para pruebas periciales:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_aceptacion_cargo,
+                            expression: "modulocuatro.fecha_aceptacion_cargo  "
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_aceptacion_cargo
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_aceptacion_cargo",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha en que peritos rinden informe respecto de las pruebas periciales:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.fecha_perritos_rinden,
+                            expression: "modulocuatro.fecha_perritos_rinden"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulocuatro.fecha_perritos_rinden
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "fecha_perritos_rinden",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Juez designa perito en discordia:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.juez_designa_perito,
+                              expression: "modulocuatro.juez_designa_perito"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "juez_designa_perito",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Se renuncia a las pruebas:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.se_renuncia_pruenas,
+                              expression: "modulocuatro.se_renuncia_pruenas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "se_renuncia_pruenas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Parte que renuncia a la/s prueba/s:")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulocuatro.parte_renuncia_pruebas,
+                              expression: "modulocuatro.parte_renuncia_pruebas"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulocuatro,
+                                "parte_renuncia_pruebas",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "form-row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-md-4" },
+                        [
+                          _c("label", { attrs: { for: "inputState" } }, [
+                            _vm._v("Tipo de prueba/s a la/s que se renuncia:")
+                          ]),
+                          _vm._v(" "),
+                          _c("vue-select", {
+                            staticClass: "vue-select1",
+                            attrs: {
+                              label: "valor_variable",
+                              options: _vm.pruebas,
+                              model: _vm.result1
+                            },
+                            on: {
+                              "update:model": function($event) {
+                                _vm.result1 = $event
+                              }
+                            },
+                            model: {
+                              value: _vm.modulocuatro.tipo_pruebas_renuncia,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.modulocuatro,
+                                  "tipo_pruebas_renuncia",
+                                  $$v
+                                )
+                              },
+                              expression: "modulocuatro.tipo_pruebas_renuncia"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("label", { attrs: { for: "inputState1" } }, [
+                      _vm._v("Motivo por el que renuncian a la/s prueba/s:")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulocuatro.motivos_renuncia_pruebas,
+                            expression: "modulocuatro.motivos_renuncia_pruebas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "inputState1" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulocuatro,
+                              "motivos_renuncia_pruebas",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { selected: "" } }, [
+                          _vm._v("Seleccionar")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", [
+                          _vm._v("1.- Por acuerdo entre las partes")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v("22.- Otra")])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulocuatros.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.se_ofrecen_pruebas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.parte_que_ofrece_prueba))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_ofrecen_pruebas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_admision_pruebas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.pruebas_ofrecidas_en))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_pruebas_ofrecidas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_pruebas_admitidas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_pruebas_desahogadas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_desahogo_pruebas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.numero_pruebas_desahogadas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_aceptacion_cargo))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_perritos_rinden))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.juez_designa_perito))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.se_renuncia_pruenas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.parte_renuncia_pruebas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_pruebas_renuncia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.motivos_renuncia_pruebas))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulocuatros },
+            on: { "pagination-change-page": _vm.getResults }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloUno",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModuloUnoLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulouno("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulouno("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - I) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Ofrecen-pruebas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Parte-ofrece ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-ofrece ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-admisión ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Pruebas-ofrecidas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo-pruebas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo-admitidas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo-desahogadas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-desahogadas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Numero-desahogadas ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-aceptación ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-peritos ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Juez-designa ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Renuncia ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Parte ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Motivos ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloUnoLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.modulodos)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.id_expediente,
+                            expression: "modulodos.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulodos,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Monto demandado como suerte principal: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.monto_demandado,
+                            expression: "modulodos.monto_demandado"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulodos.monto_demandado },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "monto_demandado",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de emisión del acuerdo del juez: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_emision,
+                            expression: "modulodos.fecha_emision"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_emision },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_emision",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de Acuerdo: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.tipo_acuerdo,
+                              expression: "modulodos.tipo_acuerdo"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "tipo_acuerdo",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Desechamiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Incompetencia")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Admisión")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Prevención")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Subsana prevención: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.subsana_prevencion,
+                              expression: "modulodos.subsana_prevencion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "subsana_prevencion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Contestación de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.contestacion_demanda,
+                              expression: "modulodos.contestacion_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "contestacion_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "No contesta la demanda. Fecha en la que se declara rebeldía: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_no_contesta,
+                            expression: "modulodos.fecha_no_contesta"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_no_contesta },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_no_contesta",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Si contesta la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.si_contesta,
+                              expression: "modulodos.si_contesta"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "si_contesta",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("1.- Opone excepciones y defensa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Se allana")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de contestación de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_si_contesta,
+                            expression: "modulodos.fecha_si_contesta"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_si_contesta },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_si_contesta",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("El demandado reconviene la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.reconviene_demanda,
+                              expression: "modulodos.reconviene_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "reconviene_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de reconvención de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_reconviene,
+                            expression: "modulodos.fecha_reconviene"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_reconviene },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_reconviene",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("El reconvenido contesta la reconvención: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.reconviene_demanda,
+                              expression: "modulodos.reconviene_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "reconviene_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la etapa postulatoria: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.numero_acuerdos,
+                            expression: "modulodos.numero_acuerdos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulodos.numero_acuerdos },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "numero_acuerdos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(" Datos de los expedientes (Modulo II)  ")
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.id_expediente,
+                            expression: "modulodos.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulodos,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Monto demandado como suerte principal: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.monto_demandado,
+                            expression: "modulodos.monto_demandado"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulodos.monto_demandado },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "monto_demandado",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de emisión del acuerdo del juez: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_emision,
+                            expression: "modulodos.fecha_emision"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_emision },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_emision",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de Acuerdo: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.tipo_acuerdo,
+                              expression: "modulodos.tipo_acuerdo"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "tipo_acuerdo",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Desechamiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Incompetencia")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Admisión")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Prevención")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Subsana prevención: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.subsana_prevencion,
+                              expression: "modulodos.subsana_prevencion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "subsana_prevencion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Contestación de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.contestacion_demanda,
+                              expression: "modulodos.contestacion_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "contestacion_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "No contesta la demanda. Fecha en la que se declara rebeldía: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_no_contesta,
+                            expression: "modulodos.fecha_no_contesta"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_no_contesta },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_no_contesta",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Si contesta la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.si_contesta,
+                              expression: "modulodos.si_contesta"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "si_contesta",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("1.- Opone excepciones y defensa")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Se allana")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de contestación de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_si_contesta,
+                            expression: "modulodos.fecha_si_contesta"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_si_contesta },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_si_contesta",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("El demandado reconviene la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.reconviene_demanda,
+                              expression: "modulodos.reconviene_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "reconviene_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de reconvención de la demanda: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.fecha_reconviene,
+                            expression: "modulodos.fecha_reconviene"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulodos.fecha_reconviene },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "fecha_reconviene",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("El reconvenido contesta la reconvención: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulodos.reconviene_demanda,
+                              expression: "modulodos.reconviene_demanda"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulodos,
+                                "reconviene_demanda",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la etapa postulatoria: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulodos.numero_acuerdos,
+                            expression: "modulodos.numero_acuerdos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulodos.numero_acuerdos },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulodos,
+                              "numero_acuerdos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulodoss.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.monto_demandado))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_emision))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_acuerdo))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.subsana_prevencion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.contestacion_demanda))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_no_contesta))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.si_contesta))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_si_contesta))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.reconviene_demanda))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_reconviene))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.contesta_reconvenido))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.numero_acuerdos))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulodoss },
+            on: { "pagination-change-page": _vm.getResults }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloDos",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModuloDosLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulodos("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModulodos("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - III) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Monto demandado ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-emisión ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo de acuerdo ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-conclusión ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Subsana prevención ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Contastación demanda")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-no-contesta ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Si contesta ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Reconviene demanda")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-reconviene ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Contesta-reconvenido ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Numero de acuerdos ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloDosLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.moduloseis)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.moduloseis.id_expediente,
+                            expression: "moduloseis.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Alegatos presentados por la parte actora: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.moduloseis.alegatos_presentados,
+                              expression: "moduloseis.alegatos_presentados"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "alegatos_presentados",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Alegatos presentados por la parte demandada: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.moduloseis
+                                  .alegatos_presentados_parte_demandada,
+                              expression:
+                                "moduloseis.alegatos_presentados_parte_demandada"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "alegatos_presentados_parte_demandada",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Incidentes pendientes por resolver: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.moduloseis.incidentes_pendientes,
+                              expression: "moduloseis.incidentes_pendientes"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "incidentes_pendientes",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Número de incidentes pendientes por resolver, según tipo: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.moduloseis.numero_incidentes_por_resolver,
+                              expression:
+                                "moduloseis.numero_incidentes_por_resolver"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "numero_incidentes_por_resolver",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("1.- Impugnación de falsedad de documento")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Nulidad de emplazamiento")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Número de incidentes resueltos, según tipo:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.moduloseis.numero_incidentes_resueltos,
+                            expression: "moduloseis.numero_incidentes_resueltos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.moduloseis.numero_incidentes_resueltos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "numero_incidentes_resueltos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la fase de Audiencia de juicio:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value:
+                              _vm.moduloseis.numero_total_acuerdos_por_resolver,
+                            expression:
+                              "moduloseis.numero_total_acuerdos_por_resolver"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value:
+                            _vm.moduloseis.numero_total_acuerdos_por_resolver
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "numero_total_acuerdos_por_resolver",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(
+                  " Datos de los expedientes - Audiencia de Juicio (Modulo VI) "
+                )
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.moduloseis.id_expediente,
+                            expression: "moduloseis.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Alegatos presentados por la parte actora: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.moduloseis.alegatos_presentados,
+                              expression: "moduloseis.alegatos_presentados"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "alegatos_presentados",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Alegatos presentados por la parte demandada: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.moduloseis
+                                  .alegatos_presentados_parte_demandada,
+                              expression:
+                                "moduloseis.alegatos_presentados_parte_demandada"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "alegatos_presentados_parte_demandada",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Incidentes pendientes por resolver: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.moduloseis.incidentes_pendientes,
+                              expression: "moduloseis.incidentes_pendientes"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "incidentes_pendientes",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Si")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("No")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Número de incidentes pendientes por resolver, según tipo: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value:
+                                _vm.moduloseis.numero_incidentes_por_resolver,
+                              expression:
+                                "moduloseis.numero_incidentes_por_resolver"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.moduloseis,
+                                "numero_incidentes_por_resolver",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("1.- Impugnación de falsedad de documento")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Nulidad de emplazamiento")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Número de incidentes resueltos, según tipo:")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.moduloseis.numero_incidentes_resueltos,
+                            expression: "moduloseis.numero_incidentes_resueltos"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value: _vm.moduloseis.numero_incidentes_resueltos
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "numero_incidentes_resueltos",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Número total de acuerdos emitidos en la fase de Audiencia de juicio:"
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value:
+                              _vm.moduloseis.numero_total_acuerdos_por_resolver,
+                            expression:
+                              "moduloseis.numero_total_acuerdos_por_resolver"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: {
+                          value:
+                            _vm.moduloseis.numero_total_acuerdos_por_resolver
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.moduloseis,
+                              "numero_total_acuerdos_por_resolver",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulo6.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.alegatos_presentados))]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(_vm._s(item.alegatos_presentados_parte_demandada))
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.incidentes_pendientes))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulo6 },
+            on: { "pagination-change-page": _vm.getResultsModuloSeis }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloSeis",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModuloSeisLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloSeis("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloSeis("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - VIII) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Alegatos presentados por la parte actora ")
+      ]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Alegatos presentados por la parte demandada")
+      ]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [
+        _vm._v(" Incidentes pendientes por resolver")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloSeisLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "modal-content" }, [
+      _c("br"),
+      _vm._v(" "),
+      _vm.editarActivo
+        ? _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.editar(_vm.modulosiete)
+                }
+              }
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.id_expediente,
+                            expression: "modulosiete.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de terminación: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.tipo_termminacion,
+                              expression: "modulosiete.tipo_termminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "tipo_termminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Sentencia definitiva")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("2.- Sentencia interlocutoria")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v(
+                              "3.- Terminación por causa diversa a sentencia"
+                            )
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "En caso de terminación por causa diferente a sentencia, especificar: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.caso_terminacion,
+                              expression: "modulosiete.caso_terminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "caso_terminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Convenio/Conciliación")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Desistimiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Desechamiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Excusa")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Recusación")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("6.- Acumulación")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("7.- Caducidad de la instancia")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("8.- Inactividad procesal")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("9.- Incompetencia")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("10.- Otro")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Fase de la terminación por causa diferente a sentencia: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.fase_terminacion,
+                              expression: "modulosiete.fase_terminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "fase_terminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Etapa postulatoria")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Reconvención")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Audiencia de juicio")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha de la terminación por causa diferente a sentencia: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.fecha_terminacion,
+                            expression: "modulosiete.fecha_terminacion"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulosiete.fecha_terminacion },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "fecha_terminacion",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de emisión de la sentencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.fecha_emision_sentencia,
+                            expression: "modulosiete.fecha_emision_sentencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulosiete.fecha_emision_sentencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "fecha_emision_sentencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Sentencia a favor de: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.sentencia_favor,
+                              expression: "modulosiete.sentencia_favor"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "sentencia_favor",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Monto líquido fijado en la sentencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.monto_liquido,
+                            expression: "modulosiete.monto_liquido"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulosiete.monto_liquido },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "monto_liquido",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Actualizar ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            return _vm.cancelarEdicion()
+                          }
+                        }
+                      },
+                      [_vm._v(" Cancelar ")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+        : _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.agregar($event)
+                }
+              }
+            },
+            [
+              _c("h4", { staticClass: "text-center" }, [
+                _vm._v(" Datos de audiencias (Modulo III)  ")
+              ]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "container" },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.id_expediente,
+                            expression: "modulosiete.id_expediente"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { id: "id_expediente" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "id_expediente",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Número de expediente ")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.expedientes, function(item, index) {
+                          return _c(
+                            "option",
+                            { domProps: { value: item.id_expediente } },
+                            [_vm._v(_vm._s(item.numero_expediente))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Tipo de terminación: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.tipo_termminacion,
+                              expression: "modulosiete.tipo_termminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "tipo_termminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Sentencia definitiva")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("2.- Sentencia interlocutoria")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v(
+                              "3.- Terminación por causa diversa a sentencia"
+                            )
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "En caso de terminación por causa diferente a sentencia, especificar: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.caso_terminacion,
+                              expression: "modulosiete.caso_terminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "caso_terminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Convenio/Conciliación")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Desistimiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Desechamiento")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Excusa")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("5.- Recusación")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("6.- Acumulación")]),
+                          _vm._v(" "),
+                          _c("option", [
+                            _vm._v("7.- Caducidad de la instancia")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("8.- Inactividad procesal")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("9.- Incompetencia")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("10.- Otro")])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v(
+                          "Fase de la terminación por causa diferente a sentencia: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.fase_terminacion,
+                              expression: "modulosiete.fase_terminacion"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "fase_terminacion",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Etapa postulatoria")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Reconvención")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("3.- Audiencia preliminar")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("4.- Audiencia de juicio")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v(
+                          "Fecha de la terminación por causa diferente a sentencia: "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.fecha_terminacion,
+                            expression: "modulosiete.fecha_terminacion"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: { value: _vm.modulosiete.fecha_terminacion },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "fecha_terminacion",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Fecha de emisión de la sentencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.fecha_emision_sentencia,
+                            expression: "modulosiete.fecha_emision_sentencia"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "date" },
+                        domProps: {
+                          value: _vm.modulosiete.fecha_emision_sentencia
+                        },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "fecha_emision_sentencia",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState1" } }, [
+                        _vm._v("Sentencia a favor de: ")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.modulosiete.sentencia_favor,
+                              expression: "modulosiete.sentencia_favor"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { id: "inputState1" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.modulosiete,
+                                "sentencia_favor",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { selected: "" } }, [
+                            _vm._v("Seleccionar")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("1.- Parte actora")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("2.- Parte demandada")])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-md-4" }, [
+                      _c("label", { attrs: { for: "inputState" } }, [
+                        _vm._v("Monto líquido fijado en la sentencia: ")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.modulosiete.monto_liquido,
+                            expression: "modulosiete.monto_liquido"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "number" },
+                        domProps: { value: _vm.modulosiete.monto_liquido },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.modulosiete,
+                              "monto_liquido",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("center", [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v(" Guardar Registro ")]
+                    )
+                  ]),
+                  _c("br")
+                ],
+                1
+              )
+            ]
+          )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "table-responsive" },
+        [
+          _c("table", { staticClass: "table table-striped" }, [
+            _c(
+              "thead",
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.modulosietes.data, function(item, index) {
+                  return _c("tr", { key: index }, [
+                    _c("td", [_vm._v(_vm._s(item.numero_expediente))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.tipo_termminacion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fase_terminacion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_terminacion))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.fecha_emision_sentencia))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.sentencia_favor))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(item.monto_liquido))])
+                  ])
+                })
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("pagination", {
+            attrs: { data: _vm.modulosietes },
+            on: { "pagination-change-page": _vm.getResults }
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "modal fade",
+              attrs: {
+                id: "exampleModalModuloSiete",
+                tabindex: "-1",
+                role: "dialog",
+                "aria-labelledby": "exampleModalModulosieteLabel",
+                "aria-hidden": "true"
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "modal-dialog", attrs: { role: "document" } },
+                [
+                  _c("div", { staticClass: "modal-content" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloSiete("cancelar")
+                            }
+                          }
+                        },
+                        [_vm._v("Cancelar")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" },
+                          on: {
+                            click: function($event) {
+                              return _vm.eliminarModuloSiete("aceptar")
+                            }
+                          }
+                        },
+                        [_vm._v("Eliminar")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-center" }, [
+      _vm._v(" Actualizar Información "),
+      _c("i", [_vm._v(" (Modulo - III) ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Número de expediente ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Tipo de terminación")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fase de terminación ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-terminación ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Fecha-emisión ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Sentencia a favor de ")]),
+      _vm._v(" "),
+      _c("th", { attrs: { scope: "col" } }, [_vm._v(" Monto liquido ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        {
+          staticClass: "modal-title",
+          attrs: { id: "exampleModalModuloSieteLabel" }
+        },
+        [_vm._v("Confirmar elminación")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body" }, [
+      _c("input", { attrs: { type: "hidden", name: "id", id: "id" } }),
+      _vm._v(
+        "\n              ¿Estas seguro(a) de eliminar el registro seleccionado?\n            "
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/moduloTresComponent.vue?vue&type=template&id=8c6ef740& ***!
@@ -82660,8 +90022,12 @@ Vue.component('modulodiezactualizar-component', __webpack_require__(/*! ./compon
 Vue.component('expedientes-component', __webpack_require__(/*! ./components/expedientesComponent.vue */ "./resources/js/components/expedientesComponent.vue")["default"]);
 Vue.component('modulouno-component', __webpack_require__(/*! ./components/modulounoComponent.vue */ "./resources/js/components/modulounoComponent.vue")["default"]);
 Vue.component('modulodos-component', __webpack_require__(/*! ./components/modulodosComponent.vue */ "./resources/js/components/modulodosComponent.vue")["default"]);
+Vue.component('modulo2-component', __webpack_require__(/*! ./components/moduloDossComponent.vue */ "./resources/js/components/moduloDossComponent.vue")["default"]);
 Vue.component('modulotres-component', __webpack_require__(/*! ./components/moduloTresComponent.vue */ "./resources/js/components/moduloTresComponent.vue")["default"]);
+Vue.component('modulocuatro-component', __webpack_require__(/*! ./components/moduloCuatroComponent.vue */ "./resources/js/components/moduloCuatroComponent.vue")["default"]);
 Vue.component('modulocinco-component', __webpack_require__(/*! ./components/moduloCincoComponent.vue */ "./resources/js/components/moduloCincoComponent.vue")["default"]);
+Vue.component('moduloseis-component', __webpack_require__(/*! ./components/moduloSeisComponent.vue */ "./resources/js/components/moduloSeisComponent.vue")["default"]);
+Vue.component('modulosiete-component', __webpack_require__(/*! ./components/moduloSieteComponent.vue */ "./resources/js/components/moduloSieteComponent.vue")["default"]);
 /**
  Componentes Contralor
  */
@@ -83547,6 +90913,282 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCincoComponent_vue_vue_type_template_id_5d351d8a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCuatroComponent.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/moduloCuatroComponent.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c& */ "./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c&");
+/* harmony import */ var _moduloCuatroComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloCuatroComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloCuatroComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloCuatroComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCuatroComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloCuatroComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCuatroComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCuatroComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloCuatroComponent.vue?vue&type=template&id=3ddabe2c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloCuatroComponent_vue_vue_type_template_id_3ddabe2c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloDossComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/moduloDossComponent.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloDossComponent.vue?vue&type=template&id=17164b7e& */ "./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e&");
+/* harmony import */ var _moduloDossComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloDossComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloDossComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloDossComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloDossComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloDossComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloDossComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloDossComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloDossComponent.vue?vue&type=template&id=17164b7e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloDossComponent.vue?vue&type=template&id=17164b7e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloDossComponent_vue_vue_type_template_id_17164b7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSeisComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/moduloSeisComponent.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloSeisComponent.vue?vue&type=template&id=5c240b10& */ "./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10&");
+/* harmony import */ var _moduloSeisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloSeisComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloSeisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloSeisComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSeisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloSeisComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSeisComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSeisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloSeisComponent.vue?vue&type=template&id=5c240b10& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSeisComponent.vue?vue&type=template&id=5c240b10&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSeisComponent_vue_vue_type_template_id_5c240b10___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSieteComponent.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/moduloSieteComponent.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moduloSieteComponent.vue?vue&type=template&id=45cabe84& */ "./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84&");
+/* harmony import */ var _moduloSieteComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduloSieteComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _moduloSieteComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/moduloSieteComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSieteComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloSieteComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSieteComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSieteComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./moduloSieteComponent.vue?vue&type=template&id=45cabe84& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/moduloSieteComponent.vue?vue&type=template&id=45cabe84&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moduloSieteComponent_vue_vue_type_template_id_45cabe84___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

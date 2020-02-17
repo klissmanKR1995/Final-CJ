@@ -132,6 +132,7 @@ Route::get('/mecanismosRealizacionCatalogos', 'valores_catalogosController@mecan
 
 Route::get('/siContestaCatalogos', 'valores_catalogosController@siContestaCatalogos')->name('siContestaCatalogos');
 
+Route::get('/pruebasCatalogos', 'valores_catalogosController@pruebasCatalogos')->name('pruebasCatalogos');
 
 
 Route::get('/searchNombreValores', 'valores_catalogosController@searchNombreValores')->name('searchNombreValores');
@@ -150,11 +151,20 @@ Route::resource('/modulouno', 'ejemploController');
 
 Route::resource('/modulodos', 'ejemploDosController');
 
+Route::resource('/modulo2', 'moduloDosController');
+
 Route::resource('/modulotres', 'ejemploTresController');
 
 Route::resource('/modulo3', 'moduloTresController');
 
+Route::resource('/modulocuatro', 'moduloCuatroController');
+
 Route::resource('/modulocinco', 'moduloCincoController');
+
+Route::resource('/moduloseis', 'moduloSeisController');
+
+Route::resource('/modulosiete', 'moduloSieteController');
+
 
 
 /* Rutas del PDF */
