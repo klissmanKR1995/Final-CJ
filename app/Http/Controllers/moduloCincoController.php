@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use App\modulo5;
+use App\Modulo5;
 
 class moduloCincoController extends Controller
 {
@@ -23,7 +23,7 @@ class moduloCincoController extends Controller
             ->orderBy('numero_expediente', 'asc')
             ->paginate(5));
         }else{
-            return view('home', compact('modulo5'));
+            return view('secretario', compact('modulo5'));
         }
     }
 
@@ -45,7 +45,7 @@ class moduloCincoController extends Controller
      */
     public function store(Request $request)
     {
-        $modulocinco = new modulo5();
+        $modulocinco = new Modulo5();
         $modulocinco->id_expediente = $request->id_expediente;
         $modulocinco->emision_acuerdo_controvertido = $request->emision_acuerdo_controvertido;
         $modulocinco->fecha_emision_acuerdo= $request->fecha_emision_acuerdo;
@@ -54,7 +54,6 @@ class moduloCincoController extends Controller
         $modulocinco->numero_total_acuerdos= $request->numero_total_acuerdos;
         $modulocinco->user_id = auth()->id();
         $modulocinco->save();
-
         return $modulocinco;
     }
     /**
@@ -108,7 +107,7 @@ class moduloCincoController extends Controller
      */
     public function destroy($id)
     {
-        $modulocinco = modulo5::find($id);
-        $modulocinco->delete();
+        $modulocinco = Modulo5::find($id);
+        $modulocinco-> delete();
     }
 }

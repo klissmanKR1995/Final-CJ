@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulodos)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - III) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - 2) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -133,7 +133,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de los expedientes (Modulo II)  </h4> <br>
+      <h4 class="text-center"> Datos de los expedientes (Módulo 2)  </h4> <br>
         <div class="container">
 
           <div class="form-group">
@@ -240,7 +240,7 @@
 
               <div class="col-md-4">
                <label for="inputState1">El reconvenido contesta la reconvención: </label>
-                <select id="inputState1" class="form-control" v-model="modulodos.reconviene_demanda">
+                <select id="inputState1" class="form-control" v-model="modulodos.contesta_reconvenido">
                   <option selected>Seleccionar</option>
                   <option>Si</option>
                   <option>No</option>
@@ -299,6 +299,7 @@
                 <td>{{item.fecha_reconviene}}</td>
                 <td>{{item.contesta_reconvenido}}</td>
                 <td>{{item.numero_acuerdos}}</td>
+
               </tr>
           </thead>   
         </table>

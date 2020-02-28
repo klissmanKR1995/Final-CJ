@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulosiete)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - III) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo 7) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -102,7 +102,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de audiencias (Modulo III)  </h4> <br>
+      <h4 class="text-center"> Terminación de juicios (Módulo 7)  </h4> <br>
         <div class="container">
          
                  
@@ -287,7 +287,7 @@
        },
         methods:{
             getResults(page = 1) {
-              axios.get('/Proyecto-CJ/public/modulo7?page=' + page)
+              axios.get('/Proyecto-CJ/public/modulosiete?page=' + page)
                 .then(response => {
                   this.modulosietes = response.data;
                 }).catch(error => {
@@ -309,7 +309,7 @@
             },
            editar(item){
               const params = {id_expediente: item.id_expediente,tipo_termminacion: item.tipo_termminacion,caso_terminacion: item.caso_terminacion,fase_terminacion: item.fase_terminacion,fecha_terminacion: item.fecha_terminacion,fecha_emision_sentencia: item.fecha_emision_sentencia,sentencia_favor: item.sentencia_favor,monto_liquido: item.monto_liquido};
-              axios.put(`/Proyecto-CJ/public/modulo7/${item.id_modulo}`, params)
+              axios.put(`/Proyecto-CJ/public/modulosiete/${item.id_modulo}`, params)
                 .then(res =>{
                   this.editarActivo = false;
                   this.getResults(this.modulosietes.current_page);
@@ -363,7 +363,7 @@
 
                
 
-                axios.post('/Proyecto-CJ/public/modulo7', params)     
+                axios.post('/Proyecto-CJ/public/modulosiete', params)     
                     .then(res => {
                         this.getResults(this.modulosietes.last_page);
                         this.expedientes.length = 0
@@ -380,7 +380,7 @@
             },
             eliminarModulosiete(op){
               if (op === "aceptar") {
-                axios.delete(`/Proyecto-CJ/public/modulo7/` + $("#id").val())
+                axios.delete(`/Proyecto-CJ/public/modulosiete/` + $("#id").val())
                   .then(()=>{
                       this.getResults(this.modulosietes.current_page);
                       $('#exampleModalModuloSiete').modal("hide")

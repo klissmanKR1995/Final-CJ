@@ -147,6 +147,7 @@ Route::get('prueba', 'expedientesController@prueba')->name('prueba');
 
 Route::get('/searchNombreExpdiente', 'expedientesController@searchNombreExpdiente')->name('searchNombreExpdiente');
 
+
 Route::resource('/modulouno', 'ejemploController');
 
 Route::resource('/modulodos', 'ejemploDosController');
@@ -164,6 +165,8 @@ Route::resource('/modulocinco', 'moduloCincoController');
 Route::resource('/moduloseis', 'moduloSeisController');
 
 Route::resource('/modulosiete', 'moduloSieteController');
+
+Route::resource('/modulonueve', 'moduloNueveController');
 
 
 

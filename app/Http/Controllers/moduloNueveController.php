@@ -19,13 +19,13 @@ class moduloNueveController extends Controller
       public function index(Request $request)
         {
             if($request->ajax()){
-                return (DB::table('modulo9')
-                ->join('expedientes', 'modulo9.id_expediente', '=', 'expedientes.id_expediente')
-                ->select('modulo9.*', 'expedientes.numero_expediente')
+                return (DB::table('modulo9s')
+                ->join('expedientes', 'modulo9s.id_expediente', '=', 'expedientes.id_expediente')
+                ->select('modulo9s.*', 'expedientes.numero_expediente')
                 ->orderBy('numero_expediente', 'asc')
                 ->paginate(5));
             }else{
-                return view('home', compact('modulo9'));
+                return view('home', compact('modulo9s'));
             }
         }
 
@@ -51,7 +51,7 @@ class moduloNueveController extends Controller
         $modulonueve->id_expediente = $request->id_expediente;
         $modulonueve->suerte_principal_liquidada_en_la_sentencia = $request->suerte_principal_liquidada_en_la_sentencia;
         $modulonueve->intereses_ordinarios_liquidados_en_la_sentencia = $request->intereses_ordinarios_liquidados_en_la_sentencia;
-        $modulonueve->intereses_moratorios_liquidados_en_la_sentenciapena_convencional_liquidada_en_la_sentencia = $request->intereses_moratorios_liquidados_en_la_sentenciapena_convencional_liquidada_en_la_sentencia;
+        $modulonueve->intereses_moratorios_liquidados_en_la_sentencia= $request->intereses_moratorios_liquidados_en_la_sentencia;
         $modulonueve->pena_convencional_liquidada_en_la_sentencia = $request->pena_convencional_liquidada_en_la_sentencia;
         $modulonueve->daños_liquidados_en_la_sentencia = $request->daños_liquidados_en_la_sentencia;
         $modulonueve->perjuicios_liquidados_en_la_sentencia = $request->perjuicios_liquidados_en_la_sentencia;
@@ -60,7 +60,7 @@ class moduloNueveController extends Controller
         $modulonueve->honorarios_liquidados_en_la_sentencia = $request->honorarios_liquidados_en_la_sentencia;
         $modulonueve->otros_liquidados_en_la_sentencia = $request->otros_liquidados_en_la_sentencia;
         $modulonueve->suerte_principal_liquidada_en_la_ejecución_de_la_sentencia = $request->suerte_principal_liquidada_en_la_ejecución_de_la_sentencia;
-        $modulonueve->intereses_ordinarios_liquidados_en_la_ejecución_la_sentenciaintereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia = $request->intereses_ordinarios_liquidados_en_la_ejecución_la_sentenciaintereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia;
+        $modulonueve->intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia= $request->intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia;
         $modulonueve->intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia = $request->intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia;
         $modulonueve->pena_convencional_liquidada_en_la_ejecución_de_la_sentencia = $request->pena_convencional_liquidada_en_la_ejecución_de_la_sentencia;
         $modulonueve->daños_liquidados_en_la_ejecución_de_la_sentencia   = $request->daños_liquidados_en_la_ejecución_de_la_sentencia    ;
@@ -110,7 +110,7 @@ class moduloNueveController extends Controller
             $modulonueve->id_expediente = $request->id_expediente;
             $modulonueve->suerte_principal_liquidada_en_la_sentencia = $request->suerte_principal_liquidada_en_la_sentencia;
             $modulonueve->intereses_ordinarios_liquidados_en_la_sentencia = $request->intereses_ordinarios_liquidados_en_la_sentencia;
-            $modulonueve->intereses_moratorios_liquidados_en_la_sentenciapena_convencional_liquidada_en_la_sentencia = $request->intereses_moratorios_liquidados_en_la_sentenciapena_convencional_liquidada_en_la_sentencia;
+            $modulonueve->intereses_moratorios_liquidados_en_la_sentencia = $request->intereses_moratorios_liquidados_en_la_sentencia;
             $modulonueve->pena_convencional_liquidada_en_la_sentencia = $request->pena_convencional_liquidada_en_la_sentencia;
             $modulonueve->daños_liquidados_en_la_sentencia = $request->daños_liquidados_en_la_sentencia;
             $modulonueve->perjuicios_liquidados_en_la_sentencia = $request->perjuicios_liquidados_en_la_sentencia;
@@ -119,7 +119,7 @@ class moduloNueveController extends Controller
             $modulonueve->honorarios_liquidados_en_la_sentencia = $request->honorarios_liquidados_en_la_sentencia;
             $modulonueve->otros_liquidados_en_la_sentencia = $request->otros_liquidados_en_la_sentencia;
             $modulonueve->suerte_principal_liquidada_en_la_ejecución_de_la_sentencia = $request->suerte_principal_liquidada_en_la_ejecución_de_la_sentencia;
-            $modulonueve->intereses_ordinarios_liquidados_en_la_ejecución_la_sentenciaintereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia = $request->intereses_ordinarios_liquidados_en_la_ejecución_la_sentenciaintereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia;
+            $modulonueve->intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia = $request->intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia;
             $modulonueve->intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia = $request->intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia;
             $modulonueve->pena_convencional_liquidada_en_la_ejecución_de_la_sentencia = $request->pena_convencional_liquidada_en_la_ejecución_de_la_sentencia;
             $modulonueve->daños_liquidados_en_la_ejecución_de_la_sentencia   = $request->daños_liquidados_en_la_ejecución_de_la_sentencia    ;

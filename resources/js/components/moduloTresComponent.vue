@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulotres)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - III) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Modulo - 3) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -108,7 +108,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de audiencias (Modulo III)  </h4> <br>
+      <h4 class="text-center"> Datos de audiencias (Módulo - 3)  </h4> <br>
         <div class="container">
          
                  

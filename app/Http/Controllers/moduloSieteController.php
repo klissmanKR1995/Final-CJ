@@ -14,7 +14,7 @@ class moduloSieteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+  public function index(Request $request)
     {
         if($request->ajax()){
             return (DB::table('modulo7')
@@ -45,7 +45,7 @@ class moduloSieteController extends Controller
      */
     public function store(Request $request)
     {
-        $modulosiete = new modulo6();
+        $modulosiete = new modulo7();
         $modulosiete->id_expediente = $request->id_expediente;
         $modulosiete->tipo_termminacion = $request->tipo_termminacion;
         $modulosiete->caso_terminacion= $request->caso_terminacion;

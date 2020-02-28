@@ -50,6 +50,6 @@ class CreateModulo9sTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modulo9');
+        Schema::dropIfExists('modulo9s');
     }
 }

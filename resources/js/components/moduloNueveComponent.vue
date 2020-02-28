@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulonueve)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - III) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo  9) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -168,7 +168,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center">Montos de liquidación de la sentencia (Modulo IX)  </h4> <br>
+      <h4 class="text-center">Montos de liquidación de la sentencia (Módulo 9)  </h4> <br>
         <div class="container">
          
           <div class="form-group">
@@ -340,7 +340,6 @@
                 <th scope="col"> Suerte Principal </th>
                 <th scope="col"> Intereses Ordinario </th>
                 <th scope="col"> Intereses moratorios </th>
-              </tr>
               <tr v-for="(item, index) in modulonueves.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
                 <td>{{item.suerte_principal_liquidada_en_la_sentencia}}</td>
@@ -410,7 +409,7 @@
        },
         methods:{
             getResults(page = 1) {
-              axios.get('/Proyecto-CJ/public/modulo9?page=' + page)
+              axios.get('/Proyecto-CJ/public/modulonueve?page=' + page)
                 .then(response => {
                   this.modulonueves = response.data;
                 }).catch(error => {
@@ -445,7 +444,7 @@
             },
            editar(item){
               const params = {id_expediente: item.id_expediente,suerte_principal_liquidada_en_la_sentencia: item.suerte_principal_liquidada_en_la_sentencia,intereses_ordinarios_liquidados_en_la_sentencia: item.intereses_ordinarios_liquidados_en_la_sentencia,intereses_moratorios_liquidados_en_la_sentencia: item.intereses_moratorios_liquidados_en_la_sentencia,pena_convencional_liquidada_en_la_sentencia: item.pena_convencional_liquidada_en_la_sentencia,daños_liquidados_en_la_sentencia: item.daños_liquidados_en_la_sentencia,perjuicios_liquidados_en_la_sentencia: item.perjuicios_liquidados_en_la_sentencia,gastos_liquidados_en_la_sentencia: item.gastos_liquidados_en_la_sentencia,costas_liquidadas_en_la_sentencia: item.costas_liquidadas_en_la_sentencia,honorarios_liquidados_en_la_sentencia: item.honorarios_liquidados_en_la_sentencia,otros_liquidados_en_la_sentencia: item.otros_liquidados_en_la_sentencia,suerte_principal_liquidada_en_la_ejecución_de_la_sentencia: item.suerte_principal_liquidada_en_la_ejecución_de_la_sentencia,intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia: item.intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia,intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia: item.intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia,pena_convencional_liquidada_en_la_ejecución_de_la_sentencia: item.pena_convencional_liquidada_en_la_ejecución_de_la_sentencia,daños_liquidados_en_la_ejecución_de_la_sentencia: item.daños_liquidados_en_la_ejecución_de_la_sentencia,perjuicios_liquidados_en_la_ejecución_de_la_sentencia: item.perjuicios_liquidados_en_la_ejecución_de_la_sentencia,gastos_liquidados_en_la_ejecución_de_la_sentencia: item.gastos_liquidados_en_la_ejecución_de_la_sentencia,costas_liquidadas_en_la_ejecución_de_la_sentencia: item.costas_liquidadas_en_la_ejecución_de_la_sentencia,honorarios_liquidados_en_la_ejecución_de_la_sentencia: item.honorarios_liquidados_en_la_ejecución_de_la_sentencia,otros_liquidados_en_la_ejecución_de_la_sentencia: item.otros_liquidados_en_la_ejecución_de_la_sentencia};
-              axios.put(`/Proyecto-CJ/public/modulo9/${item.id_modulo}`, params)
+              axios.put(`/Proyecto-CJ/public/modulonueve/${item.id_modulo}`, params)
                 .then(res =>{
                   this.editarActivo = false;
                   this.getResults(this.modulonueves.current_page);
@@ -477,7 +476,7 @@
             },
             cancelarEdicion(){
               this.editarActivo = false;
-              this.modulotres = {id_expediente: '',suerte_principal_liquidada_en_la_sentencia: '',intereses_ordinarios_liquidados_en_la_sentencia: '',intereses_moratorios_liquidados_en_la_sentencia: '',pena_convencional_liquidada_en_la_sentencia: '',daños_liquidados_en_la_sentencia: '',perjuicios_liquidados_en_la_sentencia: '',gastos_liquidados_en_la_sentencia: '',costas_liquidadas_en_la_sentencia: '',honorarios_liquidados_en_la_sentencia: '',otros_liquidados_en_la_sentencia: '',suerte_principal_liquidada_en_la_ejecución_de_la_sentencia: '',intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia: '',intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia: '',pena_convencional_liquidada_en_la_ejecución_de_la_sentencia: '',daños_liquidados_en_la_ejecución_de_la_sentencia: '',perjuicios_liquidados_en_la_ejecución_de_la_sentencia: '',gastos_liquidados_en_la_ejecución_de_la_sentencia: '',costas_liquidadas_en_la_ejecución_de_la_sentencia: '',honorarios_liquidados_en_la_ejecución_de_la_sentencia: '',otros_liquidados_en_la_ejecución_de_la_sentencia: ''}
+              this.modulonueve = {id_expediente: '',suerte_principal_liquidada_en_la_sentencia: '',intereses_ordinarios_liquidados_en_la_sentencia: '',intereses_moratorios_liquidados_en_la_sentencia: '',pena_convencional_liquidada_en_la_sentencia: '',daños_liquidados_en_la_sentencia: '',perjuicios_liquidados_en_la_sentencia: '',gastos_liquidados_en_la_sentencia: '',costas_liquidadas_en_la_sentencia: '',honorarios_liquidados_en_la_sentencia: '',otros_liquidados_en_la_sentencia: '',suerte_principal_liquidada_en_la_ejecución_de_la_sentencia: '',intereses_ordinarios_liquidados_en_la_ejecución_la_sentencia: '',intereses_moratorios_liquidados_en_la_ejecución_de_la_sentencia: '',pena_convencional_liquidada_en_la_ejecución_de_la_sentencia: '',daños_liquidados_en_la_ejecución_de_la_sentencia: '',perjuicios_liquidados_en_la_ejecución_de_la_sentencia: '',gastos_liquidados_en_la_ejecución_de_la_sentencia: '',costas_liquidadas_en_la_ejecución_de_la_sentencia: '',honorarios_liquidados_en_la_ejecución_de_la_sentencia: '',otros_liquidados_en_la_ejecución_de_la_sentencia: ''}
             },
             agregar(){
 
@@ -535,11 +534,9 @@
               this.modulonueve.gastos_liquidados_en_la_ejecución_de_la_sentencia = '';
               this.modulonueve.costas_liquidadas_en_la_ejecución_de_la_sentencia = '';
               this.modulonueve.honorarios_liquidados_en_la_ejecución_de_la_sentencia = '';
-              this.modulonueve.otros_liquidados_en_la_ejecución_de_la_sentencia = '';
-              this.modulonueve.id_modulo = item.id_modulo;
+              this.modulonueve.otros_liquidados_en_la_ejecución_de_la_sentencia = ''; 
 
-
-                axios.post('/Proyecto-CJ/public/modulo9', params)     
+                axios.post('/Proyecto-CJ/public/modulonueve', params)     
                     .then(res => {
                         this.getResults(this.modulonueves.last_page);
                         this.expedientes.length = 0
@@ -554,9 +551,9 @@
               $('#exampleModalModuloNueve').modal("show")
               $('#id').val(id)
             },
-            eliminarModulotres(op){
+            eliminarModuloNueve(op){
               if (op === "aceptar") {
-                axios.delete(`/Proyecto-CJ/public/modulo9/` + $("#id").val())
+                axios.delete(`/Proyecto-CJ/public/modulonueve/` + $("#id").val())
                   .then(()=>{
                       this.getResults(this.modulonueves.current_page);
                       $('#exampleModalModuloNueve').modal("hide")

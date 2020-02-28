@@ -54,7 +54,7 @@
                       <ul class="flex-column nav pl-4">
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo2-tab" data-toggle="pill" href="#v-pills-modulo2" role="tab" aria-controls="v-pills-modulo2" aria-selected="false"><i class="fas fa-cube"></i>
-                                   Módulo III
+                                   Módulo 3
                               </a>
                           </li>
                        </ul>

@@ -54,46 +54,46 @@
                       <ul class="flex-column nav pl-4">
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo2-tab" data-toggle="pill" href="#v-pills-modulo2" role="tab" aria-controls="v-pills-modulo2" aria-selected="false"><i class="fas fa-cube"></i>
-                                   Módulo II
+                                   Módulo 2
                               </a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo4-tab" data-toggle="pill" href="#v-pills-modulo4" role="tab" aria-controls="v-pills-modulo4" aria-selected="false"> <i class="fas fa-cube"></i>
-                                  Módulo IV
+                                  Módulo 4
                               </a>
                           </li>
 
 
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo5-tab" data-toggle="pill" href="#v-pills-modulo5" role="tab" aria-controls="v-pills-modulo5" aria-selected="false"><i class="fas fa-cube"></i>
-                                   Módulo V
+                                   Módulo 5
                               </a>
                           </li>
 
                           
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo6-tab" data-toggle="pill" href="#v-pills-modulo6" role="tab" aria-controls="v-pills-modulo6" aria-selected="false"><i class="fas fa-cube"></i>
-                                   Módulo VI
+                                   Módulo 6
                               </a>
                           </li>
 
 
                            <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo7-tab" data-toggle="pill" href="#v-pills-modulo7" role="tab" aria-controls="v-pills-modulo7" aria-selected="false"> <i class="fas fa-cube"></i>
-                                  Módulo VII
+                                  Módulo 7
                               </a>
                           </li>
 
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo8-tab" data-toggle="pill" href="#v-pills-modulo8" role="tab" aria-controls="v-pills-modulo8" aria-selected="false"><i class="fas fa-cube"></i>
-                                   Módulo VIII
+                                   Módulo 8
                               </a>
                           </li>
 
 
                            <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-modulo9-tab" data-toggle="pill" href="#v-pills-modulo9" role="tab" aria-controls="v-pills-modulo9" aria-selected="false"> <i class="fas fa-cube"></i>
-                                  Módulo IX
+                                  Módulo 9
                               </a>
                           </li>
                       </ul>
@@ -217,24 +217,11 @@
           </div>
 
           <div class="container">
-              
+              <modulosiete-component></modulosiete-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 7-->
 
-
-      <!-- Empieza formulario del modulo numero 7 -->
-        <div class="tab-pane fade" id="v-pills-modulo7" role="tabpanel" aria-labelledby="v-pills-modulo7-tab">
-
-          <div class="alert alert-secondary text-center" role="alert">
-            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de expedientes, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-          </div>
-
-          <div class="container">
-            <modulosiete-component></modulosiete-component>
-          </div>
-        </div>
-      <!-- Termina formulario del modulo numero 7-->
 
 
       <!-- Empieza formulario del modulo numero 8 -->
@@ -259,6 +246,7 @@
           </div>
 
           <div class="container">
+             <modulonueve-component></modulonueve-component>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 9-->

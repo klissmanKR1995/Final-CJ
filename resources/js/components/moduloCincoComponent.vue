@@ -2,15 +2,16 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulocinco)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - VIII) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo  5) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
-            <select class="form-control" v-model="modulocinco.id_expediente">
+            <select id="id_expediente" class="form-control" v-model="modulocinco.id_expediente">
               <option value="">Número de expediente </option>
               <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
             </select>
           </div>
+          
                 
           <div class="form-row">
            
@@ -63,24 +64,18 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Ejecución de la sentencia (Modulo VIII)  </h4> <br>
+      <h4 class="text-center"> Datos de los expedientes (Módulo 5)  </h4> <br>
         <div class="container">
          
-        <!-- <div class="form-group">
+         <div class="form-group">
             <select class="form-control" v-model="modulocinco.id_expediente">
               <option value="">Número de expediente </option>
               <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
             </select>
-          </div>-->
+          </div>
                 
 
-            <div class="col-md-4">
-              <label for="inputState1">Id expediente:</label>
-              <input type="number" class="form-control" v-model="modulocinco.id_expediente">
-            </div>
-
-                  <div class="form-row">
-           
+          <div class="form-row"> 
             <div class="col-md-4">
               <label for="inputState1">Emisión de acuerdo por hechos no controvertidos: </label>
               <select class="form-control" v-model="modulocinco.emision_acuerdo_controvertido">
@@ -105,7 +100,7 @@
           <div class="form-row">
            
             <div class="col-md-4">
-              <label for="inputState1">Emision de acuerdo: </label>
+              <label for="inputState1">Emisión de acuerdo: </label>
               <select class="form-control" v-model="modulocinco.emision_acuerdo">
                 <option selected>Seleccionar</option>
                 <option>Si</option>
@@ -135,7 +130,7 @@
           <thead>
               <tr>
                 <th scope="col"> Número de expediente </th>
-                <th scope="col"> Emision de acuerdo </th>
+                <th scope="col"> Emisión de acuerdo </th>
                 <th scope="col"> Fecha de emisión de acuerdo </th>
                 <th scope="col"> Fecha de emisión de acuerdo probatorio</th>
                 <th scope="col"> Emisión de acuerdo</th>
@@ -270,22 +265,16 @@
                 this.modulocinco.fecha_emision_acuerdo_probatorio = '';
                 this.modulocinco.emision_acuerdo = '';
                 this.modulocinco.numero_total_acuerdos = '';
-
-
-
-                axios.post('/Proyecto-CJ/public/modulocinco', params)     
+                    
+              axios.post('/Proyecto-CJ/public/modulocinco', params)     
                     .then(res => {
-                        this.getResults(this.modulocinco.last_page);
-                    })     
-               /* axios.post('/Proyecto-CJ/public/modulocinco', params)     
-                    .then(res => {
-                        this.getResultsModuloCinco(this.modulocincos.last_page);
+                        this.getResults(this.modulocincos.last_page);
                         this.expedientes.length = 0
                         axios.get('/Proyecto-CJ/public/expedientesAll')
                         .then(res => {
                             this.expedientes = res.data;
                         })
-                })*/
+                })
 
             },
             confirmar(id){

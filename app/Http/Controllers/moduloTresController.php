@@ -45,7 +45,7 @@ class moduloTresController extends Controller
      */
     public function store(Request $request)
     {
-        $modulotres = new ejemplo();
+        $modulotres = new modulo3();
         $modulotres->id_expediente = $request->id_expediente;
         $modulotres->tipo_audiencia = $request->tipo_audiencia;
         $modulotres->fecha_audiencia= $request->fecha_audiencia;
@@ -105,7 +105,7 @@ class moduloTresController extends Controller
         $modulotres->fecha_difiere_audiencia= $request->fecha_difiere_audiencia;
         $modulotres->fecha_continuidad= $request->fecha_continuidad;
         $modulotres->fecha_conclusion_diferida= $request->fecha_conclusion_diferida;
-        $modulouno->save();
+        $modulotres->save();
         return $modulotres;
     }
 
@@ -117,7 +117,7 @@ class moduloTresController extends Controller
      */
     public function destroy($id)
     {
-        $modulotres = modulotres::find($id);
+        $modulotres = modulo3::find($id);
         $modulotres->delete();
     }
 }

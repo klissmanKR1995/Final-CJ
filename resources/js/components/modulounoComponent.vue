@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(modulouno)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - I) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo  I) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -209,7 +209,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de las partes en los procesos (Modulo I)  </h4> <br>
+      <h4 class="text-center"> Datos de las partes en los procesos (Módulo I)  </h4> <br>
         <div class="container">
          
          <div class="form-group">
@@ -727,7 +727,7 @@
             },
            editar(item){
               const params = {id_expediente: item.id_expediente, datos: item.datos, persona: item.persona, razon_social: item.razon_social, nombre_comercial: item.nombre_comercial, nombre_completo: item.nombre_completo, sexo: item.sexo, fecha_nacimiento: item.fecha_nacimiento, rfc: item.rfc, curp: item.curp, pais: item.pais, estados: item.estados, municipios: item.municipios, nacionalidad: item.nacionalidad, pais_habitual: item.pais_habitual, estado_habitual: item.estado_habitual, municipio_habitual: item.municipio_habitual, tipo_domicilio: item.tipo_domicilio, tipo_discapacidad: item.tipo_discapacidad, situacion_conyugal: item.situacion_conyugal, escolaridad: item.escolaridad, condicion_migratoria: item.condicion_migratoria, habla_español: item.habla_español, habla_lengua_indigena: item.habla_lengua_indigena, tipo_lengua_indigena: item.tipo_lengua_indigena, habla_lengua_extranjera: item.habla_lengua_extranjera, trabaja_ocupacion: item.trabaja_ocupacion, condicion_actividad: item.condicion_actividad, fuente_ingresos: item.fuente_ingresos, ingreso_mensual: item.ingreso_mensual, tipo_representacion: item.tipo_representacion, sexo_representacion: item.sexo_representacion};
-              axios.put(`/Proyecto-CJ/public/modulouno/${item.id_modulo}`, params)
+                axios.put(`/Proyecto-CJ/public/modulouno/${item.id_modulo}`, params)
                 .then(res =>{
                   this.editarActivo = false;
                   this.getResults(this.modulounos.current_page);

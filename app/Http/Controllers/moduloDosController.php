@@ -23,7 +23,7 @@ class moduloDosController extends Controller
             ->orderBy('numero_expediente', 'asc')
             ->paginate(5));
         }else{
-            return view('home', compact('modulo2'));
+            return view('secretario', compact('modulo2'));
         }
     }
 
@@ -96,7 +96,6 @@ class moduloDosController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $modulodos = modulo2::find($id);
         $modulodos->id_expediente = $request->id_expediente;
         $modulodos->monto_demandado = $request->monto_demandado;

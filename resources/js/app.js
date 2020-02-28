@@ -1,10 +1,3 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -32,16 +25,19 @@ Vue.component('modulodiezactualizar-component', require('./components/modulodiez
 Vue.component('expedientes-component', require('./components/expedientesComponent.vue').default);
 Vue.component('modulouno-component', require('./components/modulounoComponent.vue').default);
 Vue.component('modulodos-component', require('./components/modulodosComponent.vue').default);
+
+
+/**
+ Componentes Secretario
+ */
+
 Vue.component('modulo2-component', require('./components/moduloDossComponent.vue').default);
 Vue.component('modulotres-component', require('./components/moduloTresComponent.vue').default);
 Vue.component('modulocuatro-component', require('./components/moduloCuatroComponent.vue').default);
 Vue.component('modulocinco-component', require('./components/moduloCincoComponent.vue').default);
 Vue.component('moduloseis-component', require('./components/moduloSeisComponent.vue').default);
 Vue.component('modulosiete-component', require('./components/moduloSieteComponent.vue').default);
-
-
-
-
+Vue.component('modulonueve-component', require('./components/moduloNueveComponent.vue').default);
 
 
 
@@ -54,6 +50,13 @@ Vue.component('expedintescontraloria-component', require('./components/expedient
 Vue.component('veruno-component', require('./components/contraloriaModuloUnoComponent.vue').default);
 Vue.component('verdos-component', require('./components/contraloriaModuloDosComponent.vue').default);
 Vue.component('verdiez-component', require('./components/contraloriaModuloDiezComponent.vue').default);
+Vue.component('modulodosc-component', require('./components/moduloDosContralorComponent.vue').default);
+Vue.component('modulotresc-component', require('./components/moduloTresContralorComponent.vue').default);
+Vue.component('modulocuatroc-component', require('./components/moduloCuatroContralorComponent.vue').default);
+Vue.component('modulocincoc-component', require('./components/moduloCincoContralorComponent.vue').default);
+Vue.component('moduloseisc-component', require('./components/moduloSeisContralorComponent.vue').default);
+Vue.component('modulosietec-component', require('./components/moduloSieteContralorComponent.vue').default);
+Vue.component('modulonuevec-component', require('./components/moduloNueveContralorComponent.vue').default);
 
 
 /**

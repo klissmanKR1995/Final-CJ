@@ -2,7 +2,7 @@
   <div>
     <div class="modal-content"> <br>
       <form @submit.prevent="editar(moduloseis)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - VIII) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo 6) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -76,7 +76,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de los expedientes - Audiencia de Juicio (Modulo VI) </h4> <br>
+      <h4 class="text-center"> Datos de los expedientes - Audiencia de Juicio (Módulo 6) </h4> <br>
         <div class="container">
          
                <div class="form-group">
@@ -164,7 +164,6 @@
                 <td>{{item.alegatos_presentados}}</td>
                 <td>{{item.alegatos_presentados_parte_demandada}}</td>
                 <td>{{item.incidentes_pendientes}}</td>
-
               </tr>
           </thead>   
         </table>

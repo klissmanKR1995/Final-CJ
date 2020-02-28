@@ -58,12 +58,52 @@
                           </li>
                           <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-moduloUno-tab" data-toggle="pill" href="#v-pills-moduloUno" role="tab" aria-controls="v-pills-moduloUno" aria-selected="false">
-                              <i class="fas fa-university"></i>  Modulo - I
+                              <i class="fas fa-university"></i>  Módulo - I
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloDos-tab" data-toggle="pill" href="#v-pills-moduloDos" role="tab" aria-controls="v-pills-moduloDos" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - II
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloTres-tab" data-toggle="pill" href="#v-pills-moduloTres" role="tab" aria-controls="v-pills-moduloTres" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - III
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloCuatro-tab" data-toggle="pill" href="#v-pills-moduloCuatro" role="tab" aria-controls="v-pills-moduloCuatro" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - IV
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloCinco-tab" data-toggle="pill" href="#v-pills-moduloCinco" role="tab" aria-controls="v-pills-moduloCinco" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - V
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloSeis-tab" data-toggle="pill" href="#v-pills-moduloSeis" role="tab" aria-controls="v-pills-moduloSeis" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - VI
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloSiete-tab" data-toggle="pill" href="#v-pills-moduloSiete" role="tab" aria-controls="v-pills-moduloSiete" aria-selected="false">
+                              <i class="fas fa-university"></i>  Modulo - XII
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloOcho-tab" data-toggle="pill" href="#v-pills-moduloOcho" role="tab" aria-controls="v-pills-moduloOcho" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - VIII
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link p-1" id="v-pills-moduloNueve-tab" data-toggle="pill" href="#v-pills-moduloNueve" role="tab" aria-controls="v-pills-moduloNueve" aria-selected="false">
+                              <i class="fas fa-university"></i>  Módulo - IX
                               </a>
                           </li>
                            <li class="nav-item">
                               <a class="nav-link p-1" id="v-pills-moduloDiez-tab" data-toggle="pill" href="#v-pills-moduloDiez" role="tab" aria-controls="v-pills-moduloDiez" aria-selected="false">
-                              <i class="fas fa-university"></i>  Modulo - X
+                              <i class="fas fa-university"></i>  Módulo - X
                               </a>
                           </li>
                       </ul>
@@ -160,6 +200,154 @@
       </div>
      
       <!-- Termina formulario modulo I -->
+
+      <!-- Empieza formulario modulo II -->
+        <div class="tab-pane fade" id="v-pills-moduloDos" role="tabpanel" aria-labelledby="v-pills-moduloDos-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulodosc-component> </modulodosc-component> <br>
+
+      
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo II -->
+
+      <!-- Empieza formulario modulo III -->
+        <div class="tab-pane fade" id="v-pills-moduloTres" role="tabpanel" aria-labelledby="v-pills-moduloTres-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulotresc-component> </modulotresc-component> <br>
+
+     
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo III -->
+
+            <!-- Empieza formulario modulo IV -->
+        <div class="tab-pane fade" id="v-pills-moduloCuatro" role="tabpanel" aria-labelledby="v-pills-moduloCuatro-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulocuatroc-component> </modulocuatroc-component> <br>
+
+  
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo IV -->
+
+
+            <!-- Empieza formulario modulo V -->
+        <div class="tab-pane fade" id="v-pills-moduloCinco" role="tabpanel" aria-labelledby="v-pills-moduloCinco-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulocincoc-component> </modulocincoc-component> <br>
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo V -->
+
+
+      <!-- Empieza formulario modulo VI -->
+        <div class="tab-pane fade" id="v-pills-moduloSeis" role="tabpanel" aria-labelledby="v-pills-moduloSeis-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <moduloseisc-component> </moduloseisc-component> <br>
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo VI -->
+
+
+           <!-- Empieza formulario modulo VII -->
+        <div class="tab-pane fade" id="v-pills-moduloSiete" role="tabpanel" aria-labelledby="v-pills-moduloSiete-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulosietec-component> </modulosietec-component> <br>
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo VII -->
+
+
+           <!-- Empieza formulario modulo VIII -->
+        <div class="tab-pane fade" id="v-pills-moduloOcho" role="tabpanel" aria-labelledby="v-pills-moduloOcho-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulounoactualizar-component> </modulounoactualizar-component> <br>
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo VIII -->
+
+
+           <!-- Empieza formulario modulo IX -->
+        <div class="tab-pane fade" id="v-pills-moduloNueve" role="tabpanel" aria-labelledby="v-pills-moduloNueve-tab">
+
+          <div class="alert alert-secondary text-center" role="alert">
+            <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de modulo I, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
+          </div>
+
+          <div class="container">
+           
+              <modulonuevec-component> </modulonuevec-component> <br>
+          
+          </div>
+    
+      </div>
+     
+      <!-- Termina formulario modulo IX -->
+
 
 
       <!-- Empieza formulario modulo X -->
