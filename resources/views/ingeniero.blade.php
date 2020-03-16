@@ -62,12 +62,7 @@
               </li>
               <!-- Termina menu con submenu usuarios-->
 
-              
 
-              <a class="nav-link menuMain" id="v-pills-expedientes-tab" data-toggle="pill" href="#v-pills-expedientes" role="tab" aria-controls="v-pills-expedientes" aria-selected="false"><i class="fas fa-file-alt"></i> Consulta-Expedientes</a>
-
-              <a class="nav-link menuMain" id="v-pills-manualAyuda-tab" data-toggle="pill" href="#v-pills-manualAyuda" role="tab" aria-controls="v-pills-manualAyuda" aria-selected="false"> <i class="fas fa-question"></i> Manual-Ayuda</a>
-      
               <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();"><i class="fas fa-sign-in-alt"></i> 
@@ -105,6 +100,7 @@
               <h1 class="mt-4">Bienvenidos al modulo ingeniero</h1>
               <p> Al sistema de generación de estadísticas del <strong> Poder Judicial del Estado de Tlaxcala. </strong> </p>
               
+              <inicio-component></inicio-component>
 
               <br> 
             </div>
@@ -113,7 +109,7 @@
 
 
 
-      <!-- Empieza formulario del modulo numero 2 -->
+      <!-- Empieza formulario del modulo numero 3 -->
         <div class="tab-pane fade" id="v-pills-modulo2" role="tabpanel" aria-labelledby="v-pills-modulo2-tab">
 
           <div class="alert alert-secondary text-center" role="alert">
@@ -126,7 +122,7 @@
 
           </div>
         </div>
-      <!-- Termina formulario del modulo numero 2-->
+      <!-- Termina formulario del modulo numero 3-->
 
 
 

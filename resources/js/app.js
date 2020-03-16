@@ -30,18 +30,23 @@ Vue.component('modulodos-component', require('./components/modulodosComponent.vu
 /**
  Componentes Secretario
  */
-
 Vue.component('modulo2-component', require('./components/moduloDossComponent.vue').default);
-Vue.component('modulotres-component', require('./components/moduloTresComponent.vue').default);
 Vue.component('modulocuatro-component', require('./components/moduloCuatroComponent.vue').default);
 Vue.component('modulocinco-component', require('./components/moduloCincoComponent.vue').default);
 Vue.component('moduloseis-component', require('./components/moduloSeisComponent.vue').default);
 Vue.component('modulosiete-component', require('./components/moduloSieteComponent.vue').default);
 Vue.component('modulonueve-component', require('./components/moduloNueveComponent.vue').default);
+/**
+ Componentes Secretario
+ */
 
-
-
-
+ /**
+ Componentes Ingeniero
+ */
+Vue.component('modulotres-component', require('./components/moduloTresComponent.vue').default);
+ /**
+ Componentes Ingeniero
+ */
 
 /**
  Componentes Contralor
@@ -58,10 +63,33 @@ Vue.component('moduloseisc-component', require('./components/moduloSeisContralor
 Vue.component('modulosietec-component', require('./components/moduloSieteContralorComponent.vue').default);
 Vue.component('modulonuevec-component', require('./components/moduloNueveContralorComponent.vue').default);
 
-
 /**
- Componentes Diligenciario
+ Componentes Contralor
  */
+
+
+  /**
+ Componentes Juez
+ */
+
+Vue.component('modulounoj-component', require('./components/moduloUnoJuezComponent.vue').default);
+Vue.component('modulodosj-component', require('./components/moduloDosJuezComponent.vue').default);
+Vue.component('modulotresj-component', require('./components/moduloTresJuezComponent.vue').default);
+Vue.component('modulocuatroj-component', require('./components/moduloCuatroJuezComponent.vue').default);
+Vue.component('modulocincoj-component', require('./components/moduloCincoJuezComponent.vue').default);
+Vue.component('moduloseisj-component', require('./components/moduloSeisJuezComponent.vue').default);
+Vue.component('modulosietej-component', require('./components/moduloSieteJuezComponent.vue').default);
+Vue.component('modulocho-component', require('./components/moduloOchoJuezComponent.vue').default);
+Vue.component('modulonuevej-component', require('./components/moduloNueveJuezComponent.vue').default);
+Vue.component('modulodiej-component', require('./components/moduloDiezJuezComponent.vue').default);
+Vue.component('expedientesj-component', require('./components/expedientesJuezComponent.vue').default);
+
+
+ /**
+ Componentes Juez
+ */
+
+
 Vue.component('modulodiez-component', require('./components/modulodiezComponent.vue').default);
 
 

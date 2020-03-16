@@ -1,5 +1,158 @@
 <template>
   <div>
+    <div class="modal-content"> <br>
+       <form @submit.prevent="editar(expediente)" v-if="editarActivo">
+          <h5 class="text-center"> Actualizar Información <i> (Libro de gobierno) </i> </h5> <br>
+          
+           <input type="text" class="form-control mb-2" placeholder="Número de expediente" v-model="expediente.numero_expediente" @blur="comprobarDuplicados"><br>
+
+           <div class="form-row">
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Materia al que pertenece</label>
+              </center>
+                <select  class="form-control" v-model="expediente.id_materia">
+                  <option v-for="(item, index) in materias" :value="item.id_materia">{{item.nombre_materia}}</option>
+                </select>
+            </div>
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Juzgado al que pertenece</label>
+              </center>
+                <select id="id_juzgado" class="form-control" v-model="expediente.id_juzgado">
+                  <option v-for="(item, index) in juzgados" :value="item.id_juzgado">{{item.nombre_juzgado}}</option>
+                </select>
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre-actor" v-model="expediente.nombre_actor">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre-demandado" v-model="expediente.nombre_demandado">
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Fecha de entrada al tribunal</label>
+              </center>
+              <input type="date" class="form-control" placeholder="Fecha-tribunal" v-model="expediente.fecha_en_tribunal">
+            </div>
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Fecha de entrada al juzgado</label>
+              </center>
+              <input type="date" class="form-control" placeholder="Fecha-juzgado" v-model="expediente.fecha_en_juzgado">
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col-md-6">
+              <select id="id_juicio" class="form-control" v-model="expediente.id_juicio">
+                <option value="">Juicio al expediente</option>
+                <option v-for="(item, index) in juicios" :value="item.id_juicio">{{item.nombre_juicio}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" v-model="expediente.tipo_accion">
+                <option value="">Tipo Acción </option>
+                <option>Accion1</option>
+                <option>Accion2</option>
+                <option>Accion3</option>
+              </select>
+            </div>
+          </div> <br>
+          
+          <center>    
+          <div class="alert alert-danger" role="alert" id="existeAlertaExpediente">
+            Registro existente, verifique la información a almacenar
+          </div> 
+          <button class="btn btn-primary" type="submit" id="guardarexpediente"> Actualizar </button>
+          <button class="btn btn-danger" type="submit" @click="cancelarEdicion()"> Cancelar </button>
+          </center> <br>
+      </form>  
+
+      <form @submit.prevent="agregar" v-else>
+          <h4 class="text-center"> Formulario Libro de Gobierno </h4> <br>
+          
+          <input type="text" class="form-control mb-2" placeholder="Número de expediente/Año" v-model="expediente.numero_expediente" @blur="comprobarDuplicados"><br>
+
+
+          <div class="form-row">
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Materia al que pertenece</label>
+              </center>
+                <select  class="form-control" v-model="expediente.id_materia">
+                  <option v-for="(item, index) in materias" :value="item.id_materia">{{item.nombre_materia}}</option>
+                </select>
+            </div>
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Juzgado al que pertenece</label>
+              </center>
+                <select id="id_juzgado" class="form-control" v-model="expediente.id_juzgado">
+                  <option v-for="(item, index) in juzgados" :value="item.id_juzgado">{{item.nombre_juzgado}}</option>
+                </select>
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre-actor" v-model="expediente.nombre_actor">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Nombre-demandado" v-model="expediente.nombre_demandado">
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Fecha de entrada al tribunal</label>
+              </center>
+              <input type="date" class="form-control" placeholder="Fecha-tribunal" v-model="expediente.fecha_en_tribunal">
+            </div>
+            <div class="col">
+              <center>
+              <label for="Fecha-tribunal">Fecha de entrada al juzgado</label>
+              </center>
+              <input type="date" class="form-control" placeholder="Fecha-juzgado" v-model="expediente.fecha_en_juzgado">
+            </div>
+          </div><br>
+
+          <div class="form-row">
+            <div class="col-md-6">
+              <select id="id_juicio" class="form-control" v-model="expediente.id_juicio">
+                <option value="">Juicio al expediente</option>
+                <option v-for="(item, index) in juicios" :value="item.id_juicio">{{item.nombre_juicio}}</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" v-model="expediente.tipo_accion">
+                <option value="">Tipo Acción </option>
+                <option>Accion1</option>
+                <option>Accion2</option>
+                <option>Accion3</option>
+              </select>
+            </div>
+          </div> <br>
+
+          
+          <center>    
+          <div class="alert alert-danger" role="alert" id="existeAlertaExpediente">
+            Registro existente, verifique la información a almacenar
+          </div> 
+          <button class="btn btn-danger" type="submit" id="guardarexpediente"> Guardar </button> 
+          </center><br>
+      </form>  
+    </div>
+
+    <br>
+
     <div class="table-responsive">
       <table class="table  table-bordered">
         <thead>
@@ -13,6 +166,9 @@
               <th scope="col"> Fecha - Juzgado</th>
               <th scope="col"> Tipo - Juicio</th>
               <th scope="col"> Tipo - Acción</th>
+              <th scope="col"> Fecha - Registro</th>
+              <th scope="col"> Actualizar - Registro</th>
+              <th scope="col"> Eliminar - Registro</th>
             </tr>
             <tr v-for="(item, index) in expedientes" :key="index">
               <td>{{item.numero_expediente}}</td>
@@ -24,6 +180,9 @@
               <td>{{item.fecha_en_juzgado}}</td>
               <td>{{item.nombre_juicio}}</td>
               <td>{{item.tipo_accion}}</td>
+              <td> <span class="badge badge-primary"> {{item.created_at}} </span> </td>
+              <td><button class="btn btn-primary" @click="editarFormulario(item)">Actualizar</button></td>
+              <td><button class="btn btn-danger"  @click="confirmar(item.id_expediente)">Eliminar</button></td>
             </tr>
         </thead>   
       </table>
@@ -60,7 +219,7 @@
                 materias: {},
                 juzgados: {},
                 expedientes: {},
-                expediente: {numero_expediente: '', id_materia: '', id_juzgado: '', nombre_actor: '', nombre_demandado: '', fecha_en_tribunal: '', fecha_en_juzgado: '', id_juicio: '' },
+                expediente: {numero_expediente: '', id_materia: '', id_juzgado: '', nombre_actor: '', nombre_demandado: '', fecha_en_tribunal: '', fecha_en_juzgado: '', id_juicio: '', tipo_accion: '' },
                 editarActivo: false
             }
        },
@@ -115,10 +274,11 @@
               this.expediente.fecha_en_tribunal = item.fecha_en_tribunal;
               this.expediente.fecha_en_juzgado = item.fecha_en_juzgado;
               this.expediente.id_juicio = item.id_juicio;
+              this.expediente.tipo_accion = item.tipo_accion;
 
             },
            editar(item){
-              const params = {numero_expediente: item.numero_expediente, id_materia: item.id_materia, id_juzgado: item.id_juzgado, nombre_actor: item.nombre_actor, nombre_demandado: item.nombre_demandado, fecha_en_tribunal: item.fecha_en_tribunal, fecha_en_juzgado: item.fecha_en_juzgado, id_juicio: item.id_juicio };
+              const params = {numero_expediente: item.numero_expediente, id_materia: item.id_materia, id_juzgado: item.id_juzgado, nombre_actor: item.nombre_actor, nombre_demandado: item.nombre_demandado, fecha_en_tribunal: item.fecha_en_tribunal, fecha_en_juzgado: item.fecha_en_juzgado, id_juicio: item.id_juicio, tipo_accion: item.tipo_accion };
               axios.put(`/Proyecto-CJ/public/expedientes/${item.id_expediente}`, params)
                 .then(res =>{
                   this.editarActivo = false;
@@ -132,10 +292,11 @@
                   this.expediente.fecha_en_tribunal = '';
                   this.expediente.fecha_en_juzgado = '';
                   this.expediente.id_juicio = '';
+                  this.expediente.tipo_accion = '';
             },
             cancelarEdicion(){
               this.editarActivo = false;
-              this.expediente = {numero_expediente: '', id_materia: '', id_juzgado: '', nombre_actor: '', nombre_demandado: '', fecha_en_tribunal: '', fecha_en_juzgado: '', id_juicio: ''}
+              this.expediente = {numero_expediente: '', id_materia: '', id_juzgado: '', nombre_actor: '', nombre_demandado: '', fecha_en_tribunal: '', fecha_en_juzgado: '', id_juicio: '', tipo_accion: ''}
             },
             agregar(){
 
@@ -157,7 +318,8 @@
                 fecha_en_tribunal: this.expediente.fecha_en_tribunal,
                 fecha_en_juzgado: this.expediente.fecha_en_juzgado,
                 id_juicio: this.expediente.id_juicio,
-                nombre_juicio: this.expediente.nombre_juicio
+                nombre_juicio: this.expediente.nombre_juicio,
+                tipo_accion: this.expediente.tipo_accion
                 }
                 //Accion para limpiar los campos
 
@@ -169,6 +331,8 @@
                 this.expediente.fecha_en_tribunal = '';
                 this.expediente.fecha_en_juzgado = '';
                 this.expediente.id_juicio = '';
+                this.expediente.tipo_accion = '';
+
                 
                 axios.post('/Proyecto-CJ/public/expedientes', params)     
                     .then(res => {
@@ -209,5 +373,8 @@
        }
     }
 </script>
+
+
+
 
 

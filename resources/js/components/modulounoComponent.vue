@@ -1,421 +1,445 @@
 <template>
   <div>
-    <div class="modal-content"> <br>
-      <form @submit.prevent="editar(modulouno)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Módulo  I) </i> </h5> <br>
-        <div class="container">
-         
-         <div class="form-group">
-            <select id="id_expediente" class="form-control" v-model="modulouno.id_expediente">
-              <option value="">Número de expediente </option>
-              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
-            </select>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">Modulo I</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-                
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Datos de las partes</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                datosPartes' :model.sync="result1" v-model="modulouno.persona"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Persona</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                persona' :model.sync="result1" v-model="modulouno.datos"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Razon Social</label>
-              <input type="text" class="form-control" v-model="modulouno.razon_social">
-            </div>
+          <div class="modal-body">
+            <form @submit.prevent="editar(modulouno)" v-if="editarActivo">
+            <h5 class="text-center"> Actualizar Información <i> (Modulo - I) </i> </h5> <br>
+              <div class="container">
+               
+               <div class="form-group">
+                  <select id="id_expediente" class="form-control" v-model="modulouno.id_expediente">
+                    <option value="">Número de expediente </option>
+                    <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+                  </select>
+                </div>
+                      
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Datos de las partes</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      datosPartes' :model.sync="result1" v-model="modulouno.persona"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Persona</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      persona' :model.sync="result1" v-model="modulouno.datos"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Razon Social</label>
+                    <input type="text" class="form-control" v-model="modulouno.razon_social">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Nombre Comercial</label>
+                    <input type="text" class="form-control" v-model="modulouno.nombre_comercial">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">Nombre Completo</label>
+                   <input type="text" class="form-control" v-model="modulouno.nombre_completo">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Sexo</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        sexo' :model.sync="result1" v-model="modulouno.sexo"></vue-select>
+                  </div>
+                </div> <br>
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" v-model="modulouno.fecha_nacimiento">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">RFC</label>
+                   <input type="text" class="form-control" v-model="modulouno.rfc">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">CURP</label>
+                   <input type="text" class="form-control" v-model="modulouno.curp">
+                  </div>
+                </div> <br>
+                    
+                <div class="form-row">
+
+                  <div class="col-md-4">
+                    <label for="inputState">Pais de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      paises' :model.sync="result1" v-model="modulouno.pais"></vue-select>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <label for="inputState">Estado de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      estados' :model.sync="result1" v-model="modulouno.estados"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Municipio de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      municipios' :model.sync="result1" v-model="modulouno.municipios"></vue-select>
+                  </div>
+                </div> 
+
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Nacionalidad</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      nacionalidades' :model.sync="result1" v-model="modulouno.nacionalidad"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Pais habitual</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pais_habitual' :model.sync="result1" v-model="modulouno.pais_habitual"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Estado habitual</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      estado_habitual' :model.sync="result1" v-model="modulouno.estado_habitual"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                    <div class="col-md-4">
+                      <label for="inputState">Municipio habitual</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        municipio_habitual' :model.sync="result1" v-model="modulouno.municipio_habitual"></vue-select>
+                    </div>
+                    <div class="col-md-4">
+                     <label for="inputState">Tipo domicilio</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        tipoDomicilio' :model.sync="result1" v-model="modulouno.tipo_domicilio"></vue-select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState">Tipo discapacidad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        discapacidades' :model.sync="result1" v-model="modulouno.tipo_discapacidad"></vue-select>
+                    </div>
+                </div> 
+
+                 <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Situación conyugal</label>
+                   <input type="text" class="form-control" v-model="modulouno.situacion_conyugal">
+                  </div>
+                  <div class="col-md-4">
+                     <label for="inputState">Escolaridad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        escolaridad' :model.sync="result1" v-model="modulouno.escolaridad"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">Condición migratoria</label>
+                   <input type="text" class="form-control" v-model="modulouno.condicion_migratoria">
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState1">¿Habla español?</label>
+                    <select id="inputState1" class="form-control" v-model="modulouno.habla_español">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState2">¿Habla lengua indigena?</label>
+                     <select id="inputState2" class="form-control" v-model="modulouno.habla_lengua_indigena">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Tipo lengua indigena</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        lenguaIndigena' :model.sync="result1" v-model="modulouno.tipo_lengua_indigena"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState3">¿Habla lengua extranjera?</label>
+                    <select id="inputState3" class="form-control" v-model="modulouno.habla_lengua_extranjera">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Ocupación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        ocupacion' :model.sync="result1" v-model="modulouno.trabaja_ocupacion"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Condicion actividad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        condicionActividad' :model.sync="result1" v-model="modulouno.condicion_actividad"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Fuente de ingresos</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        fuenteIngresos' :model.sync="result1" v-model="modulouno.fuente_ingresos"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Ingreso mensual</label>
+                      <input type="text" class="form-control" v-model="modulouno.ingreso_mensual">
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Tipo representación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        tipoRepresentacion' :model.sync="result1" v-model="modulouno.tipo_representacion"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Sexo representación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        sexo' :model.sync="result1" v-model="modulouno.sexo_representacion"></vue-select>
+                  </div>
+                </div> 
+
+                <center>    
+                <button class="btn btn-primary" type="submit"> Actualizar </button>
+                <button class="btn btn-danger" type="submit" @click="cancelarEdicion()"> Cancelar </button>
+                </center> <br>
+              </div>     
+            </form>  
+
+            <form @submit.prevent="agregar" v-else>
+            <h4 class="text-center"> Datos de las partes en los procesos (Modulo I)  </h4> <br>
+              <div class="container">
+               
+               <div class="form-group">
+                  <select id="id_expediente" class="form-control" v-model="modulouno.id_expediente">
+                    <option value="">Número de expediente </option>
+                    <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+                  </select>
+                </div>
+                      
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Datos de las partes</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      datosPartes' :model.sync="result1" v-model="modulouno.persona"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Persona</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      persona' :model.sync="result1" v-model="modulouno.datos"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Razon Social</label>
+                    <input type="text" class="form-control" v-model="modulouno.razon_social">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Nombre Comercial</label>
+                    <input type="text" class="form-control" v-model="modulouno.nombre_comercial">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">Nombre Completo</label>
+                   <input type="text" class="form-control" v-model="modulouno.nombre_completo">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Sexo</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        sexo' :model.sync="result1" v-model="modulouno.sexo"></vue-select>
+                  </div>
+                </div> <br>
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" v-model="modulouno.fecha_nacimiento">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">RFC</label>
+                   <input type="text" class="form-control" v-model="modulouno.rfc">
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">CURP</label>
+                   <input type="text" class="form-control" v-model="modulouno.curp">
+                  </div>
+                </div> <br>
+                    
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Pais de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      paises' :model.sync="result1" v-model="modulouno.pais"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Estado de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      estados' :model.sync="result1" v-model="modulouno.estados"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Municipio de nacimiento</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      municipios' :model.sync="result1" v-model="modulouno.municipios"></vue-select>
+                  </div>
+                </div> 
+
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                    <label for="inputState">Nacionalidad</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      nacionalidades' :model.sync="result1" v-model="modulouno.nacionalidad"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Pais habitual</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pais_habitual' :model.sync="result1" v-model="modulouno.pais_habitual"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Estado habitual</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      estado_habitual' :model.sync="result1" v-model="modulouno.estado_habitual"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                    <div class="col-md-4">
+                      <label for="inputState">Municipio habitual</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        municipio_habitual' :model.sync="result1" v-model="modulouno.municipio_habitual"></vue-select>
+                    </div>
+                    <div class="col-md-4">
+                     <label for="inputState">Tipo domicilio</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        tipoDomicilio' :model.sync="result1" v-model="modulouno.tipo_domicilio"></vue-select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState">Tipo discapacidad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        discapacidades' :model.sync="result1" v-model="modulouno.tipo_discapacidad"></vue-select>
+                    </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Situación conyugal</label>
+                   <input type="text" class="form-control" v-model="modulouno.situacion_conyugal">
+                  </div>
+                  <div class="col-md-4">
+                     <label for="inputState">Escolaridad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        escolaridad' :model.sync="result1" v-model="modulouno.escolaridad"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                   <label for="inputState">Condición migratoria</label>
+                   <input type="text" class="form-control" v-model="modulouno.condicion_migratoria">
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState1">¿Habla español?</label>
+                    <select id="inputState1" class="form-control" v-model="modulouno.habla_español">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState2">¿Habla lengua indigena?</label>
+                     <select id="inputState2" class="form-control" v-model="modulouno.habla_lengua_indigena">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Tipo lengua indigena</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        lenguaIndigena' :model.sync="result1" v-model="modulouno.tipo_lengua_indigena"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState3">¿Habla lengua extranjera?</label>
+                    <select id="inputState3" class="form-control" v-model="modulouno.habla_lengua_extranjera">
+                      <option selected>Seleccionar</option>
+                      <option>Si</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Ocupación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        ocupacion' :model.sync="result1" v-model="modulouno.trabaja_ocupacion"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Condicion actividad</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        condicionActividad' :model.sync="result1" v-model="modulouno.condicion_actividad"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Fuente de ingresos</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        fuenteIngresos' :model.sync="result1" v-model="modulouno.fuente_ingresos"></vue-select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputState">Ingreso mensual</label>
+                      <input type="text" class="form-control" v-model="modulouno.ingreso_mensual">
+                  </div>
+                  <div class="col-md-4">
+                  <label for="inputState">Tipo representación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        tipoRepresentacion' :model.sync="result1" v-model="modulouno.tipo_representacion"></vue-select>
+                  </div>
+                </div> 
+
+                <div class="form-row">
+                  <div class="col-md-4">
+                   <label for="inputState">Sexo representación</label>
+                      <vue-select class="vue-select1"  label="valor_variable" :options='
+                        sexoRepresentacion' :model.sync="result1" v-model="modulouno.sexo_representacion"></vue-select>
+                  </div>
+                </div> 
+
+                <center>    
+                <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+                </center><br>
+              </div>     
+            </form>
           </div>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Nombre Comercial</label>
-              <input type="text" class="form-control" v-model="modulouno.nombre_comercial">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">Nombre Completo</label>
-             <input type="text" class="form-control" v-model="modulouno.nombre_completo">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Sexo</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  sexo' :model.sync="result1" v-model="modulouno.sexo"></vue-select>
-            </div>
-          </div> <br>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Fecha de nacimiento</label>
-              <input type="date" class="form-control" v-model="modulouno.fecha_nacimiento">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">RFC</label>
-             <input type="text" class="form-control" v-model="modulouno.rfc">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">CURP</label>
-             <input type="text" class="form-control" v-model="modulouno.curp">
-            </div>
-          </div> <br>
-              
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Pais de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                paises' :model.sync="result1" v-model="modulouno.pais"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Estado de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                estados' :model.sync="result1" v-model="modulouno.estados"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Municipio de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                municipios' :model.sync="result1" v-model="modulouno.municipios"></vue-select>
-            </div>
-          </div> 
-
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Nacionalidad</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                nacionalidades' :model.sync="result1" v-model="modulouno.nacionalidad"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Pais habitual</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                pais_habitual' :model.sync="result1" v-model="modulouno.pais_habitual"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Estado habitual</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                estado_habitual' :model.sync="result1" v-model="modulouno.estado_habitual"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-              <div class="col-md-4">
-                <label for="inputState">Municipio habitual</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  municipio_habitual' :model.sync="result1" v-model="modulouno.municipio_habitual"></vue-select>
-              </div>
-              <div class="col-md-4">
-               <label for="inputState">Tipo domicilio</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  tipoDomicilio' :model.sync="result1" v-model="modulouno.tipo_domicilio"></vue-select>
-              </div>
-              <div class="col-md-4">
-                <label for="inputState">Tipo discapacidad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  discapacidades' :model.sync="result1" v-model="modulouno.tipo_discapacidad"></vue-select>
-              </div>
-          </div> 
-
-           <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Situación conyugal</label>
-             <input type="text" class="form-control" v-model="modulouno.situacion_conyugal">
-            </div>
-            <div class="col-md-4">
-               <label for="inputState">Escolaridad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  escolaridad' :model.sync="result1" v-model="modulouno.escolaridad"></vue-select>
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">Condición migratoria</label>
-             <input type="text" class="form-control" v-model="modulouno.condicion_migratoria">
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState1">¿Habla español?</label>
-              <select id="inputState1" class="form-control" v-model="modulouno.habla_español">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState2">¿Habla lengua indigena?</label>
-               <select id="inputState2" class="form-control" v-model="modulouno.habla_lengua_indigena">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Tipo lengua indigena</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  lenguaIndigena' :model.sync="result1" v-model="modulouno.tipo_lengua_indigena"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState3">¿Habla lengua extranjera?</label>
-              <select id="inputState3" class="form-control" v-model="modulouno.habla_lengua_extranjera">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Ocupación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  ocupacion' :model.sync="result1" v-model="modulouno.trabaja_ocupacion"></vue-select>
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Condicion actividad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  condicionActividad' :model.sync="result1" v-model="modulouno.condicion_actividad"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Fuente de ingresos</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  fuenteIngresos' :model.sync="result1" v-model="modulouno.fuente_ingresos"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Ingreso mensual</label>
-                <input type="text" class="form-control" v-model="modulouno.ingreso_mensual">
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Tipo representación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  tipoRepresentacion' :model.sync="result1" v-model="modulouno.tipo_representacion"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Sexo representación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  sexo' :model.sync="result1" v-model="modulouno.sexo_representacion"></vue-select>
-            </div>
-          </div> 
-
-          <center>    
-          <button class="btn btn-primary" type="submit"> Actualizar </button>
-          <button class="btn btn-danger" type="submit" @click="cancelarEdicion()"> Cancelar </button>
-          </center> <br>
-        </div>     
-      </form>  
-
-      <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de las partes en los procesos (Módulo I)  </h4> <br>
-        <div class="container">
-         
-         <div class="form-group">
-            <select id="id_expediente" class="form-control" v-model="modulouno.id_expediente">
-              <option value="">Número de expediente </option>
-              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
-            </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
           </div>
-                
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Datos de las partes</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                datosPartes' :model.sync="result1" v-model="modulouno.persona"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Persona</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                persona' :model.sync="result1" v-model="modulouno.datos"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Razon Social</label>
-              <input type="text" class="form-control" v-model="modulouno.razon_social">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Nombre Comercial</label>
-              <input type="text" class="form-control" v-model="modulouno.nombre_comercial">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">Nombre Completo</label>
-             <input type="text" class="form-control" v-model="modulouno.nombre_completo">
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Sexo</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  sexo' :model.sync="result1" v-model="modulouno.sexo"></vue-select>
-            </div>
-          </div> <br>
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Fecha de nacimiento</label>
-              <input type="date" class="form-control" v-model="modulouno.fecha_nacimiento">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">RFC</label>
-             <input type="text" class="form-control" v-model="modulouno.rfc">
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">CURP</label>
-             <input type="text" class="form-control" v-model="modulouno.curp">
-            </div>
-          </div> <br>
-              
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Pais de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                paises' :model.sync="result1" v-model="modulouno.pais"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Estado de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                estados' :model.sync="result1" v-model="modulouno.estados"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Municipio de nacimiento</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                municipios' :model.sync="result1" v-model="modulouno.municipios"></vue-select>
-            </div>
-          </div> 
-
-
-          <div class="form-row">
-            <div class="col-md-4">
-              <label for="inputState">Nacionalidad</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                nacionalidades' :model.sync="result1" v-model="modulouno.nacionalidad"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Pais habitual</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                pais_habitual' :model.sync="result1" v-model="modulouno.pais_habitual"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Estado habitual</label>
-              <vue-select class="vue-select1"  label="valor_variable" :options='
-                estado_habitual' :model.sync="result1" v-model="modulouno.estado_habitual"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-              <div class="col-md-4">
-                <label for="inputState">Municipio habitual</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  municipio_habitual' :model.sync="result1" v-model="modulouno.municipio_habitual"></vue-select>
-              </div>
-              <div class="col-md-4">
-               <label for="inputState">Tipo domicilio</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  tipoDomicilio' :model.sync="result1" v-model="modulouno.tipo_domicilio"></vue-select>
-              </div>
-              <div class="col-md-4">
-                <label for="inputState">Tipo discapacidad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  discapacidades' :model.sync="result1" v-model="modulouno.tipo_discapacidad"></vue-select>
-              </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Situación conyugal</label>
-             <input type="text" class="form-control" v-model="modulouno.situacion_conyugal">
-            </div>
-            <div class="col-md-4">
-               <label for="inputState">Escolaridad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  escolaridad' :model.sync="result1" v-model="modulouno.escolaridad"></vue-select>
-            </div>
-            <div class="col-md-4">
-             <label for="inputState">Condición migratoria</label>
-             <input type="text" class="form-control" v-model="modulouno.condicion_migratoria">
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState1">¿Habla español?</label>
-              <select id="inputState1" class="form-control" v-model="modulouno.habla_español">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState2">¿Habla lengua indigena?</label>
-               <select id="inputState2" class="form-control" v-model="modulouno.habla_lengua_indigena">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Tipo lengua indigena</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  lenguaIndigena' :model.sync="result1" v-model="modulouno.tipo_lengua_indigena"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState3">¿Habla lengua extranjera?</label>
-              <select id="inputState3" class="form-control" v-model="modulouno.habla_lengua_extranjera">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Ocupación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  ocupacion' :model.sync="result1" v-model="modulouno.trabaja_ocupacion"></vue-select>
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Condicion actividad</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  condicionActividad' :model.sync="result1" v-model="modulouno.condicion_actividad"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Fuente de ingresos</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  fuenteIngresos' :model.sync="result1" v-model="modulouno.fuente_ingresos"></vue-select>
-            </div>
-            <div class="col-md-4">
-              <label for="inputState">Ingreso mensual</label>
-                <input type="text" class="form-control" v-model="modulouno.ingreso_mensual">
-            </div>
-            <div class="col-md-4">
-            <label for="inputState">Tipo representación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  tipoRepresentacion' :model.sync="result1" v-model="modulouno.tipo_representacion"></vue-select>
-            </div>
-          </div> 
-
-          <div class="form-row">
-            <div class="col-md-4">
-             <label for="inputState">Sexo representación</label>
-                <vue-select class="vue-select1"  label="valor_variable" :options='
-                  sexoRepresentacion' :model.sync="result1" v-model="modulouno.sexo_representacion"></vue-select>
-            </div>
-          </div> 
-
-          <center>    
-          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
-          </center><br>
-        </div>     
-      </form>
+        </div>
+      </div>
     </div>
 
-    <div class="container">  
+    <div class="container"> 
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalScrollable">
+        Nuevo Registro
+      </button> <br> <br>
+
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -727,7 +751,7 @@
             },
            editar(item){
               const params = {id_expediente: item.id_expediente, datos: item.datos, persona: item.persona, razon_social: item.razon_social, nombre_comercial: item.nombre_comercial, nombre_completo: item.nombre_completo, sexo: item.sexo, fecha_nacimiento: item.fecha_nacimiento, rfc: item.rfc, curp: item.curp, pais: item.pais, estados: item.estados, municipios: item.municipios, nacionalidad: item.nacionalidad, pais_habitual: item.pais_habitual, estado_habitual: item.estado_habitual, municipio_habitual: item.municipio_habitual, tipo_domicilio: item.tipo_domicilio, tipo_discapacidad: item.tipo_discapacidad, situacion_conyugal: item.situacion_conyugal, escolaridad: item.escolaridad, condicion_migratoria: item.condicion_migratoria, habla_español: item.habla_español, habla_lengua_indigena: item.habla_lengua_indigena, tipo_lengua_indigena: item.tipo_lengua_indigena, habla_lengua_extranjera: item.habla_lengua_extranjera, trabaja_ocupacion: item.trabaja_ocupacion, condicion_actividad: item.condicion_actividad, fuente_ingresos: item.fuente_ingresos, ingreso_mensual: item.ingreso_mensual, tipo_representacion: item.tipo_representacion, sexo_representacion: item.sexo_representacion};
-                axios.put(`/Proyecto-CJ/public/modulouno/${item.id_modulo}`, params)
+              axios.put(`/Proyecto-CJ/public/modulouno/${item.id_modulo}`, params)
                 .then(res =>{
                   this.editarActivo = false;
                   this.getResults(this.modulounos.current_page);
@@ -770,12 +794,6 @@
               this.modulouno = {id_expediente: '', datos: '', persona: '', razon_social: '', nombre_comercial: '',nombre_completo: '', sexo: '', fecha_nacimiento: '', rfc: '', curp: '', pais: '', estados: '', municipios: '', nacionalidad: '', pais_habitual: '', estado_habitual: '', municipio_habitual: '', tipo_domicilio: '', tipo_discapacidad: '', situacion_conyugal: '', escolaridad: '', condicion_migratoria: '', habla_español: '', habla_lengua_indigena: '', tipo_lengua_indigena: '', habla_lengua_extranjera: '', trabaja_ocupacion: '', condicion_actividad: '', fuente_ingresos: '', ingreso_mensual: '', tipo_representacion: '', sexo_representacion: ''}
             },
             agregar(){
-
-                //Valida modulouno de formularios
-                 //if(this.modulouno.municipios.trim() === ''){
-                    //alert('Debes completar todos los campos antes de guardar');
-                    //return;
-                  //}
 
                 //console.log(this.modulouno.id_expediente, this.modulouno.descripcion); 
                 const params = {
@@ -877,5 +895,3 @@
        }
     }
 </script>
-
-

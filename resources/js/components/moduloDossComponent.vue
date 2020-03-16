@@ -1,8 +1,18 @@
 <template>
   <div>
-    <div class="modal-content"> <br>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">Módulo - II</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
       <form @submit.prevent="editar(modulodos)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Módulo - 2) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - II) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -133,7 +143,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de los expedientes (Módulo 2)  </h4> <br>
+      <h4 class="text-center"> Datos de los expedientes (Módulo - II)  </h4> <br>
         <div class="container">
 
           <div class="form-group">
@@ -256,17 +266,180 @@
 
          
 
-
-
-
-          <center>    
-          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
-          </center><br>
-        </div>     
-      </form>
+          
+                <center>    
+                <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+                </center><br>
+              </div>     
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">  
+
+
+
+
+
+  <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEditLabel">Módulo - II</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+        <form @submit.prevent="editar(modulodos)" v-if="editarActivo">
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - 2) </i> </h5> <br>
+        <div class="container">
+         
+         <div class="form-group">
+            <select id="id_expediente" class="form-control" v-model="modulodos.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+          
+
+          <div class="form-row">
+            
+             <div class="col-md-4">
+                <label for="inputState">Monto demandado como suerte principal: </label>
+                <input type="number" class="form-control" v-model="modulodos.monto_demandado">
+             </div>
+
+             <div class="col-md-4">
+                <label for="inputState">Fecha de emisión del acuerdo del juez: </label>
+                <input type="date" class="form-control" v-model="modulodos.fecha_emision">
+             </div>
+           
+
+              <div class="col-md-4">
+               <label for="inputState1">Tipo de Acuerdo: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.tipo_acuerdo">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Desechamiento</option>
+                  <option>2.- Incompetencia</option>
+                  <option>3.- Admisión</option>
+                  <option>4.- Prevención</option>
+                </select>
+              </div>
+
+
+
+          </div>
+
+          <div class="form-row">
+  
+              <div class="col-md-4">
+               <label for="inputState1">Subsana prevención: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.subsana_prevencion">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div> 
+
+
+              <div class="col-md-4">
+               <label for="inputState1">Contestación de la demanda: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.contestacion_demanda">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+
+             <div class="col-md-4">
+                <label for="inputState">No contesta la demanda. Fecha en la que se declara rebeldía: </label>
+                <input type="date" class="form-control" v-model="modulodos.fecha_no_contesta">
+             </div>
+
+
+
+          </div> <br>
+
+          <div class="form-row">
+
+             <div class="col-md-4">
+               <label for="inputState1">Si contesta la demanda: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.si_contesta">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Opone excepciones y defensa</option>
+                  <option>2.- Se allana</option>
+                </select>
+              </div> 
+           
+            <div class="col-md-4">
+                <label for="inputState">Fecha de contestación de la demanda: </label>
+                <input type="date" class="form-control" v-model="modulodos.fecha_si_contesta">
+             </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">El demandado reconviene la demanda: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.reconviene_demanda">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+          </div> <br>
+
+      
+          <div class="form-row">
+
+            <div class="col-md-4">
+              <label for="inputState">Fecha de reconvención de la demanda: </label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_reconviene">
+            </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">El reconvenido contesta la reconvención: </label>
+                <select id="inputState1" class="form-control" v-model="modulodos.reconviene_demanda">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+            <div class="col-md-4">
+                <label for="inputState">Número total de acuerdos emitidos en la etapa postulatoria: </label>
+                <input type="number" class="form-control" v-model="modulodos.numero_acuerdos">
+             </div>
+
+          </div> <br>
+
+         
+
+          <center>    
+          <button class="btn btn-primary" type="submit"> Actualizar </button>
+          <button class="btn btn-danger" type="submit" @click="cancelarEdicion()"> Cancelar </button>
+          </center> <br>
+        </div>     
+      </form>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <div class="container"> 
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalScrollable">
+        Nuevo Registro
+      </button> <br> <br>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -284,6 +457,7 @@
                 <th scope="col"> Fecha-reconviene </th>
                 <th scope="col"> Contesta-reconvenido </th>
                 <th scope="col"> Numero de acuerdos </th>
+                <th scope="col"> Editar </th>
               </tr>
               <tr v-for="(item, index) in modulodoss.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -299,6 +473,8 @@
                 <td>{{item.fecha_reconviene}}</td>
                 <td>{{item.contesta_reconvenido}}</td>
                 <td>{{item.numero_acuerdos}}</td>
+                <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEdit" @click="editarFormulario(item)">Actualizar
+      </button></td>
 
               </tr>
           </thead>   

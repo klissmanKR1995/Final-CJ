@@ -62,6 +62,9 @@ class LoginController extends Controller
                 break; 
             case 6:
                     return '/ingeniero';
+                break;   
+            case 7:
+                    return '/juez';
                 break;         
             default:
                     return '/login'; 

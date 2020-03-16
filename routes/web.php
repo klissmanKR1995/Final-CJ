@@ -32,6 +32,8 @@ Route::get('/secretario', 'SecretarioController@index');
 
 Route::get('/ingeniero', 'IngenieroController@index');
 
+Route::get('/juez', 'JuezController@index');
+
 Route::get('/graficas', 'graController@index');
 
 /* Rutas de los componentes en interfaz home (Administrador) */
@@ -132,8 +134,13 @@ Route::get('/mecanismosRealizacionCatalogos', 'valores_catalogosController@mecan
 
 Route::get('/siContestaCatalogos', 'valores_catalogosController@siContestaCatalogos')->name('siContestaCatalogos');
 
-Route::get('/pruebasCatalogos', 'valores_catalogosController@pruebasCatalogos')->name('pruebasCatalogos');
+Route::get('/pruebasCatalogos1', 'valores_catalogosController@pruebasCatalogos1')->name('pruebasCatalogos1');
 
+Route::get('/pruebasCatalogos2', 'valores_catalogosController@pruebasCatalogos2')->name('pruebasCatalogos2');
+
+Route::get('/pruebasCatalogos3', 'valores_catalogosController@pruebasCatalogos3')->name('pruebasCatalogos3');
+
+Route::get('/pruebasCatalogos4', 'valores_catalogosController@pruebasCatalogos4')->name('pruebasCatalogos4');
 
 Route::get('/searchNombreValores', 'valores_catalogosController@searchNombreValores')->name('searchNombreValores');
 
@@ -205,3 +212,6 @@ Route::get('modulodiezPDF', 'ejemplotresController@exportPdf')->name('modulodiez
 Route::get('modulounoExcel', 'ejemploController@exportExcel')->name('modulouno.xlsx');
 
 Route::get('modulodiezExcel', 'ejemplotresController@exportExcel')->name('modulodiez.xlsx');
+
+Route::get('modulo2Excel', 'modulosDosController@exportExcel')->name('modulo2.xlsx');
+

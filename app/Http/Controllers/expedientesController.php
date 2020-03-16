@@ -167,13 +167,18 @@ class expedientesController extends Controller
 
     public function expedientesAll()
     {
-        return  DB::table('expedientes')->select('id_expediente', 'numero_expediente')->whereNotExists(function($query)
+
+        return
+        (
+            expedientes::all()
+        );
+       /* return  DB::table('expedientes')->select('id_expediente', 'numero_expediente')->whereNotExists(function($query)
             {
                 $query->select(DB::raw(1))
                       ->from('ejemplos')
                       ->whereRaw('expedientes.id_expediente = ejemplos.id_expediente');
             })
-            ->get();
+            ->get();*/
     }
 
     public function searchNombreExpdiente(Request $request)

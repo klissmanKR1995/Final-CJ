@@ -1,8 +1,283 @@
 <template>
-  <div>
-    <div class="modal-content"> <br>
-      <form @submit.prevent="editar(modulodos)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - VIII) </i> </h5> <br>
+<div>
+<div class="modal fade" id="modalAgregarM8" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Módulo - IV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     <form @submit.prevent="agregar" >
+      <h4 class="text-center"> Ejecución de la sentencia (Módulo 8)  </h4> <br>
+        <div class="container">
+         
+         <div class="form-group">
+            <select class="form-control" v-model="modulodos.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+                
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">Fecha causa sentencia</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_sentencia">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Fecha de promoción</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_promocion">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Solicitud de embargo</label>
+              <select class="form-control" v-model="modulodos.solicitud_embargo">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">Fecha de solicitud de embargo</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_solicitud_embargo">
+            </div>
+            <div class="col-md-4">
+             <label for="inputState1">¿Se autoriza realización de embargo?</label>
+             <select class="form-control" v-model="modulodos.autorizacion_embargo ">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Fecha emisión de embargo</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_emision">
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">Se ejecuta el embargo</label>
+              <select class="form-control" v-model="modulodos.ejecucion_embargo">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+             <label for="inputState1">Fecha ejecución de embargo</label>
+             <input type="date" class="form-control" v-model="modulodos.fecha_ejecucion_embargo">
+            </div>
+            <div class="col-md-4">
+             <label for="inputState1">¿Cumple voluntariamente con pago?</label>
+             <select class="form-control" v-model="modulodos.cumple_pago">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> <br>
+              
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">¿Realiza el embargo de bienes?</label>
+              <select class="form-control" v-model="modulodos.bienes_sentencia">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Solicita adjudicación</label>
+              <select class="form-control" v-model="modulodos.solicita_adjudicacion">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Designa perito valuador</label>
+              <select class="form-control" v-model="modulodos.designa_perito">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> <br>
+
+
+          <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">Fecha designación peritos valuadores</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_designacion">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Fecha de aceptación del cargo peritos</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_aceptacion">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Fecha en que rinden informe</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_informe">
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+              <div class="col-md-4">
+                <label for="inputState1">Realiza venta en almoneda</label>
+                <select class="form-control" v-model="modulodos.venta_almoneda">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+               <label for="inputState1">Fecha de acuerdo orden</label>
+                <input type="date" class="form-control" v-model="modulodos.fecha_acuerdo">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState1">Número de publicaciones</label>
+                <input type="text" class="form-control" v-model="modulodos.numero_publicaciones">
+              </div>
+          </div> <br>
+
+           <div class="form-row">
+            <div class="col-md-4">
+             <label for="inputState1">Fecha venta almoneda pública</label>
+             <input type="date" class="form-control" v-model="modulodos.fecha_venta">
+            </div>
+            <div class="col-md-4">
+               <label for="inputState1">Número de almonedas públicas</label>
+               <input type="text" class="form-control" v-model="modulodos.almonedas_publicas">
+            </div>
+            <div class="col-md-4">
+             <label for="inputState1">Fecha cambio propietario</label>
+             <input type="date" class="form-control" v-model="modulodos.cambio_propietario">
+            </div>
+          </div> 
+
+          <div class="form-row">
+            <div class="col-md-4">
+             <label for="inputState11">Orden de lanzamiento</label>
+              <select class="form-control" v-model="modulodos.orden_lanzamiento">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState12">Fecha ejecución lanzamiento</label>
+              <input type="date" class="form-control" v-model="modulodos.fecha_lanzamiento">
+            </div>
+            <div class="col-md-4">
+            <label for="inputState1">Existencia de derechos humandos vulnerados</label>
+              <select class="form-control" v-model="modulodos.existencia_derechos">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+            <div class="col-md-4">
+             <label for="inputState13">Tipo de derechos humanos vulnerados</label>
+             <vue-select class="vue-select1"  label="valor_variable" :options='
+                tipoDerechos' :model.sync="result1" v-model="modulodos.tipo_derechos"></vue-select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Medidas dictadas para reparar el daño</label>
+              <select class="form-control" v-model="modulodos.medidas_dictadas">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+            <label for="inputState1">Tipo de medida</label>
+              <vue-select class="vue-select1"  label="valor_variable" :options='
+                tipoMedida' :model.sync="result1" v-model="modulodos.tipo_medida"></vue-select>
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+            <div class="col-md-4">
+             <label for="inputState1">Solicitud de amparo</label>
+              <select class="form-control" v-model="modulodos.solicitud_amparo">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Tipo de amparo solicitado</label>
+                <vue-select class="vue-select1"  label="valor_variable" :options='
+                tipoAmparo' :model.sync="result1" v-model="modulodos.tipo_amparo"></vue-select>
+            </div>
+            <div class="col-md-4">
+            <label for="inputState1">Se solicito suspension provisional</label>
+              <select class="form-control" v-model="modulodos.suspension_provisional">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div>
+          </div> <br>
+
+          <div class="form-row">
+            <div class="col-md-4">
+             <label for="inputState1">Fase procesal</label>
+                <vue-select class="vue-select1"  label="valor_variable" :options='
+                  faseProcesal' :model.sync="result1" v-model="modulodos.fase_procesal"></vue-select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState1">Resolución de amparo</label>
+                <vue-select class="vue-select1"  label="valor_variable" :options='
+                resolucionAmparo' :model.sync="result1" v-model="modulodos.resolucion_amparo"></vue-select>
+            </div>
+            <div class="col-md-4">
+            <label for="inputState1">Número total de acuerdos emitidos</label>
+              <input type="text" class="form-control" v-model="modulodos.total_acuerdos">
+            </div>
+          </div> <br>
+
+          <center>    
+          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+          </center><br>
+        </div>     
+      </form>
+     </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="modalEditarM8" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Módulo - IV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     <form @submit.prevent="editar(modulodos)" v-if="editarActivo">
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - 8) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -242,7 +517,7 @@
       </form>  
 
       <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Ejecución de la sentencia (Modulo VIII)  </h4> <br>
+      <h4 class="text-center"> Ejecución de la sentencia (Módulo 8)  </h4> <br>
         <div class="container">
          
          <div class="form-group">
@@ -480,9 +755,19 @@
           </center><br>
         </div>     
       </form>
+     </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
+  </div>
+</div>
 
-    <div class="container">  
+  
+   <div class="container">  
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalAgregarM8">
+  Nuevo Registro
+</button><br> <br>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -521,6 +806,7 @@
                 <th scope="col"> Fase procesal </th>
                 <th scope="col"> Resolución amparo </th>
                 <th scope="col"> Total acuerdos </th>
+                <th scope="col"> Actualizar </th>
               </tr>
               <tr v-for="(item, index) in modulodoss.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -557,40 +843,17 @@
                 <td>{{item.fase_procesal}}</td>
                 <td>{{item.resolucion_amparo}}</td>
                 <td>{{item.total_acuerdos}}</td>
+                 <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEditarM8" @click="editarFormulario(item)">Actualizar</button></td>
               </tr>
           </thead>   
         </table>
-
+       
 
        <!-- Paginador -->
        <pagination :data="modulodoss" @pagination-change-page="getResultsModuloDos"> </pagination>
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalModuloDos" tabindex="-1" role="dialog" aria-labelledby="exampleModalModuloDosLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalModuloDosLabel">Confirmar elminación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <input type="hidden" name="id" id="id">
-                ¿Estas seguro(a) de eliminar el registro seleccionado?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="eliminarModuloDos('cancelar')">Cancelar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" @click="eliminarModuloDos('aceptar')">Eliminar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Termina modal -->
-      </div>  
-    </div>    
-  </div>            
+   </div>
+</div>
+</div>
 </template>
 
 <script>

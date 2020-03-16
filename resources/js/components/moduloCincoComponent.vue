@@ -1,7 +1,93 @@
 <template>
-  <div>
-    <div class="modal-content"> <br>
-      <form @submit.prevent="editar(modulocinco)" v-if="editarActivo">
+<div>
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Módulo - V</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+        <form @submit.prevent="agregar">
+      <h4 class="text-center"> Datos de los expedientes (Módulo 5)  </h4> <br>
+         
+         <div class="form-group">
+            <select class="form-control" v-model="modulocinco.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+                
+
+          <div class="form-row"> 
+            <div class="col-md-4">
+              <label for="inputState1">Emisión de acuerdo por hechos no controvertidos: </label>
+              <select class="form-control" v-model="modulocinco.emision_acuerdo_controvertido">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div> 
+
+            <div class="col-md-4">
+              <label for="inputState1">Fecha causa sentencia</label>
+              <input type="date" class="form-control" v-model="modulocinco.fecha_emision_acuerdo">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputState1">Fecha de promoción</label>
+              <input type="date" class="form-control" v-model="modulocinco.fecha_emision_acuerdo_probatorio">
+            </div>
+
+          </div> <br>
+
+          <div class="form-row">
+           
+            <div class="col-md-4">
+              <label for="inputState1">Emisión de acuerdo: </label>
+              <select class="form-control" v-model="modulocinco.emision_acuerdo">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div> 
+
+
+            <div class="col-md-4">
+              <label for="inputState1">Número total de acuerdos emitidos en la fase de Audiencia preliminar:</label>
+              <input type="number" class="form-control" v-model="modulocinco.numero_total_acuerdos">
+            </div>
+
+           
+              <br>
+              <br>
+             <center>    
+                <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+                </center><br>
+              </div>     
+            </form>
+            </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalEdit3" tabindex="-1" role="dialog" aria-labelledby="ModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel3">Módulo - V</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+<form @submit.prevent="editar(modulocinco)" v-if="editarActivo">
       <h5 class="text-center"> Actualizar Información <i> (Módulo  5) </i> </h5> <br>
         <div class="container">
          
@@ -122,10 +208,22 @@
           </center><br>
         </div>     
       </form>
-    </div>
 
-    <div class="container">  
+
+          </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
       <div class="table-responsive">
+         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
+  Nuevo Registro
+</button><br> <br>
         <table class="table table-striped">
           <thead>
               <tr>
@@ -135,6 +233,7 @@
                 <th scope="col"> Fecha de emisión de acuerdo probatorio</th>
                 <th scope="col"> Emisión de acuerdo</th>
                 <th scope="col"> Numero total de acuerdos</th>
+                <th scope="col"> Actualizar</th>
               </tr>
               <tr v-for="(item, index) in modulocincos.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -143,42 +242,17 @@
                 <td>{{item.fecha_emision_acuerdo_probatorio}}</td>
                 <td>{{item.emision_acuerdo}}</td>
                 <td>{{item.numero_total_acuerdos}}</td>
+                 <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEdit3" @click="editarFormulario(item)">Actualizar
+      </button></td>
               </tr>
           </thead>   
         </table>
-
-
        <!-- Paginador -->
        <pagination :data="modulocincos" @pagination-change-page="getResultsModuloCinco"> </pagination>
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalModuloCinco" tabindex="-1" role="dialog" aria-labelledby="exampleModalModuloCincoLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalModuloCincoLabel">Confirmar elminación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <input type="hidden" name="id" id="id">
-                ¿Estas seguro(a) de eliminar el registro seleccionado?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="eliminarModuloCinco('cancelar')">Cancelar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" @click="eliminarModuloCinco('aceptar')">Eliminar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Termina modal -->
-      </div>  
-    </div>    
-  </div>            
+           </div>  
+    </div>
+  </div>
 </template>
-
 
 <script>
   import vueSelect from 'vue-select'
@@ -268,7 +342,7 @@
                     
               axios.post('/Proyecto-CJ/public/modulocinco', params)     
                     .then(res => {
-                        this.getResults(this.modulocincos.last_page);
+                        this.getResultsModuloCinco(this.modulocincos.last_page);
                         this.expedientes.length = 0
                         axios.get('/Proyecto-CJ/public/expedientesAll')
                         .then(res => {

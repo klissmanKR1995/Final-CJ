@@ -103,9 +103,6 @@
 
               
 
-              <a class="nav-link menuMain" id="v-pills-expedientes-tab" data-toggle="pill" href="#v-pills-expedientes" role="tab" aria-controls="v-pills-expedientes" aria-selected="false"><i class="fas fa-file-alt"></i> Consulta-Expedientes</a>
-
-              <a class="nav-link menuMain" id="v-pills-manualAyuda-tab" data-toggle="pill" href="#v-pills-manualAyuda" role="tab" aria-controls="v-pills-manualAyuda" aria-selected="false"> <i class="fas fa-question"></i> Manual-Ayuda</a>
       
               <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -145,6 +142,7 @@
               <p> Al sistema de generación de estadísticas del <strong> Poder Judicial del Estado de Tlaxcala. </strong> </p>
               
               
+              <inicio-component></inicio-component>
 
               <br> 
             </div>
@@ -162,6 +160,7 @@
 
           <div class="container">
              <modulo2-component></modulo2-component>
+              <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 2-->
@@ -176,7 +175,8 @@
 
           <div class="container">
 
-            <modulocuatro-component></modulocuatro-component>          
+            <modulocuatro-component></modulocuatro-component>   
+             <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>       
           </div>
         </div>
       <!-- Termina formulario del modulo numero 4-->
@@ -191,6 +191,7 @@
 
           <div class="container">
             <modulocinco-component></modulocinco-component>
+             <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 5-->
@@ -204,6 +205,7 @@
 
           <div class="container">
             <moduloseis-component></moduloseis-component>
+             <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 6-->
@@ -218,6 +220,7 @@
 
           <div class="container">
               <modulosiete-component></modulosiete-component>
+               <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 7-->
@@ -233,6 +236,7 @@
 
           <div class="container">
             <modulodos-component></modulodos-component>
+             <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 8-->
@@ -247,6 +251,7 @@
 
           <div class="container">
              <modulonueve-component></modulonueve-component>
+              <a href="{{ route('modulouno.xlsx') }}" class="btn btn-success"> Exportar Excel </a>
           </div>
         </div>
       <!-- Termina formulario del modulo numero 9-->

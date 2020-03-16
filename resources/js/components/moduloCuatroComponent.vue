@@ -1,6 +1,202 @@
 <template>
   <div>
-    <div class="modal-content"> <br>
+<div class="modal fade" id="modalAgregarM4" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Módulo - IV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <form @submit.prevent="agregar" >
+      <h4 class="text-center"> Datos de pruebas (Módulo 4)  </h4> <br>
+        <div class="container">
+         
+                  <div class="form-group">
+            <select id="id_expediente" class="form-control" v-model="modulocuatro.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+          
+            <div class="form-row">
+
+              <div class="col-md-4">
+               <label for="inputState1">Se ofrecen pruebas:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.se_ofrecen_pruebas">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Parte que ofrece la/s prueba/s:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.parte_que_ofrece_prueba">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Parte actora</option>
+                  <option>2.- Parte demandada</option>
+                </select>
+              </div>
+
+            <div class="col-md-4">
+              <label for="inputState">Fecha en que se ofrecen las pruebas:</label>
+              <input type="date" class="form-control" v-model="modulocuatro.fecha_ofrecen_pruebas">
+            </div>
+            
+            </div>
+
+            <div class="form-row">
+            
+              <div class="col-md-4">
+                <label for="inputState">Fecha de admisión de las pruebas:</label>
+                <input type="date" class="form-control" v-model="modulocuatro.fecha_admision_pruebas">
+              </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Prueba/s ofrecida/s en:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.pruebas_ofrecidas_en">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Juicio</option>
+                  <option>2.- Reconvención</option>
+                </select>
+              </div>
+            
+             <div class="form-row">
+                <div class="col-md-4">
+                 <label for="inputState">Tipo de prueba/s ofrecida/s:</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pruebas1' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_ofrecidas"></vue-select>
+                </div>
+             </div>
+
+            </div>
+
+            <div class="form-row">
+              
+              <div class="form-row">
+                <div class="col-md-4">
+                 <label for="inputState">Tipo de prueba/s admitida/s:</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pruebas2' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_admitidas"></vue-select>
+                </div>
+             </div>
+
+             <div class="form-row">
+                <div class="col-md-4">
+                 <label for="inputState">Tipo de prueba/s desahogada/s:</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pruebas3' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_desahogadas"></vue-select>
+                </div>
+             </div>
+
+             <div class="col-md-4">
+                <label for="inputState">Fecha de desahogo de pruebas admitidas:</label>
+                <input type="date" class="form-control" v-model="modulocuatro.fecha_desahogo_pruebas">
+              </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+              <div class="col-md-4">
+                <label for="inputState">Número de pruebas desahogadas fuera del Tribunal:</label>
+              <input type="number" class="form-control" v-model="modulocuatro.numero_pruebas_desahogadas">
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputState">Fecha de aceptación de cargo de peritos para pruebas periciales:</label>
+                <input type="date" class="form-control" v-model="modulocuatro.fecha_aceptacion_cargo  ">
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputState">Fecha en que peritos rinden informe respecto de las pruebas periciales:</label>
+                <input type="date" class="form-control" v-model="modulocuatro.fecha_perritos_rinden">
+              </div>
+
+
+            </div>
+
+            <div class="form-row">
+
+               <div class="col-md-4">
+               <label for="inputState1">Juez designa perito en discordia:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.juez_designa_perito">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+               <div class="col-md-4">
+               <label for="inputState1">Se renuncia a las pruebas:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.se_renuncia_pruenas">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Parte que renuncia a la/s prueba/s:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.parte_renuncia_pruebas">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Parte actora</option>
+                  <option>2.- Parte demandada</option>
+                </select>
+              </div>
+
+
+            </div>
+
+            <div class="form-row">
+              
+               <div class="form-row">
+                <div class="col-md-4">
+                 <label for="inputState">Tipo de prueba/s a la/s que se renuncia:</label>
+                    <vue-select class="vue-select1"  label="valor_variable" :options='
+                      pruebas4' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_renuncia"></vue-select>
+                </div>
+             </div>
+            </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Motivo por el que renuncian a la/s prueba/s:</label>
+                <select id="inputState1" class="form-control" v-model="modulocuatro.motivos_renuncia_pruebas">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Por acuerdo entre las partes</option>
+                  <option>22.- Otra</option>
+                </select>
+              </div>
+
+
+          <center>    
+                <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+                </center><br>
+              </div>     
+            </form>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="modal fade" id="modalEditarM4" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">Módulo - IV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
       <form @submit.prevent="editar(modulocuatro)" v-if="editarActivo">
       <h5 class="text-center"> Actualizar Información <i> (Módulo 4) </i> </h5> <br>
         <div class="container">
@@ -59,7 +255,7 @@
                 <div class="col-md-4">
                  <label for="inputState">Tipo de prueba/s ofrecida/s:</label>
                     <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_ofrecidas"></vue-select>
+                      pruebas1' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_ofrecidas"></vue-select>
                 </div>
              </div>
 
@@ -71,7 +267,7 @@
                 <div class="col-md-4">
                  <label for="inputState">Tipo de prueba/s admitida/s:</label>
                     <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_admitidas"></vue-select>
+                      pruebas2' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_admitidas"></vue-select>
                 </div>
              </div>
 
@@ -79,7 +275,7 @@
                 <div class="col-md-4">
                  <label for="inputState">Tipo de prueba/s desahogada/s:</label>
                     <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_desahogadas"></vue-select>
+                      pruebas3' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_desahogadas"></vue-select>
                 </div>
              </div>
 
@@ -149,7 +345,7 @@
                 <div class="col-md-4">
                  <label for="inputState">Tipo de prueba/s a la/s que se renuncia:</label>
                     <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_renuncia"></vue-select>
+                      pruebas4' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_renuncia"></vue-select>
                 </div>
              </div>
             </div>
@@ -170,178 +366,21 @@
           </center> <br>
         </div>     
       </form>  
-
-      <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de pruebas (Módulo 4)  </h4> <br>
-        <div class="container">
-         
-                  <div class="form-group">
-            <select id="id_expediente" class="form-control" v-model="modulocuatro.id_expediente">
-              <option value="">Número de expediente </option>
-              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
-            </select>
-          </div>
-          
-            <div class="form-row">
-
-              <div class="col-md-4">
-               <label for="inputState1">Se ofrecen pruebas:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.se_ofrecen_pruebas">
-                  <option selected>Seleccionar</option>
-                  <option>Si</option>
-                  <option>No</option>
-                </select>
-              </div>
-
-              <div class="col-md-4">
-               <label for="inputState1">Parte que ofrece la/s prueba/s:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.parte_que_ofrece_prueba">
-                  <option selected>Seleccionar</option>
-                  <option>1.- Parte actora</option>
-                  <option>2.- Parte demandada</option>
-                </select>
-              </div>
-
-            <div class="col-md-4">
-              <label for="inputState">Fecha en que se ofrecen las pruebas:</label>
-              <input type="date" class="form-control" v-model="modulocuatro.fecha_ofrecen_pruebas">
-            </div>
-            
-            </div>
-
-            <div class="form-row">
-            
-              <div class="col-md-4">
-                <label for="inputState">Fecha de admisión de las pruebas:</label>
-                <input type="date" class="form-control" v-model="modulocuatro.fecha_admision_pruebas">
-              </div>
-
-              <div class="col-md-4">
-               <label for="inputState1">Prueba/s ofrecida/s en:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.pruebas_ofrecidas_en">
-                  <option selected>Seleccionar</option>
-                  <option>1.- Juicio</option>
-                  <option>2.- Reconvención</option>
-                </select>
-              </div>
-            
-             <div class="form-row">
-                <div class="col-md-4">
-                 <label for="inputState">Tipo de prueba/s ofrecida/s:</label>
-                    <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_ofrecidas"></vue-select>
-                </div>
-             </div>
-
-            </div>
-
-            <div class="form-row">
-              
-              <div class="form-row">
-                <div class="col-md-4">
-                 <label for="inputState">Tipo de prueba/s admitida/s:</label>
-                    <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_admitidas"></vue-select>
-                </div>
-             </div>
-
-             <div class="form-row">
-                <div class="col-md-4">
-                 <label for="inputState">Tipo de prueba/s desahogada/s:</label>
-                    <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_desahogadas"></vue-select>
-                </div>
-             </div>
-
-             <div class="col-md-4">
-                <label for="inputState">Fecha de desahogo de pruebas admitidas:</label>
-                <input type="date" class="form-control" v-model="modulocuatro.fecha_desahogo_pruebas">
-              </div>
-
-
-            </div>
-
-            <div class="form-row">
-
-              <div class="col-md-4">
-                <label for="inputState">Número de pruebas desahogadas fuera del Tribunal:</label>
-              <input type="number" class="form-control" v-model="modulocuatro.numero_pruebas_desahogadas">
-              </div>
-
-              <div class="col-md-4">
-                <label for="inputState">Fecha de aceptación de cargo de peritos para pruebas periciales:</label>
-                <input type="date" class="form-control" v-model="modulocuatro.fecha_aceptacion_cargo  ">
-              </div>
-
-              <div class="col-md-4">
-                <label for="inputState">Fecha en que peritos rinden informe respecto de las pruebas periciales:</label>
-                <input type="date" class="form-control" v-model="modulocuatro.fecha_perritos_rinden">
-              </div>
-
-
-            </div>
-
-            <div class="form-row">
-
-               <div class="col-md-4">
-               <label for="inputState1">Juez designa perito en discordia:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.juez_designa_perito">
-                  <option selected>Seleccionar</option>
-                  <option>Si</option>
-                  <option>No</option>
-                </select>
-              </div>
-
-               <div class="col-md-4">
-               <label for="inputState1">Se renuncia a las pruebas:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.se_renuncia_pruenas">
-                  <option selected>Seleccionar</option>
-                  <option>Si</option>
-                  <option>No</option>
-                </select>
-              </div>
-
-              <div class="col-md-4">
-               <label for="inputState1">Parte que renuncia a la/s prueba/s:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.parte_renuncia_pruebas">
-                  <option selected>Seleccionar</option>
-                  <option>1.- Parte actora</option>
-                  <option>2.- Parte demandada</option>
-                </select>
-              </div>
-
-
-            </div>
-
-            <div class="form-row">
-              
-               <div class="form-row">
-                <div class="col-md-4">
-                 <label for="inputState">Tipo de prueba/s a la/s que se renuncia:</label>
-                    <vue-select class="vue-select1"  label="valor_variable" :options='
-                      pruebas' :model.sync="result1" v-model="modulocuatro.tipo_pruebas_renuncia"></vue-select>
-                </div>
-             </div>
-            </div>
-
-              <div class="col-md-4">
-               <label for="inputState1">Motivo por el que renuncian a la/s prueba/s:</label>
-                <select id="inputState1" class="form-control" v-model="modulocuatro.motivos_renuncia_pruebas">
-                  <option selected>Seleccionar</option>
-                  <option>1.- Por acuerdo entre las partes</option>
-                  <option>22.- Otra</option>
-                </select>
-              </div>
-
-
-          <center>    
-          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
-          </center><br>
-        </div>     
-      </form>
+        
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
+  </div>
+</div>
 
-    <div class="container">  
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalAgregarM4">
+        Nuevo Registro
+      </button> <br> <br>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -364,6 +403,7 @@
                 <th scope="col"> Parte </th>
                 <th scope="col"> Tipo </th>
                 <th scope="col"> Motivos </th>
+                <th scope="col"> Actualizar </th>
               </tr>
               <tr v-for="(item, index) in modulocuatros.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -384,40 +424,19 @@
                 <td>{{item.parte_renuncia_pruebas}}</td>
                 <td>{{item.tipo_pruebas_renuncia}}</td>
                 <td>{{item.motivos_renuncia_pruebas}}</td>
+                 <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEditarM4" @click="editarFormulario(item)">Actualizar
+      </button></td>
               </tr>
           </thead>   
         </table>
-
-
        <!-- Paginador -->
        <pagination :data="modulocuatros" @pagination-change-page="getResults"> </pagination>
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalModuloUno" tabindex="-1" role="dialog" aria-labelledby="exampleModalModuloUnoLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalModuloUnoLabel">Confirmar elminación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <input type="hidden" name="id" id="id">
-                ¿Estas seguro(a) de eliminar el registro seleccionado?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="eliminarModulouno('cancelar')">Cancelar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" @click="eliminarModulouno('aceptar')">Eliminar</button>
-              </div>
-            </div>
-          </div>
         </div>
-        <!--Termina modal -->
-      </div>  
-    </div>    
-  </div>            
+      
+</div>
+
+
+
 </template>
 
 <script>
@@ -430,7 +449,10 @@
                 expedientes: [],
                 modulocuatros: {},
                 modulocuatro: {id_expediente: '',se_ofrecen_pruebas: '',parte_que_ofrece_prueba: '',fecha_ofrecen_pruebas: '',fecha_admision_pruebas: '',pruebas_ofrecidas_en: '',tipo_pruebas_ofrecidas: '',tipo_pruebas_admitidas: '',tipo_pruebas_desahogadas: '',fecha_desahogo_pruebas: '',numero_pruebas_desahogadas: '',fecha_aceptacion_cargo: '',fecha_perritos_rinden: '',juez_designa_perito: '',se_renuncia_pruenas: '',parte_renuncia_pruebas: '',tipo_pruebas_renuncia: '',motivos_renuncia_pruebas: ''},
-                pruebas: [] ,
+                pruebas1: [] ,
+                pruebas2: [] ,
+                pruebas3: [] ,
+                pruebas4: [] ,
                 editarActivo: false,
                 result1: "",
             }
@@ -447,9 +469,30 @@
                 console.log(error.response)
             });
     
-            axios.get('/Proyecto-CJ/public/pruebasCatalogos')
+            axios.get('/Proyecto-CJ/public/pruebasCatalogos1')
             .then(res => {
-                this.pruebas = res.data;
+                this.pruebas1 = res.data;
+            }).catch(error => {
+                console.log(error.response)
+            });
+
+            axios.get('/Proyecto-CJ/public/pruebasCatalogos2')
+            .then(res => {
+                this.pruebas2 = res.data;
+            }).catch(error => {
+                console.log(error.response)
+            });
+
+            axios.get('/Proyecto-CJ/public/pruebasCatalogos3')
+            .then(res => {
+                this.pruebas3 = res.data;
+            }).catch(error => {
+                console.log(error.response)
+            });
+
+            axios.get('/Proyecto-CJ/public/pruebasCatalogos4')
+            .then(res => {
+                this.pruebas4 = res.data;
             }).catch(error => {
                 console.log(error.response)
             });
@@ -486,7 +529,7 @@
 
             },
            editar(item){
-              const params = {id_expediente: item.id_expediente,se_ofrecen_pruebas: item.se_ofrecen_pruebas,parte_que_ofrece_prueba: item.parte_que_ofrece_prueba,fecha_ofrecen_pruebas: item.fecha_ofrecen_pruebas,fecha_admision_pruebas: item.fecha_admision_pruebas,pruebas_ofrecidas_en: item.pruebas_ofrecidas_en,tipo_pruebas_admitidas: item.tipo_pruebas_admitidas,tipo_pruebas_desahogadas: item.tipo_pruebas_desahogadas,fecha_desahogo_pruebas: item.fecha_desahogo_pruebas,numero_pruebas_desahogadas: item.numero_pruebas_desahogadas,fecha_aceptacion_cargo: item.fecha_aceptacion_cargo,fecha_perritos_rinden: item.fecha_perritos_rinden,juez_designa_perito: item.juez_designa_perito,se_renuncia_pruenas: item.se_renuncia_pruenas,parte_renuncia_pruebas: item.parte_renuncia_pruebas,motivos_renuncia_pruebas: item.motivos_renuncia_pruebas};
+              const params = {id_expediente: item.id_expediente,se_ofrecen_pruebas: item.se_ofrecen_pruebas,parte_que_ofrece_prueba: item.parte_que_ofrece_prueba,fecha_ofrecen_pruebas: item.fecha_ofrecen_pruebas,fecha_admision_pruebas: item.fecha_admision_pruebas,pruebas_ofrecidas_en: item.pruebas_ofrecidas_en, tipo_pruebas_ofrecidas: typeof(this.modulocuatro.tipo_pruebas_ofrecidas) == "object" ? this.modulocuatro.tipo_pruebas_ofrecidas.valor_variable:this.modulocuatro.tipo_pruebas_ofrecidas,tipo_pruebas_admitidas: typeof(this.modulocuatro.tipo_pruebas_admitidas) == "object" ? this.modulocuatro.tipo_pruebas_admitidas.valor_variable:this.modulocuatro.tipo_pruebas_admitidas,tipo_pruebas_desahogadas: typeof(this.modulocuatro.tipo_pruebas_desahogadas) == "object" ? this.modulocuatro.tipo_pruebas_desahogadas.valor_variable:this.modulocuatro.tipo_pruebas_desahogadas,fecha_desahogo_pruebas: item.fecha_desahogo_pruebas,numero_pruebas_desahogadas: item.numero_pruebas_desahogadas,fecha_aceptacion_cargo: item.fecha_aceptacion_cargo,fecha_perritos_rinden: item.fecha_perritos_rinden,juez_designa_perito: item.juez_designa_perito,se_renuncia_pruenas: item.se_renuncia_pruenas,parte_renuncia_pruebas: item.parte_renuncia_pruebas,tipo_pruebas_renuncia: typeof(this.modulocuatro.tipo_pruebas_renuncia) == "object" ? this.modulocuatro.tipo_pruebas_renuncia.valor_variable:this.modulocuatro.tipo_pruebas_renuncia,motivos_renuncia_pruebas: item.motivos_renuncia_pruebas};
               axios.put(`/Proyecto-CJ/public/modulocuatro/${item.id_modulo}`, params)
                 .then(res =>{
                   this.editarActivo = false;
@@ -534,9 +577,9 @@
                 fecha_ofrecen_pruebas: this.modulocuatro.fecha_ofrecen_pruebas,
                 fecha_admision_pruebas: this.modulocuatro.fecha_admision_pruebas,
                 pruebas_ofrecidas_en: this.modulocuatro.pruebas_ofrecidas_en,
-                tipo_pruebas_ofrecidas: this.modulocuatro.tipo_pruebas_ofrecidas,
-                tipo_pruebas_admitidas: this.modulocuatro.tipo_pruebas_admitidas,
-                tipo_pruebas_desahogadas: this.modulocuatro.tipo_pruebas_desahogadas,
+                tipo_pruebas_ofrecidas: this.modulocuatro.tipo_pruebas_ofrecidas.valor_variable,
+                tipo_pruebas_admitidas: this.modulocuatro.tipo_pruebas_admitidas.valor_variable,
+                tipo_pruebas_desahogadas: this.modulocuatro.tipo_pruebas_desahogadas.valor_variable,
                 fecha_desahogo_pruebas: this.modulocuatro.fecha_desahogo_pruebas,
                 numero_pruebas_desahogadas: this.modulocuatro.numero_pruebas_desahogadas,
                 fecha_aceptacion_cargo: this.modulocuatro.fecha_aceptacion_cargo,
@@ -544,7 +587,7 @@
                 juez_designa_perito: this.modulocuatro.juez_designa_perito,
                 se_renuncia_pruenas: this.modulocuatro.se_renuncia_pruenas,
                 parte_renuncia_pruebas: this.modulocuatro.parte_renuncia_pruebas,
-                tipo_pruebas_renuncia: this.modulocuatro.tipo_pruebas_renuncia,
+                tipo_pruebas_renuncia: this.modulocuatro.tipo_pruebas_renuncia.valor_variable,
                 motivos_renuncia_pruebas: this.modulocuatro.motivos_renuncia_pruebas,
  
     

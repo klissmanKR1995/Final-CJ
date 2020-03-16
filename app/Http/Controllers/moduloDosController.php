@@ -124,5 +124,12 @@ class moduloDosController extends Controller
         $modulodos = modulo2::find($id);
         $modulodos->delete();
     }
-
+    
+    public function exportExcel()
+    {
+        
+        
+        return Excel::download(new Modulo2Export, 'Modulo.xlsx');
+       
+    }
 }

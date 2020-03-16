@@ -1,7 +1,107 @@
 <template>
-  <div>
-    <div class="modal-content"> <br>
-      <form @submit.prevent="editar(moduloseis)" v-if="editarActivo">
+<div>
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="ModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel1">Módulo - VI</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"> 
+       <form @submit.prevent="agregar">
+       <h4 class="text-center"> Datos de los expedientes - Audiencia de Juicio (Módulo - VI) </h4> <br>
+        <div class="container">
+         
+          <div class="form-group">
+            <select class="form-control" v-model="moduloseis.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+
+           <div class="form-row">
+            <div class="col-md-4">
+              <label for="inputState1">Alegatos presentados por la parte actora: </label>
+              <select class="form-control" v-model="moduloseis.alegatos_presentados">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div> 
+
+            
+            <div class="col-md-4">
+              <label for="inputState1">Alegatos presentados por la parte demandada: </label>
+              <select class="form-control" v-model="moduloseis.alegatos_presentados_parte_demandada">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div> 
+
+            <div class="col-md-4">
+              <label for="inputState1">Incidentes pendientes por resolver: </label>
+              <select class="form-control" v-model="moduloseis.incidentes_pendientes">
+                <option selected>Seleccionar</option>
+                <option>Si</option>
+                <option>No</option>
+              </select>
+            </div> 
+
+          </div> <br>
+
+
+          <div class="form-row">
+           
+            <div class="col-md-4">
+              <label for="inputState1">Número de incidentes pendientes por resolver, según tipo: </label>
+              <select class="form-control" v-model="moduloseis.numero_incidentes_por_resolver">
+                <option selected>Seleccionar</option>
+                <option>1.- Impugnación de falsedad de documento</option>
+                <option>2.- Nulidad de emplazamiento</option>
+              </select>
+            </div> 
+
+            <div class="col-md-4">
+                <label for="inputState">Número de incidentes resueltos, según tipo:</label>
+              <input type="number" class="form-control" v-model="moduloseis.numero_incidentes_resueltos">
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputState">Número total de acuerdos emitidos en la fase de Audiencia de juicio:</label>
+              <input type="number" class="form-control" v-model="moduloseis.numero_total_acuerdos_por_resolver">
+              </div>
+
+          </div> <br>
+
+
+
+        <center><button class="btn btn-danger" type="submit"> Guardar Registro </button> </center><br>
+      </div>
+  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalEdit5" tabindex="-1" role="dialog" aria-labelledby="ModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel3">Módulo - V</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <form @submit.prevent="editar(moduloseis)" v-if="editarActivo">
       <h5 class="text-center"> Actualizar Información <i> (Módulo 6) </i> </h5> <br>
         <div class="container">
          
@@ -74,82 +174,20 @@
           </center> <br>
         </div>     
       </form>  
-
-      <form @submit.prevent="agregar" v-else>
-      <h4 class="text-center"> Datos de los expedientes - Audiencia de Juicio (Módulo 6) </h4> <br>
-        <div class="container">
-         
-               <div class="form-group">
-            <select class="form-control" v-model="moduloseis.id_expediente">
-              <option value="">Número de expediente </option>
-              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
-            </select>
-          </div>
-                
-          <div class="form-row">
-           
-            <div class="col-md-4">
-              <label for="inputState1">Alegatos presentados por la parte actora: </label>
-              <select class="form-control" v-model="moduloseis.alegatos_presentados">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div> 
-
-            
-            <div class="col-md-4">
-              <label for="inputState1">Alegatos presentados por la parte demandada: </label>
-              <select class="form-control" v-model="moduloseis.alegatos_presentados_parte_demandada">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div> 
-
-            <div class="col-md-4">
-              <label for="inputState1">Incidentes pendientes por resolver: </label>
-              <select class="form-control" v-model="moduloseis.incidentes_pendientes">
-                <option selected>Seleccionar</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-            </div> 
-
-          </div> <br>
-
-          <div class="form-row">
-           
-            <div class="col-md-4">
-              <label for="inputState1">Número de incidentes pendientes por resolver, según tipo: </label>
-              <select class="form-control" v-model="moduloseis.numero_incidentes_por_resolver">
-                <option selected>Seleccionar</option>
-                <option>1.- Impugnación de falsedad de documento</option>
-                <option>2.- Nulidad de emplazamiento</option>
-              </select>
-            </div> 
-
-            <div class="col-md-4">
-                <label for="inputState">Número de incidentes resueltos, según tipo:</label>
-              <input type="number" class="form-control" v-model="moduloseis.numero_incidentes_resueltos">
-            </div>
-
-            <div class="col-md-4">
-                <label for="inputState">Número total de acuerdos emitidos en la fase de Audiencia de juicio:</label>
-              <input type="number" class="form-control" v-model="moduloseis.numero_total_acuerdos_por_resolver">
-              </div>
-              
-          </div> <br>
-                      
-
-          <center>    
-          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
-          </center><br>
-        </div>     
-      </form>
+        </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
+  </div>
+</div>
 
-    <div class="container">  
+
+
+    <div class="container"> 
+     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1">
+  Nuevo Registro
+</button><br> <br>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -158,12 +196,15 @@
                 <th scope="col"> Alegatos presentados por la parte actora </th>
                 <th scope="col"> Alegatos presentados por la parte demandada</th>
                 <th scope="col"> Incidentes pendientes por resolver</th>
+                <th scope="col"> Actualizar</th>
               </tr>
               <tr v-for="(item, index) in modulo6.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
                 <td>{{item.alegatos_presentados}}</td>
                 <td>{{item.alegatos_presentados_parte_demandada}}</td>
                 <td>{{item.incidentes_pendientes}}</td>
+                 <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEdit5" @click="editarFormulario(item)">Actualizar
+      </button></td>
               </tr>
           </thead>   
         </table>
@@ -172,33 +213,16 @@
        <!-- Paginador -->
        <pagination :data="modulo6" @pagination-change-page="getResultsModuloSeis"> </pagination>
 
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalModuloSeis" tabindex="-1" role="dialog" aria-labelledby="exampleModalModuloSeisLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalModuloSeisLabel">Confirmar elminación</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <input type="hidden" name="id" id="id">
-                ¿Estas seguro(a) de eliminar el registro seleccionado?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="eliminarModuloSeis('cancelar')">Cancelar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" @click="eliminarModuloSeis('aceptar')">Eliminar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Termina modal -->
       </div>  
-    </div>    
-  </div>            
+    </div>
+  </div>
+
 </template>
+
+
+
+
+
 
 
 <script>
@@ -294,19 +318,16 @@
 
 
 
-                axios.post('/Proyecto-CJ/public/moduloseis', params)     
+         
+               axios.post('/Proyecto-CJ/public/moduloseis', params)     
                     .then(res => {
-                        this.getResults(this.moduloseis.last_page);
-                    })     
-               /* axios.post('/Proyecto-CJ/public/modulocinco', params)     
-                    .then(res => {
-                        this.getResultsModuloCinco(this.modulocincos.last_page);
+                        this.getResultsModuloSeis(this.modulo6.last_page);
                         this.expedientes.length = 0
                         axios.get('/Proyecto-CJ/public/expedientesAll')
                         .then(res => {
                             this.expedientes = res.data;
                         })
-                })*/
+                })
 
             },
             confirmar(id){

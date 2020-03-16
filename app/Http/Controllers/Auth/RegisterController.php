@@ -83,6 +83,8 @@ class RegisterController extends Controller
        $user->roles()->attach(Role::where('name', 'secretario')->first());
 
        $user->roles()->attach(Role::where('name', 'ingeniero')->first());
+      
+       $user->roles()->attach(Role::where('name', 'juez')->first());
 
        return $user;
     }
@@ -112,6 +114,9 @@ class RegisterController extends Controller
             case 6:
                     return '/ingeniero';
                 break;   
+            case 7:
+                    return '/juez';
+                break;
             default:
                     return '/login'; 
                 break;

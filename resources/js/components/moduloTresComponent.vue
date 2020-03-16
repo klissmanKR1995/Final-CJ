@@ -1,8 +1,18 @@
 <template>
   <div>
-    <div class="modal-content"> <br>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">Módulo III</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
       <form @submit.prevent="editar(modulotres)" v-if="editarActivo">
-      <h5 class="text-center"> Actualizar Información <i> (Modulo - 3) </i> </h5> <br>
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - III) </i> </h5> <br>
         <div class="container">
          
          <div class="form-group">
@@ -208,13 +218,147 @@
 
 
           <center>    
-          <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
-          </center><br>
-        </div>     
-      </form>
+                <button class="btn btn-danger" type="submit"> Guardar Registro </button> 
+                </center><br>
+              </div>     
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">  
+<div class="modal fade" id="modalEdit2" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEditLabel2">Módulo - III</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+ <form @submit.prevent="editar(modulotres)" v-if="editarActivo">
+      <h5 class="text-center"> Actualizar Información <i> (Módulo - III) </i> </h5> <br>
+        <div class="container">
+         
+         <div class="form-group">
+            <select id="id_expediente" class="form-control" v-model="modulotres.id_expediente">
+              <option value="">Número de expediente </option>
+              <option v-for="(item, index) in expedientes" :value="item.id_expediente">{{item.numero_expediente}}</option>
+            </select>
+          </div>
+          
+
+          <div class="form-row">
+          
+              <div class="col-md-4">
+               <label for="inputState1">Tipo de Audiencia: </label>
+                <select id="inputState1" class="form-control" v-model="modulotres.tipo_audiencia">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Audiencia preliminar</option>
+                  <option>2.- Audiencia incidental</option>
+                  <option>3.- Audiencia de juicio</option>
+                  <option>4.- Audiencia de continuación de juicio</option>
+                  <option>5.- Otra</option>
+                </select>
+              </div>
+
+             <div class="col-md-4">
+                <label for="inputState">Fecha y hora de audiencia fijada por la/el juez: </label>
+                <input type="date" class="form-control" v-model="modulotres.fecha_audiencia">
+              </div>
+           
+             <div class="col-md-4">
+                <label for="inputState">Fecha y hora de inicio de la audiencia: </label>
+                <input type="date" class="form-control" v-model="modulotres.fecha_inicio_audiencia">
+            </div>
+
+          </div>
+
+          <div class="form-row">
+             
+             <div class="col-md-4">
+                <label for="inputState">Fecha y hora de conclusión de la audiencia: </label>
+                <input type="date" class="form-control" v-model="modulotres.fecha_conclusion">
+             </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Se difiere la Audiencia: </label>
+                <select id="inputState1" class="form-control" v-model="modulotres.se_difiere">
+                  <option selected>Seleccionar</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+               <label for="inputState1">Tipo de audiencia diferida: </label>
+                <select id="inputState1" class="form-control" v-model="modulotres.tipo_audiencia_diferida">
+                  <option selected>Seleccionar</option>
+                  <option>1.- Audiencia preliminar</option>
+                  <option>2.- Audiencia incidental</option>
+                  <option>3.- Audiencia de juicio</option>
+                  <option>4.- Audiencia de continuación de juicio</option>
+                  <option>5.- Otra</option>
+                </select>
+              </div>
+
+          </div> <br>
+
+          <div class="form-row">
+
+            <div class="col-md-4">
+             <label for="inputState">Causas de diferimientos de audiencias: </label>
+             <input type="text" class="form-control" v-model="modulotres.causas_diferimientos">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputState">Fecha en la que se difiere la audiencia: </label>
+              <input type="date" class="form-control" v-model="modulotres.fecha_difiere_audiencia">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputState">Fecha y hora en que se da continuidad a la audiencia diferida: </label>
+              <input type="date" class="form-control" v-model="modulotres.fecha_continuidad">
+            </div>
+
+          </div> <br>
+
+      
+          <div class="form-row">
+
+            <div class="col-md-4">
+              <label for="inputState">Fecha y hora de conclusión de la audiencia diferida: </label>
+              <input type="date" class="form-control" v-model="modulotres.fecha_conclusion_diferida">
+            </div>
+
+          </div> <br>
+
+         
+
+          <center>    
+          <button class="btn btn-primary" type="submit"> Actualizar </button>
+          <button class="btn btn-danger" type="submit" @click="cancelarEdicion()"> Cancelar </button>
+          </center> <br>
+        </div>     
+      </form>  
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="container"> 
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalScrollable">
+        Nuevo Registro
+      </button> <br> <br>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -230,6 +374,7 @@
                 <th scope="col"> Fecha-difiere </th>
                 <th scope="col"> Fecha-continuidad</th>
                 <th scope="col"> Fecha-conclusión-diferida </th>
+                <th scope="col"> Actualizar </th>
               </tr>
               <tr v-for="(item, index) in modulotress.data" :key="index">
                 <td>{{item.numero_expediente}}</td>
@@ -243,6 +388,8 @@
                 <td>{{item.fecha_difiere_audiencia}}</td>
                 <td>{{item.fecha_continuidad}}</td>
                 <td>{{item.fecha_conclusion_diferida}}</td>
+                  <td><button  class="btn btn-primary" data-toggle="modal" data-target="#modalEdit2" @click="editarFormulario(item)">Actualizar
+      </button></td>
               </tr>
           </thead>   
         </table>

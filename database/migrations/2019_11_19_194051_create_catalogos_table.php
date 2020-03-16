@@ -17,7 +17,7 @@ class CreateCatalogosTable extends Migration
             $table->bigIncrements('id_catalogo');
             $table->string('nombre_variable');
             $table->string('estatus');
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
