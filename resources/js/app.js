@@ -5,8 +5,8 @@ window.Vue = require('vue');
 /**
  Componentes Administrador
  */
-
 Vue.component('inicio-component', require('./components/inicioComponent.vue').default);
+Vue.component('usuarios-component', require('./components/usuariosComponent.vue').default);
 Vue.component('distritos-component', require('./components/distritosNComponent.vue').default);
 Vue.component('juzgados-component', require('./components/juzgadosNComponent.vue').default);
 Vue.component('materias-component', require('./components/materiasNComponent.vue').default);
@@ -48,9 +48,11 @@ Vue.component('modulotres-component', require('./components/moduloTresComponent.
  Componentes Ingeniero
  */
 
+
 /**
  Componentes Contralor
  */
+
 Vue.component('expedintescontraloria-component', require('./components/expedientesContraloriaComponent.vue').default);
 Vue.component('veruno-component', require('./components/contraloriaModuloUnoComponent.vue').default);
 Vue.component('verdos-component', require('./components/contraloriaModuloDosComponent.vue').default);

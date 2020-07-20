@@ -138,9 +138,10 @@
 
           <div class="alert alert-secondary text-center" role="alert">
             <font size="4"> ACCIONES: </font>  <strong> ALTAS Y BAJAS </strong> de tipos de usuarios, <strong> ACTUALIZACIÓN DE LA INFORMACIÓN </strong> y generación de <strong> REPORTES </strong>
-          </div>
 
-          
+          </div>
+           <usuarios-component></usuarios-component>
+
         </div>  
         <!-- Termina formulario de usuarios -->
 

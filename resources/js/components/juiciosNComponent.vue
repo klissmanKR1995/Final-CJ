@@ -79,7 +79,7 @@
               <td><button class="btn btn-danger" @click="confirmar(item.id_juicio)">Eliminar</button></td>
             </tr>
         </thead>   
-      </table> 
+      </table>  
 
       <pagination :data="juicios" @pagination-change-page="getResultsJuicios">
       </pagination>
@@ -224,5 +224,3 @@
        }
     }
 </script>
-
-

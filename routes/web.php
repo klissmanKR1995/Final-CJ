@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('register', 'Auth\RegisterController@index')->name('register');
 
 
 /* Rutas de tipos usuarios */
@@ -40,6 +41,7 @@ Route::get('/graficas', 'graController@index');
 
 Route::resource('/distritos','distritosController');
 
+
 Route::get('distritosAll', 'distritosController@distritosAll')->name('distritosAll');
 
 Route::get('/searchNombreDistrito', 'distritosController@searchNombreDistrito')->name('searchNombreDistrito');
@@ -51,6 +53,11 @@ Route::get('juzgadosAll', 'juzgadosController@juzgadosAll')->name('juzgadosAll')
 Route::get('/searchNombreJuzgado', 'juzgadosController@searchNombreJuzgado')->name('searchNombreJuzgado');
 
 Route::resource('/materias', 'materiasController');
+
+
+
+Route::resource('/usuarios', 'usuariosController');
+
 
 Route::get('materiasAll', 'materiasController@materiasAll')->name('materiasAll');
 

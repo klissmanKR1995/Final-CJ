@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Role;
+use App\Juzgados;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -53,8 +54,34 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
+    }
+
+
+
+    public function index(Request $request)
+    {
+        
+        if($request->ajax()){
+            return DB::table('users')->paginate(5);
+        }else{
+            return view('home', compact('users'));
+        }
+    }
+
+
+        public function store(Request $request)
+    {
+        $users = new users();
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->password = $request->password;
+        $users->role_id = $request->role_id;
+        $users->user_id = auth()->id();
+        $users->save();
+
+        return $users;
     }
 
     /**
@@ -70,6 +97,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'role_id' => $data['role_id'],
+            'id_juzgado' => $data['id_juzgado'],
         ]);
 
        $user->roles()->attach(Role::where('name', 'admin')->first());
@@ -88,6 +116,30 @@ class RegisterController extends Controller
 
        return $user;
     }
+
+
+
+        public function update(Request $request, $id)
+    {
+        $users = users::find($id);
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->passwords = $request->passwords;
+        $users->role_id = $request->role_id;
+        $users->id_juzgado = $request->id_juzgado;
+        $users->save();
+        return $users;
+    }
+
+
+    public function destroy($id)
+        {
+            $users = users::find($id);
+            $users->delete();
+        }
+
+
+
 
     public function redirectTo(){
             

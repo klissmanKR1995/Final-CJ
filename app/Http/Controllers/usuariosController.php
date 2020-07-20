@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Role;
+use App\Juzgados;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,14 +20,14 @@ class usuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {   
+      public function index(Request $request)
+     {       
         if($request->ajax()){
-            return user::where('user_id', auth()->id())->get();
+            return DB::table('User')->paginate(5);
         }else{
-            return view('home');
+            return view('home', compact('User'));
         }
-    }  
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +47,15 @@ class usuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->role_id = $request->role_id;
+        $user->user_id = auth()->id();
+        $user->save();
+
+        return $use;
     }
 
     /**
@@ -73,7 +89,14 @@ class usuariosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->passwords = $request->passwords;
+        $user->role_id = $request->role_id;
+        $user->id_juzgado = $request->id_juzgado;
+        $user->save();
+        return $user;
     }
 
     /**
@@ -82,8 +105,10 @@ class usuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+ 
+        public function destroy($id)
+        {
+            $user = User::find($id);
+            $user->delete();
+        }
 }
